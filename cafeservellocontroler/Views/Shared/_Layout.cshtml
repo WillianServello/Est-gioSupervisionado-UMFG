@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CAFÉ SERVELLO</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/sidebar.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/navbar.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/cafeservellocontroler.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+          integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+
+
+    
+        <body class="bodi">
+           
+            @* NAVBAR *@
+
+                <header>
+                    <nav class="navbarr">
+                        <div class="navbarr">
+                            <p>CAFÉ SERVELLO</p>
+                        </div>
+                    </nav>
+                </header>
+
+            <div>
+            
+
+
+            @* SIDEBAR *@
+            <nav id="sidebar">
+                <div id="sidebar_content">
+                    @* Foto do usuario *@
+                    <div id="user">
+                         <img src="~/css/Avatar.png" id="user_avatar" alt="Avatar" />
+
+                         <p id="user_infos">
+                            <span class="item-description">
+                                Cuphead
+                            </span>
+                            <span class="item-description">
+                                Lorem Ipsum
+                            </span>
+                         </p>
+                    </div>
+
+                    @* Links e icons dos botões do sidebar *@
+                    <ul id="side_items">
+                        <li class="side-item" data-url="/Produto/Index">
+                        <a >
+                                <i class="fa-brands fa-product-hunt"></i>
+                                <span class="item-description">
+                                    Produto
+                                </span>
+                            </a>
+                        </li>
+
+                        <li class="side-item" data-url="/Home/Index">
+                        <a>
+                                <i class="fa-solid fa-user"></i>
+                                <span class="item-description">
+                                    Revendendor
+                                </span>
+                            </a>
+                        </li>
+
+                        <li class="side-item" >
+                            <a href="#">
+                                <i class="fa-solid fa-hands"></i>
+                                <span class="item-description">
+                                    Fornecedor
+                                </span>
+                            </a>
+                        </li>
+
+                        <li class="side-item">
+                            <a href="#">
+                                <i class="fa-solid fa-gear"></i>
+                                <span class="item-description">
+                                    Configurações
+                                </span>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    @* Botão de abrir o side bar *@
+                    <button id="open_btn">
+                        <i id="open_btn_icon"class ="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+
+
+                <div id="logout">
+                    <button id="logout_btn">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span class="item-description">
+                            logout
+                        </span>
+                    </button>   
+                </div>
+            </nav>
+            </div>
+
+    
+        
+
+        
+
+        
+
+
+
+    <div class="container-fluid">
+        <main role="main" class=" custom">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    <script src="~/js/sidebar.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>

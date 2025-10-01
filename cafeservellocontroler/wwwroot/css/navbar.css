@@ -1,0 +1,21 @@
+﻿.navbarr {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #3B4656;
+    margin-bottom: 20px;
+    
+}
+
+    .navbarr p {
+        color: white;
+        margin-left: 100px;
+        margin-bottom: auto;
+        margin-top: auto;
+    }

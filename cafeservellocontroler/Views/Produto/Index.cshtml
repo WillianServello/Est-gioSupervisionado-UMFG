@@ -1,0 +1,143 @@
+﻿@model List<ModelProduto>
+@{
+    ViewData["Title"] = "Produtos";
+    }
+    <div style="display: flex; justify-content:center;">
+    <div class="container-fluid"> 
+    <h1 class="display-4">Produtos</h1>
+
+    @*Esse daqui e o BOTAO DE CRIAR PRODUTO*@
+
+    <div class="d-flex justify-content-end">
+    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalCriar" onclick="limparFormulario()">
+        Novo
+    </button>
+    </div>
+
+
+    @*Esse daqui e o modal de CRIAR PRODUTO*@
+
+    <div class="modal fade" id="modalCriar" tabindex="-1" aria-labelledby="modalCriarLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalCriarLabel">Adicionar Produto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    @Html.Partial("_Criar", new ModelProduto())
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+
+
+
+
+    @*Sao mensagens de erro, que pegam as informacoes da controller, sao descritas la*@
+
+
+    @if (TempData["MensagemSucesso"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @TempData["MensagemSucesso"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    @if (TempData["MensagemErro"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            @TempData["MensagemErro"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+
+
+
+
+    @*Aqui e a tabela, onde quando for adicionado ira aparecer um novo produto*@
+
+        <table class="table">
+        <thead >
+            <tr>
+                <th scope="col">Codigo</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Preço</th>
+                <th scope="col">Modificar<h>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                foreach (ModelProduto produto in Model)
+                {
+                    <tr>
+                        <th scope="row">@produto.Id</th>
+                        <td>@produto.Nome</td>
+                        <td>@produto.Descricao</td>
+                        <td>@produto.Preco</td>
+                        <td>
+                            <div role="group">
+
+
+                            @*Esse daqui e o modal de EDITAR PRODUTO (OBSERVACAO, DEVE FAZER UM JAVASCRIPT PRA CONFIRMAR REALMENTE) *@
+
+
+                                <a role="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalEditar-@produto.Id">
+                                    Editar
+                                </a>
+
+                                <div class="modal fade" id="modalEditar-@produto.Id" tabindex="-1" aria-labelledby="modalEditarLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Alterar Produto</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                @Html.Partial("_Editar", produto)
+                                            </div>
+                                        </div>
+                                   </div>
+                               </div>
+
+
+
+                            @*Esse daqui e o modal de APAGAR O PRODUTO (OBSERVACAO, DEVE FAZER UM JAVASCRIPT PRA CONFIRMAR REALMENTE) *@
+
+                            <a role="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalApagarConfirmacao-@produto.Id">
+                                Apagar
+                            </a>
+
+                            <div class="modal fade" id="modalApagarConfirmacao-@produto.Id" tabindex="-1" aria-labelledby="modalApagarConfirmacaoLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Apagar Produto</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            @Html.Partial("_ApagarConfirmacao", produto)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>   
+                        </div>
+                    </td>
+                </tr>
+                }
+            }
+
+        </tbody>
+    </table>
+</div>
+</div>
+
+

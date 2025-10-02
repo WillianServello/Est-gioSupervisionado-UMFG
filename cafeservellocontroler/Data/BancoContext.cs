@@ -16,7 +16,7 @@ namespace cafeservellocontroler.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.ApplyConfiguration(new ProdutoMap);
+            modelBuilder.ApplyConfiguration(new ProdutoMap());
         }
     }
 

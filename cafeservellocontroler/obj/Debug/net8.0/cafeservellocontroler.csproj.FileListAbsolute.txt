@@ -224,3 +224,4 @@ C:\Users\WillianRafael\Desktop\cafeservellocontroler VERSION 1\cafeservellocontr
 C:\Users\WillianRafael\Desktop\cafeservellocontroler VERSION 1\cafeservellocontroler\obj\Debug\net8.0\cafeservellocontroler.pdb
 C:\Users\WillianRafael\Desktop\cafeservellocontroler VERSION 1\cafeservellocontroler\obj\Debug\net8.0\cafeservellocontroler.genruntimeconfig.cache
 C:\Users\WillianRafael\Desktop\cafeservellocontroler VERSION 1\cafeservellocontroler\obj\Debug\net8.0\ref\cafeservellocontroler.dll
+C:\Users\WillianRafael\Desktop\cafeservellocontroler\cafeservellocontroler\obj\Debug\net8.0\cafeservellocontroler.sourcelink.json

@@ -6,7 +6,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace cafeservellocontroler.Migrations
 {
     /// <inheritdoc />
-    public partial class CriandoTabelaProdutos : Migration
+    public partial class PrimeiraMigrationProduto : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -15,15 +15,16 @@ namespace cafeservellocontroler.Migrations
                 name: "Produtos",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer", nullable: false)
+                    ID = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Nome = table.Column<string>(type: "text", nullable: false),
-                    Descricao = table.Column<string>(type: "text", nullable: false),
-                    Preco = table.Column<decimal>(type: "numeric", nullable: false)
+                    NomeProduto = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false),
+                    DescricaoProduto = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false),
+                    PrecoProduto = table.Column<decimal>(type: "numeric", nullable: false),
+                    EstoqueProduto = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Produtos", x => x.Id);
+                    table.PrimaryKey("PK_Produtos", x => x.ID);
                 });
         }
 

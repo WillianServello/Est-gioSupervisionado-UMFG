@@ -8,6 +8,8 @@ namespace cafeservellocontroler.Mapeamento
     {
         public void Configure(EntityTypeBuilder<ModelProduto> builder)
         {
+            builder.ToTable("Produtos");
+
             builder
                 .HasKey(x => x.Id);
 

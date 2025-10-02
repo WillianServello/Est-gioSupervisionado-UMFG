@@ -1,4 +1,5 @@
-﻿using cafeservellocontroler.Models;
+﻿using cafeservellocontroler.Mapeamento;
+using cafeservellocontroler.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace cafeservellocontroler.Data
@@ -9,5 +10,15 @@ namespace cafeservellocontroler.Data
         }   
 
         public DbSet<ModelProduto> Produtos { get; set; }
+
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.ApplyConfiguration(new ProdutoMap);
+        }
     }
+
+   
 }

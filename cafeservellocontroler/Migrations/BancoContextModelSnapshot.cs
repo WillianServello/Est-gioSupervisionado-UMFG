@@ -54,6 +54,47 @@ namespace cafeservellocontroler.Migrations
 
                     b.ToTable("Produtos", (string)null);
                 });
+
+            modelBuilder.Entity("cafeservellocontroler.Models.Pessoa.ModelRevendedor", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Cnpj")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Cpf")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Endereco")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("NomeFantasia")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Telefone")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Revendedor");
+                });
 #pragma warning restore 612, 618
         }
     }

@@ -4,7 +4,7 @@ namespace cafeservellocontroler.Models
 {
     public class ModelProduto
     {   
-        public int Id { get; private set; } 
+        public int Id { get; set; } 
         [Required(ErrorMessage = "Digite o nome do produto")]
         public string Nome { get; set; } = string.Empty;
         [Required(ErrorMessage = "Digite a descrição do produto")]

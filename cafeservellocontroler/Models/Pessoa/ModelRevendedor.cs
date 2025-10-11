@@ -2,9 +2,10 @@
 {
     public class ModelRevendedor : ModelPessoa
     {
-        public string Cnpj { get; set;}
-        public string Endereco { get; set;}
-        public string NomeFantasia { get; set;}
+        public int Id { get; private set;}
+        public string Cnpj { get; private set;}
+        public string Endereco { get; private set;}
+        public string NomeFantasia { get; private set;}
 
     }
 }

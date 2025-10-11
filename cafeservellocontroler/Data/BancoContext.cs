@@ -1,5 +1,6 @@
 ﻿using cafeservellocontroler.Mapeamento;
 using cafeservellocontroler.Models;
+using cafeservellocontroler.Models.Pessoa;
 using Microsoft.EntityFrameworkCore;
 
 namespace cafeservellocontroler.Data
@@ -10,6 +11,8 @@ namespace cafeservellocontroler.Data
         }   
 
         public DbSet<ModelProduto> Produtos { get; set; }
+
+        public DbSet<ModelRevendedor> Revendedor { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

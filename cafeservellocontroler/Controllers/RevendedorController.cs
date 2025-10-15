@@ -1,4 +1,6 @@
-﻿using cafeservellocontroler.Models.Pessoa;
+﻿using cafeservellocontroler.Data;
+using cafeservellocontroler.Models;
+using cafeservellocontroler.Models.Pessoa;
 using cafeservellocontroler.Models.Pessoa.ViewModels;
 using cafeservellocontroler.Repositorio.RevendedorRepositorio;
 using Microsoft.AspNetCore.Mvc;
@@ -39,15 +41,21 @@ namespace cafeservellocontroler.Controllers
             return PartialView();
         }
 
-        public IActionResult Editar()
+        public IActionResult Editar(int Id)
         {
-            return PartialView();
+            ModelRevendedor revendedor = _revendedorRepositorio.ListarPorId(Id);
+            return PartialView(revendedor);
         }
 
         public IActionResult ApagarConfirmacao()
         {
             return PartialView();
         }
+
+
+
+
+
         [HttpPost]
         public IActionResult Criar(RevendedorViewModel model)
         {
@@ -72,6 +80,25 @@ namespace cafeservellocontroler.Controllers
             _revendedorRepositorio.Adicionar(revendedor);
 
             //direto pro Index
+            return RedirectToAction("Index");
+        }
+
+
+        [HttpPost]
+        public IActionResult Alterar(RevendedorViewModel model)
+        {
+            var revendedorExistente = _revendedorRepositorio.ListarPorId(model.Id);
+            if (revendedorExistente == null)
+            {
+                return NotFound("Revendedor não encontrado.");
+            }
+
+            
+            revendedorExistente.AtualizarDados(model);
+            
+
+            // Chama o repositório para salvar as alterações
+            _revendedorRepositorio.Atualizar(revendedorExistente);
             return RedirectToAction("Index");
         }
     }

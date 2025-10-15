@@ -1,4 +1,5 @@
 ﻿using cafeservellocontroler.Data;
+using cafeservellocontroler.Models;
 using cafeservellocontroler.Models.Pessoa;
 
 namespace cafeservellocontroler.Repositorio.RevendedorRepositorio
@@ -20,9 +21,29 @@ namespace cafeservellocontroler.Repositorio.RevendedorRepositorio
             return revendedor;
         }
 
+        public ModelRevendedor Atualizar(ModelRevendedor revendedor)
+        {
+
+           
+            _bancoContext.Revendedor.Update(revendedor);
+            _bancoContext.SaveChanges();
+            return revendedor;
+
+
+
+
+
+
+        }
+
         public List<ModelRevendedor> BuscarTodos()
         {
             return _bancoContext.Revendedor.ToList();
+        }
+
+        public ModelRevendedor ListarPorId(int id)
+        {
+            return _bancoContext.Revendedor.FirstOrDefault(x => x.Id == id);
         }
     }
 }

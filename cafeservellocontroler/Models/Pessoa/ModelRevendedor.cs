@@ -1,4 +1,6 @@
-﻿namespace cafeservellocontroler.Models.Pessoa
+﻿using cafeservellocontroler.Models.Pessoa.ViewModels;
+
+namespace cafeservellocontroler.Models.Pessoa
 {
     public class ModelRevendedor : ModelPessoa
     {
@@ -20,6 +22,28 @@
 
         protected ModelRevendedor()
         {
+        }
+
+        public void SetCnpj(string cnpj)
+        {
+            Cnpj = cnpj;
+        }
+
+        public void SetNomeFantasia(string nomeFantasia)
+        {
+            NomeFantasia = nomeFantasia;
+
+        }
+
+        public void AtualizarDados(RevendedorViewModel viewModel)
+        {
+            SetNome(viewModel.Nome);
+            Telefone = viewModel.Telefone;
+            Email = viewModel.Email;
+            SetCnpj(viewModel.Cnpj);
+            Endereco = viewModel.Endereco;
+            SetNomeFantasia(viewModel.NomeFantasia);
+
         }
     }
 }

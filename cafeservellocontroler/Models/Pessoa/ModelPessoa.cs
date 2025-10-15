@@ -1,4 +1,6 @@
-﻿namespace cafeservellocontroler.Models.Pessoa
+﻿using cafeservellocontroler.Models.Pessoa.ViewModels;
+
+namespace cafeservellocontroler.Models.Pessoa
 {
     public class ModelPessoa
     {
@@ -16,5 +18,12 @@
         protected ModelPessoa()
         {
         }
+
+        public void SetNome (string nome)
+        {
+            Nome = nome;
+        }
+
+    
     }
 }

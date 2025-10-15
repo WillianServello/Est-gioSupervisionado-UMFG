@@ -1,5 +1,6 @@
 using cafeservellocontroler.Data;
 using cafeservellocontroler.Repositorio.ProdutoRepositorio;
+using cafeservellocontroler.Repositorio.RevendedorRepositorio;
 using Microsoft.EntityFrameworkCore;
 using System.Data.Common;
 
@@ -20,6 +21,9 @@ namespace cafeservellocontroller
             options.UseNpgsql(builder.Configuration.GetConnectionString("Database")));
             builder.Services.AddScoped<IProdutoRepositorio, ProdutoRepositorio>();
 
+            builder.Services.AddDbContext<BancoContext>(options =>
+            options.UseNpgsql(builder.Configuration.GetConnectionString("Database")));
+            builder.Services.AddScoped<IRevendedorRepositorio, RevendedorRepositorio>();
 
             var app = builder.Build(); // só depois de registrar tudo
 

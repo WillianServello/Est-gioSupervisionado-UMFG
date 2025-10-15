@@ -1,0 +1,28 @@
+﻿using cafeservellocontroler.Data;
+using cafeservellocontroler.Models.Pessoa;
+
+namespace cafeservellocontroler.Repositorio.RevendedorRepositorio
+{
+    public class RevendedorRepositorio : IRevendedorRepositorio
+    {
+        //Conexao com o banco de dados
+        public readonly BancoContext _bancoContext;
+        public RevendedorRepositorio(BancoContext bancoContext)
+        {
+            _bancoContext = bancoContext;
+        }
+
+
+        public ModelRevendedor Adicionar(ModelRevendedor revendedor)
+        {
+            _bancoContext.Revendedor.Add(revendedor);
+            _bancoContext.SaveChanges();
+            return revendedor;
+        }
+
+        public List<ModelRevendedor> BuscarTodos()
+        {
+            return _bancoContext.Revendedor.ToList();
+        }
+    }
+}

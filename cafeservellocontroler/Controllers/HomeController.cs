@@ -10,11 +10,8 @@ namespace cafeservellocontroler.Controllers
 
         public IActionResult Index()
         {
-            ModelPessoa pessoa = new ModelPessoa();
-
-            pessoa.Nome = "Dirceu Servello";
-            pessoa.Email = "dirceuservello@hotmail.com";
-            return View(pessoa);
+            
+            return View();
         }
 
         public IActionResult Privacy()

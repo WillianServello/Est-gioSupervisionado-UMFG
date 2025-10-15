@@ -2,11 +2,19 @@
 {
     public class ModelPessoa
     {
-        public string Nome { get; set; }
-        public string Cpf { get; set; }
+        public string Nome { get; private set; }
+        public string Cpf { get; private set; }
         public string Email { get; set; }
         public string Telefone { get; set; }
 
+        public ModelPessoa(string nome)
+        {
+            ArgumentNullException.ThrowIfNullOrWhiteSpace(nome);
+            Nome = nome;
+        }
 
+        protected ModelPessoa()
+        {
+        }
     }
 }

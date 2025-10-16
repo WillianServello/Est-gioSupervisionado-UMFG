@@ -21,6 +21,7 @@ namespace cafeservellocontroler.Repositorio.RevendedorRepositorio
             return revendedor;
         }
 
+
         public ModelRevendedor Atualizar(ModelRevendedor revendedor)
         {
 
@@ -44,6 +45,19 @@ namespace cafeservellocontroler.Repositorio.RevendedorRepositorio
         public ModelRevendedor ListarPorId(int id)
         {
             return _bancoContext.Revendedor.FirstOrDefault(x => x.Id == id);
+        }
+
+        public bool Apagar(int id)
+        {
+            var revendedor = _bancoContext.Revendedor.FirstOrDefault(x => x.Id == id);
+
+            if (revendedor == null)
+                throw new Exception("Revendedor não encontrado para exclusão.");
+
+            _bancoContext.Revendedor.Remove(revendedor);
+            _bancoContext.SaveChanges();
+
+            return true;
         }
     }
 }

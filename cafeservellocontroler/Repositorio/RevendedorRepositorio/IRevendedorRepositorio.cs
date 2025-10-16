@@ -8,6 +8,8 @@ namespace cafeservellocontroler.Repositorio.RevendedorRepositorio
         ModelRevendedor Adicionar(ModelRevendedor revendedor);
         ModelRevendedor Atualizar(ModelRevendedor revendedor);
         List<ModelRevendedor> BuscarTodos();
+
+        bool Apagar(int id);
     }
 
 }

@@ -47,14 +47,13 @@ namespace cafeservellocontroler.Controllers
             return PartialView(revendedor);
         }
 
-        public IActionResult ApagarConfirmacao()
+        public IActionResult ApagarConfirmacao(int Id)
         {
-            return PartialView();
+            var revendedor = _revendedorRepositorio.ListarPorId(Id);
+            if (revendedor == null) return NotFound();
+
+            return PartialView("~/Views/Revendedor/ApagarConfirmacao.cshtml", revendedor);
         }
-
-
-
-
 
         [HttpPost]
         public IActionResult Criar(RevendedorViewModel model)
@@ -100,6 +99,30 @@ namespace cafeservellocontroler.Controllers
             // Chama o repositório para salvar as alterações
             _revendedorRepositorio.Atualizar(revendedorExistente);
             return RedirectToAction("Index");
+        }
+
+        public IActionResult Apagar(int Id)
+        {
+            try
+            {
+                bool apagado = _revendedorRepositorio.Apagar(Id);
+
+                if (apagado)
+                {
+                    TempData["MensagemSucesso"] = "Revendedor apagado com sucesso!";
+                }
+                else
+                {
+                    TempData["MensagemErro"] = "Erro ao apagar o revendedor.";
+                }
+
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                TempData["MensagemErro"] = $"Erro ao apagar o revendedor: {ex.Message}";
+                return RedirectToAction("Index");
+            }
         }
     }
 }

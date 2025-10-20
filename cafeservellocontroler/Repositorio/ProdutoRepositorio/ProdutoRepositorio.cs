@@ -30,18 +30,13 @@ namespace cafeservellocontroler.Repositorio.ProdutoRepositorio
 
         public ModelProduto Atualizar(ModelProduto produto)
         {
-            ModelProduto produtoDB = ListarPorId(produto.Id);
 
-            if (produtoDB == null) throw new Exception("Houve um erro na atualização do produto"); 
+            if (produto == null) throw new Exception("Houve um erro na atualização do produto"); 
 
-                produtoDB.Nome = produto.Nome;
-                produtoDB.Descricao = produto.Descricao;
-                produtoDB.Preco = produto.Preco;
-
-            _bancoContext.Produtos.Update(produtoDB);
+            _bancoContext.Produtos.Update(produto);
             _bancoContext.SaveChanges();
 
-            return produtoDB;
+            return produto;
          
         }
 

@@ -1,4 +1,5 @@
-﻿@model List<ModelProduto>
+﻿@using cafeservellocontroler.Models.Pessoa.ViewModels
+@model List<ProdutoViewModel>
 @{
     ViewData["Title"] = "Produtos";
     }
@@ -25,7 +26,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
                 </div>
                 <div class="modal-body">
-                    @Html.Partial("_Criar", new ModelProduto())
+                    @Html.Partial("_Criar", new ProdutoViewModel())
                 </div>
             </div>
         </div>
@@ -70,19 +71,21 @@
                 <th scope="col">Nome</th>
                 <th scope="col">Tipo</th>
                 <th scope="col">Preço</th>
+                <th scope="col">Estoque</th>
                 <th scope="col">Modificar</th>
             </tr>
         </thead>
         <tbody>
             @if (Model != null && Model.Any())
             {
-                foreach (ModelProduto produto in Model)
+                foreach (ProdutoViewModel produto in Model)
                 {
                     <tr>
                         <th scope="row">@produto.Id</th>
                         <td>@produto.Nome</td>
                         <td>@produto.Descricao</td>
                         <td>@produto.Preco</td>
+                        <td>@produto.Estoque</td>
                         <td>
                             <div role="group">
 

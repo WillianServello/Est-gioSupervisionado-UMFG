@@ -1,4 +1,5 @@
 ﻿using cafeservellocontroler.Models;
+using cafeservellocontroler.Models.Pessoa.ViewModels;
 using cafeservellocontroler.Repositorio.ProdutoRepositorio;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,8 +14,18 @@ namespace cafeservellocontroler.Controllers
         }
         public IActionResult Index()
         {
-            List<ModelProduto> produtos = _produtoRepositorio.BuscarTodos();
-            return View(produtos);
+            var produtos = _produtoRepositorio.BuscarTodos(); 
+
+            var viewModels = produtos.Select(p => new ProdutoViewModel
+            {
+                Id = p.Id,
+                Nome = p.Nome,
+                Descricao = p.Descricao,
+                Preco = p.Preco,
+                Estoque = p.Estoque
+            }).ToList();
+
+            return View(viewModels);
         }
 
         public IActionResult Criar()
@@ -31,7 +42,8 @@ namespace cafeservellocontroler.Controllers
         }
         public IActionResult ApagarConfirmacao(int id)
         {
-            ModelProduto produto = _produtoRepositorio.ListarPorId(id);
+            var produto = _produtoRepositorio.ListarPorId(id);
+            if (produto == null) return NotFound();
             return PartialView("_ApagarConfirmacao", produto);
         }
 
@@ -42,11 +54,11 @@ namespace cafeservellocontroler.Controllers
                 bool apagado = _produtoRepositorio.Apagar(id);
                 if(apagado)
                 {
-                    TempData["MensagemSucesso"] = "Contato apagado com sucesso!";
+                    TempData["MensagemSucesso"] = "Produto apagado com sucesso!";
                 }
                 else
                 {
-                    TempData["MensagemErro"] = "Não foi possivel apagar seu contato!";
+                    TempData["MensagemErro"] = "Não foi possivel apagar seu Produto!";
                 }
 
                 return RedirectToAction("Index");
@@ -54,22 +66,37 @@ namespace cafeservellocontroler.Controllers
             catch(System.Exception erro)
             {
 
-                TempData["MensagemErro"] = $"Não foi possivel apagar seu contato: {erro.Message}!";
+                TempData["MensagemErro"] = $"Não foi possivel apagar seu Produto: {erro.Message}!";
                 return RedirectToAction("Index");
             }
         }
         [HttpPost]
-        public IActionResult Criar(ModelProduto produto)
+        public IActionResult Criar(ProdutoViewModel model)
         {
             try
             {
+                var produto = new ModelProduto(
+
+                        model.Nome,
+                        model.Preco,
+                        model.Estoque
+
+                );
+
+                
+                produto.Descricao = model.Descricao;
+
                 if (ModelState.IsValid)
                 {
+                    
+
                     _produtoRepositorio.Adicionar(produto);
                     TempData["MensagemSucesso"] = "Contato cadastrado com sucesso";
                     return RedirectToAction("Index");
                 }
                 return PartialView("_Criar", produto);
+
+
             }
             catch(System.Exception erro)
             {
@@ -79,19 +106,28 @@ namespace cafeservellocontroler.Controllers
         }
 
         [HttpPost]
-        public IActionResult Alterar(ModelProduto produto)
+        public IActionResult Alterar(ProdutoViewModel model)
         {
-
-
             try
             {
+
+                var produtoExistente = _produtoRepositorio.ListarPorId(model.Id);
+                if (produtoExistente == null)
+                {
+                    TempData["MensagemErro"] = "Produto não encontrado."; // Mensagem de erro se o produto não for encontrado
+                    return RedirectToAction("Index");
+                }
+
+                produtoExistente.AtualizarDados(model);
+
+
                 if (ModelState.IsValid)
                 {
-                    _produtoRepositorio.Atualizar(produto);
+                    _produtoRepositorio.Atualizar(produtoExistente);
                     TempData["MensagemSucesso"] = "Contato atualizado com sucesso";
                     return RedirectToAction("Index");
                 }
-                return PartialView("_Editar", produto);
+                return PartialView("_Editar", produtoExistente);
 
             }
             catch (System.Exception erro)

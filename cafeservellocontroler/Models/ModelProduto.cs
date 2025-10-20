@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using cafeservellocontroler.Models.Pessoa.ViewModels;
+using System.ComponentModel.DataAnnotations;
 
 namespace cafeservellocontroler.Models
 {
@@ -11,6 +12,29 @@ namespace cafeservellocontroler.Models
         public string Descricao { get; set; } = string.Empty;
         [Required(ErrorMessage = "Digite o preço do produto")]
         public decimal Preco { get; set; } = decimal.Zero;
+
         public int Estoque { get; set; }
+
+
+
+        public ModelProduto(string nome, decimal preco, int estoque)
+        {
+
+            Nome = nome;
+            Preco = preco;
+            Estoque = estoque;
+        }
+
+        public ModelProduto()
+        {
+        }
+
+        public void AtualizarDados(ProdutoViewModel viewModel)
+        {
+            Nome = viewModel.Nome;
+            Descricao = viewModel.Descricao;
+            Preco = viewModel.Preco;
+            Estoque = viewModel.Estoque;
+        }
     }
 }

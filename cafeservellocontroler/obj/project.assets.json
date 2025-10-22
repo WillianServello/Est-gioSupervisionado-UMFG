@@ -15,6 +15,9 @@
           }
         }
       },
+      "jQuery.InputMask/5.0.9": {
+        "type": "package"
+      },
       "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
         "type": "package",
         "compile": {
@@ -850,6 +853,27 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "jQuery.InputMask/5.0.9": {
+      "sha512": "5YjQgmoFGZRZ2dv1/oS4k8PqeiAH6Vz0u6eNrasNwtCkNeZuLBVQWieyuH+6ZmTnzLoTveLvfBb31uwTSEIwog==",
+      "type": "package",
+      "path": "jquery.inputmask/5.0.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Readme.txt",
+        "content/Scripts/inputmask/bindings/inputmask.binding.js",
+        "content/Scripts/inputmask/colormask.css",
+        "content/Scripts/inputmask/colormask.js",
+        "content/Scripts/inputmask/colormask.min.js",
+        "content/Scripts/inputmask/inputmask.es6.js",
+        "content/Scripts/inputmask/inputmask.js",
+        "content/Scripts/inputmask/inputmask.min.js",
+        "content/Scripts/inputmask/jquery.inputmask.js",
+        "content/Scripts/inputmask/jquery.inputmask.min.js",
+        "jquery.inputmask.5.0.9.nupkg.sha512",
+        "jquery.inputmask.nuspec"
       ]
     },
     "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
@@ -2145,7 +2169,8 @@
       "Microsoft.EntityFrameworkCore >= 8.0.20",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.20",
       "Npgsql >= 8.0.7",
-      "Npgsql.EntityFrameworkCore.PostgreSQL >= 8.0.11"
+      "Npgsql.EntityFrameworkCore.PostgreSQL >= 8.0.11",
+      "jQuery.InputMask >= 5.0.9"
     ]
   },
   "packageFolders": {
@@ -2216,6 +2241,10 @@
           "Npgsql.EntityFrameworkCore.PostgreSQL": {
             "target": "Package",
             "version": "[8.0.11, )"
+          },
+          "jQuery.InputMask": {
+            "target": "Package",
+            "version": "[5.0.9, )"
           }
         },
         "imports": [

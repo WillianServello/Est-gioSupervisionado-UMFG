@@ -78,8 +78,8 @@ namespace cafeservellocontroler.Controllers
                 var produto = new ModelProduto(
 
                         model.Nome,
-                        model.Preco,
-                        model.Estoque
+                        model.Preco ?? 0,
+                        model.Estoque ?? 0
 
                 );
 

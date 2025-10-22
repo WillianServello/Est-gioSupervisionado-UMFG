@@ -32,6 +32,7 @@ namespace cafeservellocontroler.Mapeamento
             builder
                 .Property(x => x.Preco)
                 .HasColumnName("PrecoProduto")
+                .HasColumnType("numeric(10, 2)")
                 .IsRequired();
 
             builder

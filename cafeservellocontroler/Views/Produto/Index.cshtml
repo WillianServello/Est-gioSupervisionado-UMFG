@@ -84,7 +84,7 @@
                         <th scope="row">@produto.Id</th>
                         <td>@produto.Nome</td>
                         <td>@produto.Descricao</td>
-                        <td>@produto.Preco</td>
+                        <td>@(produto.Preco.HasValue ? produto.Preco.Value.ToString("C") : "0,00")</td>
                         <td>@produto.Estoque</td>
                         <td>
                             <div role="group">

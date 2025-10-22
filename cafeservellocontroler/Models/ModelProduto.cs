@@ -11,9 +11,13 @@ namespace cafeservellocontroler.Models
         [Required(ErrorMessage = "Digite a descrição do produto")]
         public string Descricao { get; set; } = string.Empty;
         [Required(ErrorMessage = "Digite o preço do produto")]
+
+        [DisplayFormat(DataFormatString = "{0:F2}", ApplyFormatInEditMode = true)]
         public decimal Preco { get; set; } = decimal.Zero;
 
         public int Estoque { get; set; }
+
+
 
 
 
@@ -33,8 +37,8 @@ namespace cafeservellocontroler.Models
         {
             Nome = viewModel.Nome;
             Descricao = viewModel.Descricao;
-            Preco = viewModel.Preco;
-            Estoque = viewModel.Estoque;
+            Preco = viewModel.Preco ?? 0;
+            Estoque = viewModel.Estoque ?? 0;
         }
     }
 }

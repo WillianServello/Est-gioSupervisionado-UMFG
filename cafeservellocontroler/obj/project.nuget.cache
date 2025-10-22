@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "2V944ZP+v3s=",
+  "dgSpecHash": "mpiBe6uE1gc=",
   "success": true,
   "projectFilePath": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\cafeservellocontroler.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\WillianRafael\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\WillianRafael\\.nuget\\packages\\jquery.inputmask\\5.0.9\\jquery.inputmask.5.0.9.nupkg.sha512",
     "C:\\Users\\WillianRafael\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\WillianRafael\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.3\\microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",
     "C:\\Users\\WillianRafael\\.nuget\\packages\\microsoft.codeanalysis.common\\4.5.0\\microsoft.codeanalysis.common.4.5.0.nupkg.sha512",

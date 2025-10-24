@@ -22,7 +22,10 @@
 
     <div class="form-group">
         <label for="estoque">Estoque</label>
-        <input type="number" min="1" step="1"  asp-for="Estoque" class="form-control" placeholder="Escreva a quantidade em estoque">
+        <input type="number" min="0" step="1" min="0"
+        onkeydown="if(event.key === '-' || event.key === 'e' || event.key === '+' ) event.preventDefault();"
+        oninput="this.value = this.value.replace(/[^0-9]/g, '');"
+        asp-for="Estoque" class="form-control" placeholder="Escreva a quantidade em estoque">
         <span asp-validation-for="Estoque" class="text-danger"></span>
     </div>
 

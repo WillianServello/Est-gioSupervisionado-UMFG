@@ -2,6 +2,8 @@
 {
     public class RevendedorViewModel
     {
+
+        //fazer validacoes de entrada, required, format, length, etc
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Telefone { get; set; }

@@ -40,13 +40,7 @@ namespace cafeservellocontroler.Mapeamento
                 .Property(x => x.Cnpj)
                 .HasColumnName("Cnpj")
                 .HasMaxLength(18)
-                .IsRequired(false);
-
-            builder 
-                .Property(x => x.Cpf)
-                .HasColumnName("Cpf")
-                .HasMaxLength(100)
-                .IsRequired(false);
+                .IsRequired();
 
             builder
                 .Property(x => x.Endereco)

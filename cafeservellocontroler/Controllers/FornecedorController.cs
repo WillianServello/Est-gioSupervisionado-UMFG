@@ -1,4 +1,5 @@
-﻿using cafeservellocontroler.Models.Pessoa.ViewModels;
+﻿using cafeservellocontroler.Models.Pessoa;
+using cafeservellocontroler.Models.Pessoa.ViewModels;
 using cafeservellocontroler.Repositorio.FornecedorRepositorio;
 using cafeservellocontroler.Repositorio.RevendedorRepositorio;
 using Microsoft.AspNetCore.Mvc;
@@ -25,10 +26,9 @@ namespace cafeservellocontroler.Controllers
                 Id = r.Id,
                 Nome = r.Nome,
                 Cnpj = r.Cnpj,
-                Endereco = r.Endereco,
-                NomeFantasia = r.NomeFantasia,
+                Email = r.Email,
                 Telefone = r.Telefone,
-                Email = r.Email
+                MateriaPrima = r.MateriaPrima
             }).ToList();
 
             return View(viewModels);
@@ -39,16 +39,25 @@ namespace cafeservellocontroler.Controllers
             return PartialView();
         }
 
-        public IActionResult Editar()
+        public IActionResult Editar(int Id)
         {
-            return PartialView();
+            ModelFornecedor fornecedor = _fornecedorRepositorio.ListarPorId(Id);
+            return PartialView(fornecedor);
         }
 
-        public IActionResult ApagarConfirmacao()
+        public IActionResult ApagarConfirmacao(int Id)
         {
-            return PartialView();
+            var fornecedor = _fornecedorRepositorio.ListarPorId(Id);
+            if (fornecedor == null) return NotFound();
+
+            return PartialView("~/Views/Revendedor/ApagarConfirmacao.cshtml", fornecedor);
         }
 
+        [HttpPost]
+        public IActionResult Criar(FornecedorViewModel fornecedorView)
+        {
 
+            return PartialView();
+        }
     }
 }

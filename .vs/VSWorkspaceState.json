@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\cafeservellocontroler",
+    "\\cafeservellocontroler\\Controllers",
+    "\\cafeservellocontroler\\Models",
+    "\\cafeservellocontroler\\Models\\Pessoa"
   ],
-  "SelectedNode": "\\cafeservellocontroler.sln",
+  "SelectedNode": "\\cafeservellocontroler\\Controllers\\FornecedorController.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -71,8 +71,7 @@
               "ViewState": "AgIAABIAAAAAAAAAAAAwwB0AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-25T01:00:09.468Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -84,8 +83,7 @@
               "RelativeToolTip": "cafeservellocontroler\\Views\\Fornecedor\\Index.cshtml",
               "ViewState": "AgIAAEwAAAAAAAAAAAAwwFcAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-25T01:16:18.93Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-25T01:16:18.93Z"
             },
             {
               "$type": "Document",
@@ -97,8 +95,7 @@
               "RelativeToolTip": "cafeservellocontroler\\Views\\Fornecedor\\_Criar.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-25T01:15:29.914Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-25T01:15:29.914Z"
             },
             {
               "$type": "Document",
@@ -123,8 +120,7 @@
               "RelativeToolTip": "cafeservellocontroler\\Models\\Pessoa\\ViewModels\\FornecedorViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T01:14:39.881Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-25T01:14:39.881Z"
             },
             {
               "$type": "Document",
@@ -136,8 +132,7 @@
               "RelativeToolTip": "cafeservellocontroler\\Views\\Fornecedor\\_Editar.cshtml",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-25T01:15:51.226Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-25T01:15:51.226Z"
             },
             {
               "$type": "Document",
@@ -149,8 +144,7 @@
               "RelativeToolTip": "cafeservellocontroler\\Models\\Pessoa\\ModelFornecedor.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T01:15:05.226Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-25T01:15:05.226Z"
             },
             {
               "$type": "Document",
@@ -162,8 +156,7 @@
               "RelativeToolTip": "cafeservellocontroler\\Models\\Pessoa\\ModelPessoa.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T01:13:55.706Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-25T01:13:55.706Z"
             },
             {
               "$type": "Document",
@@ -175,8 +168,7 @@
               "RelativeToolTip": "cafeservellocontroler\\Controllers\\RevendedorController.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAAACMAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T01:10:43.394Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-25T01:10:43.394Z"
             },
             {
               "$type": "Document",
@@ -188,8 +180,7 @@
               "RelativeToolTip": "cafeservellocontroler\\Repositorio\\RevendedorRepositorio\\IRevendedorRepositorio.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T01:03:53.386Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-25T01:03:53.386Z"
             },
             {
               "$type": "Document",
@@ -201,8 +192,7 @@
               "RelativeToolTip": "cafeservellocontroler\\Repositorio\\RevendedorRepositorio\\RevendedorRepositorio.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T01:03:22.675Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-25T01:03:22.675Z"
             },
             {
               "$type": "Document",
@@ -214,8 +204,11 @@
               "RelativeToolTip": "cafeservellocontroler\\Repositorio\\FornecedorRepositorio\\IFornecedorRepositorio.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwBEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T01:00:01.103Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-25T01:00:01.103Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }

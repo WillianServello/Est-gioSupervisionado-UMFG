@@ -5,14 +5,15 @@ namespace cafeservellocontroler.Models.Pessoa
     public class ModelPessoa
     {
         public string Nome { get; private set; }
-        public string Cpf { get; private set; }
+        public string Cnpj { get; private set; }
         public string Email { get; set; }
         public string Telefone { get; set; }
 
-        public ModelPessoa(string nome, string telefone)
+        public ModelPessoa(string nome, string cnpj, string telefone)
         {
             ArgumentNullException.ThrowIfNullOrWhiteSpace(nome);
             Nome = nome;
+            Cnpj = cnpj;
             Telefone = telefone;
         }
 
@@ -25,6 +26,11 @@ namespace cafeservellocontroler.Models.Pessoa
             Nome = nome;
         }
 
-    
+        public void SetCnpj(string cnpj)
+        {
+            Cnpj = cnpj;
+        }
+
+
     }
 }

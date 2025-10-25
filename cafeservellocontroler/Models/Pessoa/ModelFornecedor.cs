@@ -8,7 +8,7 @@ namespace cafeservellocontroler.Models.Pessoa
         public string MateriaPrima { get; private set; }
 
 
-        public ModelFornecedor(string nome, string telefone, string materiaprima) : base(nome, telefone)
+        public ModelFornecedor(string nome, string cnpj, string telefone, string materiaprima) : base(nome, cnpj, telefone)
         {
             ArgumentNullException.ThrowIfNullOrWhiteSpace(MateriaPrima);
         }

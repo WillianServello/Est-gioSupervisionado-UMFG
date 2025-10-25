@@ -51,8 +51,7 @@
               "RelativeToolTip": "cafeservellocontroler\\Models\\Pessoa\\ModelFuncionario.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T23:06:28.675Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-24T23:06:28.675Z"
             },
             {
               "$type": "Document",
@@ -64,8 +63,7 @@
               "RelativeToolTip": "cafeservellocontroler\\Models\\Pessoa\\ModelRevendedor.cs",
               "ViewState": "AgIAAB4AAAAAAAAAAAAgwDEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T23:06:24.563Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-24T23:06:24.563Z"
             },
             {
               "$type": "Document",
@@ -77,8 +75,11 @@
               "RelativeToolTip": "cafeservellocontroler\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T23:05:35.872Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-24T23:05:35.872Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }

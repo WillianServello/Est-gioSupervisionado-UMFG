@@ -9,10 +9,11 @@ namespace cafeservellocontroler.Models.Pessoa
         public string Email { get; set; }
         public string Telefone { get; set; }
 
-        public ModelPessoa(string nome)
+        public ModelPessoa(string nome, string telefone)
         {
             ArgumentNullException.ThrowIfNullOrWhiteSpace(nome);
             Nome = nome;
+            Telefone = telefone;
         }
 
         protected ModelPessoa()

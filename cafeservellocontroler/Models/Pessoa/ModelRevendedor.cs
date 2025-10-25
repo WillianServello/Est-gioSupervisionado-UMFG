@@ -10,7 +10,7 @@ namespace cafeservellocontroler.Models.Pessoa
         public string NomeFantasia { get; private set;}
 
 
-        public ModelRevendedor(string nome, string cnpj, string endereco, string nomeFantasia) : base(nome)
+        public ModelRevendedor(string nome, string telefone, string cnpj, string endereco, string nomeFantasia) : base(nome, telefone)
         {
             ArgumentNullException.ThrowIfNullOrWhiteSpace(endereco);
             ArgumentNullException.ThrowIfNullOrWhiteSpace(nomeFantasia);

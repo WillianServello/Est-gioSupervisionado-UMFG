@@ -1,4 +1,5 @@
-﻿using cafeservellocontroler.Models.Pessoa.ViewModels;
+﻿using cafeservellocontroler.Models.Pessoa;
+using cafeservellocontroler.Models.Pessoa.ViewModels;
 using cafeservellocontroler.Repositorio.FornecedorRepositorio;
 using cafeservellocontroler.Repositorio.RevendedorRepositorio;
 using Microsoft.AspNetCore.Mvc;
@@ -25,9 +26,8 @@ namespace cafeservellocontroler.Controllers
                 Id = r.Id,
                 Nome = r.Nome,
                 Cnpj = r.Cnpj,
-                Endereco = r.Endereco,
-                NomeFantasia = r.NomeFantasia,
                 Telefone = r.Telefone,
+                MateriaPrima = r.MateriaPrima,
                 Email = r.Email
             }).ToList();
 
@@ -39,16 +39,86 @@ namespace cafeservellocontroler.Controllers
             return PartialView();
         }
 
-        public IActionResult Editar()
+        public IActionResult Editar(int Id)
         {
-            return PartialView();
+            ModelFornecedor fornecedor = _fornecedorRepositorio.ListarPorId(Id);
+            return PartialView(fornecedor);
         }
 
-        public IActionResult ApagarConfirmacao()
+        public IActionResult ApagarConfirmacao(int Id)
         {
-            return PartialView();
+            var fornecedor = _fornecedorRepositorio.ListarPorId(Id);
+            if (fornecedor == null) return NotFound();
+
+            return PartialView("~/Views/Fornecedor/ApagarConfirmacao.cshtml", fornecedor);
         }
 
+        [HttpPost]
+        public IActionResult Criar(FornecedorViewModel model)
+        {
+            //Aqui ele esta fazendo a entrega de infomacoes, ele ta pegando as informacoes do FornecedorViewModel e passando para o ModelFornecedor pelo controller, o que esta dentro
+            // do parenteses e por pq e necessario, o que esta fora e pq e opcional
 
+            var fornecedor = new ModelFornecedor(
+
+                //necessario
+
+                model.Nome,
+                model.Telefone,
+                model.Cnpj,
+                model.MateriaPrima
+                );
+
+            //opcional
+            fornecedor.Email = model.Email;
+
+            //adicionando ao repositorio
+            _fornecedorRepositorio.Adicionar(fornecedor);
+
+            //direto pro Index
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public IActionResult Alterar(FornecedorViewModel model)
+        {
+            var fornecedorExistente = _fornecedorRepositorio.ListarPorId(model.Id);
+            if (fornecedorExistente == null)
+            {
+                return NotFound("Fornecedor não encontrado.");
+            }
+
+
+            fornecedorExistente.AtualizarDados(model);
+
+
+            // Chama o repositório para salvar as alterações
+            _fornecedorRepositorio.Atualizar(fornecedorExistente);
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Apagar(int Id)
+        {
+            try
+            {
+                bool apagado = _fornecedorRepositorio.Apagar(Id);
+
+                if (apagado)
+                {
+                    TempData["MensagemSucesso"] = "Fornecedor apagado com sucesso!";
+                }
+                else
+                {
+                    TempData["MensagemErro"] = "Erro ao apagar o fornecedor.";
+                }
+
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                TempData["MensagemErro"] = $"Erro ao apagar o fornecedor: {ex.Message}";
+                return RedirectToAction("Index");
+            }
+        }
     }
 }

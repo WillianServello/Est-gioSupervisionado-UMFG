@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace cafeservellocontroler.Mapeamento
 {
-    public class RevendedorMap : IEntityTypeConfiguration<ModelRevendedor>
+    public class FornecedorMap : IEntityTypeConfiguration<ModelFornecedor>
     {
-        public void Configure(EntityTypeBuilder<ModelRevendedor> builder)
+        public void Configure(EntityTypeBuilder<ModelFornecedor> builder)
         {
-            builder.ToTable("Revendedor");
+            builder.ToTable("Fornecedor");
 
             builder
                 .HasKey(x => x.Id);
@@ -18,7 +18,7 @@ namespace cafeservellocontroler.Mapeamento
                 .HasColumnName("ID")
                 .IsRequired();
 
-            builder 
+            builder
                 .Property(x => x.Nome)
                 .HasColumnName("Nome")
                 .HasMaxLength(200)
@@ -42,17 +42,9 @@ namespace cafeservellocontroler.Mapeamento
                 .HasMaxLength(18)
                 .IsRequired(false);
 
-         
-
             builder
-                .Property(x => x.Endereco)
-                .HasColumnName("Endereco")
-                .HasMaxLength(200)
-                .IsRequired();
-
-            builder
-                .Property(x => x.NomeFantasia)
-                .HasColumnName("NomeFantasia")
+                .Property(x => x.MateriaPrima)
+                .HasColumnName("MateriaPrima")
                 .HasMaxLength(100)
                 .IsRequired();
 

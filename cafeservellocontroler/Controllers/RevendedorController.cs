@@ -66,13 +66,13 @@ namespace cafeservellocontroler.Controllers
                 //necessario
                 
                 model.Nome,
+                model.Telefone,
                 model.Cnpj,
                 model.Endereco,
                 model.NomeFantasia
                 );
 
             //opcional
-            revendedor.Telefone = model.Telefone;
             revendedor.Email = model.Email;
            
             //adicionando ao repositorio

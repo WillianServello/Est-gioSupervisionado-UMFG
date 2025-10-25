@@ -8,7 +8,7 @@ namespace cafeservellocontroler.Models.Pessoa
         public string MateriaPrima { get; private set; }
 
 
-        public ModelFornecedor(string nome, string telefone, string materiaprima) : base(nome, telefone)
+        public ModelFornecedor(string nome, string cnpj, string telefone, string materiaprima) : base(nome, cnpj, telefone)
         {
             ArgumentNullException.ThrowIfNullOrWhiteSpace(MateriaPrima);
         }
@@ -22,15 +22,14 @@ namespace cafeservellocontroler.Models.Pessoa
             MateriaPrima = materiaPrima;
         }
 
-        //public void AtualizarDados(RevendedorViewModel viewModel)
-        //{
-        //    SetNome(viewModel.Nome);
-        //    Telefone = viewModel.Telefone;
-        //    Email = viewModel.Email;
-        //    SetCnpj(viewModel.Cnpj);
-        //    Endereco = viewModel.Endereco;
-        //    SetNomeFantasia(viewModel.NomeFantasia);
+        public void AtualizarDados(FornecedorViewModel viewModel)
+        {
+            SetNome(viewModel.Nome);
+            Telefone = viewModel.Telefone;
+            Email = viewModel.Email;
+            SetCnpj(viewModel.Cnpj);
+            MateriaPrima = viewModel.MateriaPrima;
 
-        //}
+        }
     }
 }

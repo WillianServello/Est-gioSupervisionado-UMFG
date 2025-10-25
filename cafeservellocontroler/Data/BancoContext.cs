@@ -14,6 +14,8 @@ namespace cafeservellocontroler.Data
 
         public DbSet<ModelRevendedor> Revendedor { get; set; }
 
+        public DbSet<ModelFornecedor> Fornecedor { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -21,6 +23,7 @@ namespace cafeservellocontroler.Data
 
             modelBuilder.ApplyConfiguration(new ProdutoMap());
             modelBuilder.ApplyConfiguration(new RevendedorMap());
+            modelBuilder.ApplyConfiguration(new FornecedorMap());
         }
     }
 

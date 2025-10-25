@@ -22,7 +22,7 @@ namespace cafeservellocontroler.Repositorio.FornecedorRepositorio
         }
 
 
-        public <ModelFornecedor> Atualizar(ModelFornecedor fornecedor)
+        public ModelFornecedor Atualizar(ModelFornecedor fornecedor)
         {
 
 

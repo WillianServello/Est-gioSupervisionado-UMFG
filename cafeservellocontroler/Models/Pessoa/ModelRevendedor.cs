@@ -1,4 +1,4 @@
-﻿using cafeservellocontroler.Models.Pessoa.ViewModels;
+﻿using cafeservellocontroler.Models.ViewModels;
 
 namespace cafeservellocontroler.Models.Pessoa
 {

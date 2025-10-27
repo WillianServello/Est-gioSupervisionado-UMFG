@@ -1,5 +1,5 @@
 ﻿using cafeservellocontroler.Models.Pessoa;
-using cafeservellocontroler.Models.Pessoa.ViewModels;
+using cafeservellocontroler.Models.ViewModels;
 using cafeservellocontroler.Repositorio.FornecedorRepositorio;
 using cafeservellocontroler.Repositorio.RevendedorRepositorio;
 using Microsoft.AspNetCore.Mvc;
@@ -27,8 +27,8 @@ namespace cafeservellocontroler.Controllers
                 Nome = r.Nome,
                 Cnpj = r.Cnpj,
                 Telefone = r.Telefone,
+                Email = r.Email,
                 MateriaPrima = r.MateriaPrima,
-                Email = r.Email
             }).ToList();
 
             return View(viewModels);
@@ -64,8 +64,8 @@ namespace cafeservellocontroler.Controllers
                 //necessario
 
                 model.Nome,
-                model.Telefone,
                 model.Cnpj,
+                model.Telefone,
                 model.MateriaPrima
                 );
 

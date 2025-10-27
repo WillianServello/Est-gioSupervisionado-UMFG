@@ -1,4 +1,4 @@
-﻿using cafeservellocontroler.Models.Pessoa.ViewModels;
+﻿using cafeservellocontroler.Models.ViewModels;
 using System.ComponentModel.DataAnnotations;
 
 namespace cafeservellocontroler.Models

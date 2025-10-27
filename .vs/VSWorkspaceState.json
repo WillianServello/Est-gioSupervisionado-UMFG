@@ -2,10 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\cafeservellocontroler",
-    "\\cafeservellocontroler\\Controllers",
-    "\\cafeservellocontroler\\Models",
     "\\cafeservellocontroler\\Models\\Pessoa"
   ],
-  "SelectedNode": "\\cafeservellocontroler\\Controllers\\FornecedorController.cs",
+  "SelectedNode": "\\cafeservellocontroler\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

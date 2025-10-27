@@ -1,4 +1,4 @@
-﻿using cafeservellocontroler.Models.Pessoa.ViewModels;
+﻿using cafeservellocontroler.Models.ViewModels;
 
 namespace cafeservellocontroler.Models.Pessoa
 {
@@ -10,7 +10,9 @@ namespace cafeservellocontroler.Models.Pessoa
 
         public ModelFornecedor(string nome, string cnpj, string telefone, string materiaprima) : base(nome, cnpj, telefone)
         {
-            ArgumentNullException.ThrowIfNullOrWhiteSpace(MateriaPrima);
+            ArgumentNullException.ThrowIfNullOrWhiteSpace(materiaprima);
+
+            MateriaPrima = materiaprima;
         }
 
         protected ModelFornecedor()
@@ -22,13 +24,14 @@ namespace cafeservellocontroler.Models.Pessoa
             MateriaPrima = materiaPrima;
         }
 
+
         public void AtualizarDados(FornecedorViewModel viewModel)
         {
             SetNome(viewModel.Nome);
             Telefone = viewModel.Telefone;
             Email = viewModel.Email;
             SetCnpj(viewModel.Cnpj);
-            MateriaPrima = viewModel.MateriaPrima;
+            SetMateriaPrima(viewModel.MateriaPrima);
 
         }
     }

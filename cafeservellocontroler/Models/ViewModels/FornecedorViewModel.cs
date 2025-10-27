@@ -1,4 +1,4 @@
-﻿namespace cafeservellocontroler.Models.Pessoa.ViewModels
+﻿namespace cafeservellocontroler.Models.ViewModels
 {
     public class FornecedorViewModel
     {

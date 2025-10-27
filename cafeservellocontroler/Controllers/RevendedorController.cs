@@ -1,7 +1,7 @@
 ﻿using cafeservellocontroler.Data;
 using cafeservellocontroler.Models;
 using cafeservellocontroler.Models.Pessoa;
-using cafeservellocontroler.Models.Pessoa.ViewModels;
+using cafeservellocontroler.Models.ViewModels;
 using cafeservellocontroler.Repositorio.RevendedorRepositorio;
 using Microsoft.AspNetCore.Mvc;
 

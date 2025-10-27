@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace cafeservellocontroler.Models.Pessoa.ViewModels
+namespace cafeservellocontroler.Models.ViewModels
 {
     public class ProdutoViewModel
     {

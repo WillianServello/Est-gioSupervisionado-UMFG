@@ -1,5 +1,5 @@
 ﻿using cafeservellocontroler.Models;
-using cafeservellocontroler.Models.Pessoa.ViewModels;
+using cafeservellocontroler.Models.ViewModels;
 using cafeservellocontroler.Repositorio.ProdutoRepositorio;
 using Microsoft.AspNetCore.Mvc;
 

@@ -1,62 +1,86 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\",
+  "WorkspaceRootPath": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\facec.lab04\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|solutionrelative:cafeservellocontroler\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\willianrafael\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\models\\modelproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|solutionrelative:cafeservellocontroler\\models\\modelproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\facec.lab04\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|solutionrelative:cafeservellocontroler\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\willianrafael\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\views\\revendedor\\_criar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|solutionrelative:cafeservellocontroler\\views\\revendedor\\_criar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\facec.lab04\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\views\\fornecedor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|solutionrelative:cafeservellocontroler\\views\\fornecedor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\willianrafael\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\views\\revendedor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|solutionrelative:cafeservellocontroler\\views\\revendedor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\facec.lab04\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\views\\fornecedor\\_criar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\willianrafael\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\views\\produto\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|solutionrelative:cafeservellocontroler\\views\\produto\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\willianrafael\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\models\\pessoa\\modelpessoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|solutionrelative:cafeservellocontroler\\models\\pessoa\\modelpessoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\willianrafael\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\views\\produto\\_criar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|solutionrelative:cafeservellocontroler\\views\\produto\\_criar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\willianrafael\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\views\\revendedor\\_editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|solutionrelative:cafeservellocontroler\\views\\revendedor\\_editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\willianrafael\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\views\\revendedor\\apagarconfirmacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|solutionrelative:cafeservellocontroler\\views\\revendedor\\apagarconfirmacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\willianrafael\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\views\\produto\\_editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|solutionrelative:cafeservellocontroler\\views\\produto\\_editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\willianrafael\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\views\\produto\\_apagarconfirmacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|solutionrelative:cafeservellocontroler\\views\\produto\\_apagarconfirmacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\willianrafael\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\views\\fornecedor\\_criar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|solutionrelative:cafeservellocontroler\\views\\fornecedor\\_criar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Migrations\\20251025140831_TerceiraMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:cafeservellocontroler\\Migrations\\20251025140831_TerceiraMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\willianrafael\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\views\\fornecedor\\_editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|solutionrelative:cafeservellocontroler\\views\\fornecedor\\_editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\facec.lab04\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\repositorio\\fornecedorrepositorio\\fornecedorrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\willianrafael\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\views\\fornecedor\\_apagarconfirmacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|solutionrelative:cafeservellocontroler\\views\\fornecedor\\_apagarconfirmacao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\willianrafael\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\views\\fornecedor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|solutionrelative:cafeservellocontroler\\views\\fornecedor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\willianrafael\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\models\\pessoa\\modelfornecedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|solutionrelative:cafeservellocontroler\\models\\pessoa\\modelfornecedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\willianrafael\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\repositorio\\fornecedorrepositorio\\fornecedorrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|solutionrelative:cafeservellocontroler\\repositorio\\fornecedorrepositorio\\fornecedorrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\facec.lab04\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\repositorio\\produtorepositorio\\produtorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|solutionrelative:cafeservellocontroler\\repositorio\\produtorepositorio\\produtorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\facec.lab04\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\data\\bancocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|solutionrelative:cafeservellocontroler\\data\\bancocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\facec.lab04\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\mapeamento\\revendedormap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|solutionrelative:cafeservellocontroler\\mapeamento\\revendedormap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\facec.lab04\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\controllers\\revendedorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|solutionrelative:cafeservellocontroler\\controllers\\revendedorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\facec.lab04\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|solutionrelative:cafeservellocontroler\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\facec.lab04\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\mapeamento\\fornecedormap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|solutionrelative:cafeservellocontroler\\mapeamento\\fornecedormap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\facec.lab04\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\controllers\\fornecedorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\willianrafael\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\controllers\\fornecedorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|solutionrelative:cafeservellocontroler\\controllers\\fornecedorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\facec.lab04\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\models\\pessoa\\modelfornecedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|solutionrelative:cafeservellocontroler\\models\\pessoa\\modelfornecedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\willianrafael\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\models\\pessoa\\modelfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|solutionrelative:cafeservellocontroler\\models\\pessoa\\modelfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\willianrafael\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\models\\pessoa\\modelrevendedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|solutionrelative:cafeservellocontroler\\models\\pessoa\\modelrevendedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\willianrafael\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\mapeamento\\fornecedormap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|solutionrelative:cafeservellocontroler\\mapeamento\\fornecedormap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,191 +90,248 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "FornecedorController.cs",
-              "DocumentMoniker": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Controllers\\FornecedorController.cs",
-              "RelativeDocumentMoniker": "cafeservellocontroler\\Controllers\\FornecedorController.cs",
-              "ToolTip": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Controllers\\FornecedorController.cs",
-              "RelativeToolTip": "cafeservellocontroler\\Controllers\\FornecedorController.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAqwHYAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T13:43:53.554Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "RevendedorController.cs",
-              "DocumentMoniker": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Controllers\\RevendedorController.cs",
-              "RelativeDocumentMoniker": "cafeservellocontroler\\Controllers\\RevendedorController.cs",
-              "ToolTip": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Controllers\\RevendedorController.cs",
-              "RelativeToolTip": "cafeservellocontroler\\Controllers\\RevendedorController.cs",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAAAH0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T13:45:36.529Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Program.cs",
-              "RelativeDocumentMoniker": "cafeservellocontroler\\Program.cs",
-              "ToolTip": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Program.cs*",
-              "RelativeToolTip": "cafeservellocontroler\\Program.cs*",
-              "ViewState": "AgIAABYAAAAAAAAAAAAUwCIAAABUAAAAAAAAAA==",
+              "Title": "ModelProduto.cs",
+              "DocumentMoniker": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\ModelProduto.cs",
+              "RelativeDocumentMoniker": "cafeservellocontroler\\Models\\ModelProduto.cs",
+              "ToolTip": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\ModelProduto.cs",
+              "RelativeToolTip": "cafeservellocontroler\\Models\\ModelProduto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T14:18:02.066Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_Criar.cshtml",
-              "DocumentMoniker": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Fornecedor\\_Criar.cshtml",
-              "RelativeDocumentMoniker": "cafeservellocontroler\\Views\\Fornecedor\\_Criar.cshtml",
-              "ToolTip": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Fornecedor\\_Criar.cshtml",
-              "RelativeToolTip": "cafeservellocontroler\\Views\\Fornecedor\\_Criar.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-25T14:15:20.707Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Fornecedor\\Index.cshtml",
-              "RelativeDocumentMoniker": "cafeservellocontroler\\Views\\Fornecedor\\Index.cshtml",
-              "ToolTip": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Fornecedor\\Index.cshtml",
-              "RelativeToolTip": "cafeservellocontroler\\Views\\Fornecedor\\Index.cshtml",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-25T14:15:06.901Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "cafeservellocontroler\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "cafeservellocontroler\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAAEgAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-25T14:09:13.009Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "20251025140831_TerceiraMigration.cs",
-              "DocumentMoniker": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Migrations\\20251025140831_TerceiraMigration.cs",
-              "RelativeDocumentMoniker": "cafeservellocontroler\\Migrations\\20251025140831_TerceiraMigration.cs",
-              "ToolTip": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Migrations\\20251025140831_TerceiraMigration.cs",
-              "RelativeToolTip": "cafeservellocontroler\\Migrations\\20251025140831_TerceiraMigration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T14:08:31.424Z",
+              "WhenOpened": "2025-10-27T13:07:45.519Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "ProdutoRepositorio.cs",
-              "DocumentMoniker": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Repositorio\\ProdutoRepositorio\\ProdutoRepositorio.cs",
-              "RelativeDocumentMoniker": "cafeservellocontroler\\Repositorio\\ProdutoRepositorio\\ProdutoRepositorio.cs",
-              "ToolTip": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Repositorio\\ProdutoRepositorio\\ProdutoRepositorio.cs",
-              "RelativeToolTip": "cafeservellocontroler\\Repositorio\\ProdutoRepositorio\\ProdutoRepositorio.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T14:07:07.987Z",
-              "EditorCaption": ""
+              "Title": "_Editar.cshtml",
+              "DocumentMoniker": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Revendedor\\_Editar.cshtml",
+              "RelativeDocumentMoniker": "cafeservellocontroler\\Views\\Revendedor\\_Editar.cshtml",
+              "ToolTip": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Revendedor\\_Editar.cshtml",
+              "RelativeToolTip": "cafeservellocontroler\\Views\\Revendedor\\_Editar.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-27T13:06:01.667Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Produto\\Index.cshtml",
+              "RelativeDocumentMoniker": "cafeservellocontroler\\Views\\Produto\\Index.cshtml",
+              "ToolTip": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Produto\\Index.cshtml",
+              "RelativeToolTip": "cafeservellocontroler\\Views\\Produto\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-27T13:05:50.591Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "BancoContext.cs",
-              "DocumentMoniker": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Data\\BancoContext.cs",
-              "RelativeDocumentMoniker": "cafeservellocontroler\\Data\\BancoContext.cs",
-              "ToolTip": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Data\\BancoContext.cs",
-              "RelativeToolTip": "cafeservellocontroler\\Data\\BancoContext.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABkAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T14:04:55.627Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FornecedorRepositorio.cs",
-              "DocumentMoniker": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Repositorio\\FornecedorRepositorio\\FornecedorRepositorio.cs",
-              "RelativeDocumentMoniker": "cafeservellocontroler\\Repositorio\\FornecedorRepositorio\\FornecedorRepositorio.cs",
-              "ToolTip": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Repositorio\\FornecedorRepositorio\\FornecedorRepositorio.cs",
-              "RelativeToolTip": "cafeservellocontroler\\Repositorio\\FornecedorRepositorio\\FornecedorRepositorio.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAABgAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T14:04:42.688Z",
-              "EditorCaption": ""
+              "Title": "ApagarConfirmacao.cshtml",
+              "DocumentMoniker": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Revendedor\\ApagarConfirmacao.cshtml",
+              "RelativeDocumentMoniker": "cafeservellocontroler\\Views\\Revendedor\\ApagarConfirmacao.cshtml",
+              "ToolTip": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Revendedor\\ApagarConfirmacao.cshtml",
+              "RelativeToolTip": "cafeservellocontroler\\Views\\Revendedor\\ApagarConfirmacao.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-27T13:05:43.236Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "RevendedorMap.cs",
-              "DocumentMoniker": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Mapeamento\\RevendedorMap.cs",
-              "RelativeDocumentMoniker": "cafeservellocontroler\\Mapeamento\\RevendedorMap.cs",
-              "ToolTip": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Mapeamento\\RevendedorMap.cs",
-              "RelativeToolTip": "cafeservellocontroler\\Mapeamento\\RevendedorMap.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAgwCwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T13:57:46.081Z",
-              "EditorCaption": ""
+              "Title": "_Editar.cshtml",
+              "DocumentMoniker": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Produto\\_Editar.cshtml",
+              "RelativeDocumentMoniker": "cafeservellocontroler\\Views\\Produto\\_Editar.cshtml",
+              "ToolTip": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Produto\\_Editar.cshtml",
+              "RelativeToolTip": "cafeservellocontroler\\Views\\Produto\\_Editar.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-27T13:05:39.951Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_Criar.cshtml",
+              "DocumentMoniker": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Produto\\_Criar.cshtml",
+              "RelativeDocumentMoniker": "cafeservellocontroler\\Views\\Produto\\_Criar.cshtml",
+              "ToolTip": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Produto\\_Criar.cshtml",
+              "RelativeToolTip": "cafeservellocontroler\\Views\\Produto\\_Criar.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-27T13:05:37.344Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_ApagarConfirmacao.cshtml",
+              "DocumentMoniker": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Produto\\_ApagarConfirmacao.cshtml",
+              "RelativeDocumentMoniker": "cafeservellocontroler\\Views\\Produto\\_ApagarConfirmacao.cshtml",
+              "ToolTip": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Produto\\_ApagarConfirmacao.cshtml",
+              "RelativeToolTip": "cafeservellocontroler\\Views\\Produto\\_ApagarConfirmacao.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-27T13:05:34.269Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\appsettings.json",
-              "RelativeDocumentMoniker": "cafeservellocontroler\\appsettings.json",
-              "ToolTip": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\appsettings.json",
-              "RelativeToolTip": "cafeservellocontroler\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-25T14:04:12.7Z",
-              "EditorCaption": ""
+              "Title": "_Criar.cshtml",
+              "DocumentMoniker": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Fornecedor\\_Criar.cshtml",
+              "RelativeDocumentMoniker": "cafeservellocontroler\\Views\\Fornecedor\\_Criar.cshtml",
+              "ToolTip": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Fornecedor\\_Criar.cshtml",
+              "RelativeToolTip": "cafeservellocontroler\\Views\\Fornecedor\\_Criar.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-27T13:05:30.682Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Revendedor\\Index.cshtml",
+              "RelativeDocumentMoniker": "cafeservellocontroler\\Views\\Revendedor\\Index.cshtml",
+              "ToolTip": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Revendedor\\Index.cshtml",
+              "RelativeToolTip": "cafeservellocontroler\\Views\\Revendedor\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-27T13:01:39.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Criar.cshtml",
+              "DocumentMoniker": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Revendedor\\_Criar.cshtml",
+              "RelativeDocumentMoniker": "cafeservellocontroler\\Views\\Revendedor\\_Criar.cshtml",
+              "ToolTip": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Revendedor\\_Criar.cshtml",
+              "RelativeToolTip": "cafeservellocontroler\\Views\\Revendedor\\_Criar.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-27T13:01:14.037Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "FornecedorMap.cs",
-              "DocumentMoniker": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Mapeamento\\FornecedorMap.cs",
-              "RelativeDocumentMoniker": "cafeservellocontroler\\Mapeamento\\FornecedorMap.cs",
-              "ToolTip": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Mapeamento\\FornecedorMap.cs",
-              "RelativeToolTip": "cafeservellocontroler\\Mapeamento\\FornecedorMap.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAC4AAAAsAAAAAAAAAA==",
+              "Title": "_Editar.cshtml",
+              "DocumentMoniker": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Fornecedor\\_Editar.cshtml",
+              "RelativeDocumentMoniker": "cafeservellocontroler\\Views\\Fornecedor\\_Editar.cshtml",
+              "ToolTip": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Fornecedor\\_Editar.cshtml",
+              "RelativeToolTip": "cafeservellocontroler\\Views\\Fornecedor\\_Editar.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-27T13:05:21.223Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "_ApagarConfirmacao.cshtml",
+              "DocumentMoniker": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Fornecedor\\_ApagarConfirmacao.cshtml",
+              "RelativeDocumentMoniker": "cafeservellocontroler\\Views\\Fornecedor\\_ApagarConfirmacao.cshtml",
+              "ToolTip": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Fornecedor\\_ApagarConfirmacao.cshtml",
+              "RelativeToolTip": "cafeservellocontroler\\Views\\Fornecedor\\_ApagarConfirmacao.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-27T13:05:11.806Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ModelPessoa.cs",
+              "DocumentMoniker": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\Pessoa\\ModelPessoa.cs",
+              "RelativeDocumentMoniker": "cafeservellocontroler\\Models\\Pessoa\\ModelPessoa.cs",
+              "ToolTip": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\Pessoa\\ModelPessoa.cs",
+              "RelativeToolTip": "cafeservellocontroler\\Models\\Pessoa\\ModelPessoa.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T13:57:44.687Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-27T12:57:54.619Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "ModelFornecedor.cs",
-              "DocumentMoniker": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\Pessoa\\ModelFornecedor.cs",
-              "RelativeDocumentMoniker": "cafeservellocontroler\\Models\\Pessoa\\ModelFornecedor.cs",
-              "ToolTip": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\Pessoa\\ModelFornecedor.cs",
-              "RelativeToolTip": "cafeservellocontroler\\Models\\Pessoa\\ModelFornecedor.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAAAyAAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Fornecedor\\Index.cshtml",
+              "RelativeDocumentMoniker": "cafeservellocontroler\\Views\\Fornecedor\\Index.cshtml",
+              "ToolTip": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Fornecedor\\Index.cshtml",
+              "RelativeToolTip": "cafeservellocontroler\\Views\\Fornecedor\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-27T13:04:58.518Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FornecedorRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Repositorio\\FornecedorRepositorio\\FornecedorRepositorio.cs",
+              "RelativeDocumentMoniker": "cafeservellocontroler\\Repositorio\\FornecedorRepositorio\\FornecedorRepositorio.cs",
+              "ToolTip": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Repositorio\\FornecedorRepositorio\\FornecedorRepositorio.cs",
+              "RelativeToolTip": "cafeservellocontroler\\Repositorio\\FornecedorRepositorio\\FornecedorRepositorio.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAADwvyoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T13:52:54.602Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-27T13:02:11.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ModelFornecedor.cs",
+              "DocumentMoniker": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\Pessoa\\ModelFornecedor.cs",
+              "RelativeDocumentMoniker": "cafeservellocontroler\\Models\\Pessoa\\ModelFornecedor.cs",
+              "ToolTip": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\Pessoa\\ModelFornecedor.cs",
+              "RelativeToolTip": "cafeservellocontroler\\Models\\Pessoa\\ModelFornecedor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T12:57:22.659Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ModelFuncionario.cs",
+              "DocumentMoniker": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\Pessoa\\ModelFuncionario.cs",
+              "RelativeDocumentMoniker": "cafeservellocontroler\\Models\\Pessoa\\ModelFuncionario.cs",
+              "ToolTip": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\Pessoa\\ModelFuncionario.cs",
+              "RelativeToolTip": "cafeservellocontroler\\Models\\Pessoa\\ModelFuncionario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T12:58:13.721Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ModelRevendedor.cs",
+              "DocumentMoniker": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\Pessoa\\ModelRevendedor.cs",
+              "RelativeDocumentMoniker": "cafeservellocontroler\\Models\\Pessoa\\ModelRevendedor.cs",
+              "ToolTip": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\Pessoa\\ModelRevendedor.cs",
+              "RelativeToolTip": "cafeservellocontroler\\Models\\Pessoa\\ModelRevendedor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T12:57:57.776Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "FornecedorMap.cs",
+              "DocumentMoniker": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Mapeamento\\FornecedorMap.cs",
+              "RelativeDocumentMoniker": "cafeservellocontroler\\Mapeamento\\FornecedorMap.cs",
+              "ToolTip": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Mapeamento\\FornecedorMap.cs",
+              "RelativeToolTip": "cafeservellocontroler\\Mapeamento\\FornecedorMap.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T12:57:04.857Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "FornecedorController.cs",
+              "DocumentMoniker": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Controllers\\FornecedorController.cs",
+              "RelativeDocumentMoniker": "cafeservellocontroler\\Controllers\\FornecedorController.cs",
+              "ToolTip": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Controllers\\FornecedorController.cs",
+              "RelativeToolTip": "cafeservellocontroler\\Controllers\\FornecedorController.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAADwv3wAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T12:55:17.737Z"
             }
           ]
         }

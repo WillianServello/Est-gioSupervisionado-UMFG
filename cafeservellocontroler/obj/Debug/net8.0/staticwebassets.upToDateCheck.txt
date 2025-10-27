@@ -3,6 +3,7 @@ wwwroot\css\navbar.css
 wwwroot\css\sidebar.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\js\Search_PesquisaJs\search.js
 wwwroot\js\sidebar.js
 wwwroot\js\site.js
 wwwroot\js\ValidacoesProduto\validacaoCrud.js
@@ -63,3 +64,4 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
+wwwroot\css\Search_PesquisaCss\search.css

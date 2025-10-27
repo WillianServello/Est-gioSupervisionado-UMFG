@@ -18,8 +18,6 @@ namespace cafeservellocontroller
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
-         
-
 
             // Configura o DbContext + SQL Server
             builder.Services.AddDbContext<BancoContext>(options =>
@@ -36,8 +34,6 @@ namespace cafeservellocontroller
 
             var app = builder.Build(); // só depois de registrar tudo
 
-
-           
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())

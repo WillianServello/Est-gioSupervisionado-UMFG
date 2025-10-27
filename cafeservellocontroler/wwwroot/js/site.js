@@ -1,5 +1,6 @@
 ﻿//const { bottom } = require("@popperjs/core");
 
+
 $('.close-alert').click(function () {
     $('.alert').hide('hide');
 });
@@ -22,6 +23,5 @@ function limparFormulario() {
      let spansErro = document.querySelectorAll(".text-danger, .field-validation-error");
      spansErro.forEach(s => s.innerText = "");
 }
-
 
 

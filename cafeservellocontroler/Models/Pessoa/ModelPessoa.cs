@@ -4,14 +4,16 @@ namespace cafeservellocontroler.Models.Pessoa
 {
     public class ModelPessoa
     {
+        
+
         public string Nome { get; private set; }
         public string Cnpj { get; private set; }
         public string Email { get; set; }
-        public string Telefone { get; set; }
+        public string Telefone { get; set; } 
+        public DateTime DataCadastro { get; set; } = DateTime.Now;
 
         public ModelPessoa(string nome, string cnpj, string telefone)
         {
-            ArgumentNullException.ThrowIfNullOrWhiteSpace(nome);
             Nome = nome;
             Cnpj = cnpj;
             Telefone = telefone;
@@ -20,6 +22,8 @@ namespace cafeservellocontroler.Models.Pessoa
         protected ModelPessoa()
         {
         }
+
+        
 
         public void SetNome (string nome)
         {

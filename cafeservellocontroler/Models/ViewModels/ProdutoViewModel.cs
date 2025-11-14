@@ -29,5 +29,8 @@ namespace cafeservellocontroler.Models.ViewModels
         [Required(ErrorMessage = "Digite um estoque disponivel")]
         [Range(0, int.MaxValue, ErrorMessage = "O valor não pode ser negativo.")]
         public int? Estoque { get; set; }
+
+        public DateTime DataCadastro { get; set; } = DateTime.Now;
+
     }
 }

@@ -65,6 +65,7 @@
 
     @*Aqui e a tabela, onde quando for adicionado ira aparecer um novo produto*@
         
+    @* A barra de pesquisar *@
          <div class="search-position">   
             <div id="container-search">
                 <div class="input-group">
@@ -72,6 +73,7 @@
                         <i class="fa-solid fa-magnifying-glass"></i>
                         
                     </div>
+
                     <input type="text"
                            id="search"
                            class="input-field"
@@ -80,6 +82,7 @@
             </div>
          </div>
 
+        
 
         <table class="table" id="table">
         <thead >
@@ -89,6 +92,7 @@
                 <th scope="col">Tipo</th>
                 <th scope="col">Preço</th>
                 <th scope="col">Estoque</th>
+                <th scope="col">Data de Criação</th>
                 <th scope="col">Modificar</th>
             </tr>
         </thead>
@@ -103,6 +107,7 @@
                         <td>@produto.Descricao</td>
                         <td>@(produto.Preco.HasValue ? produto.Preco.Value.ToString("C") : "0,00")</td>
                         <td>@produto.Estoque</td>
+                        <td>@produto.DataCadastro</td>
                         <td>
                             <div role="group">
 
@@ -162,5 +167,7 @@
      
 </div>
 </div>
+
+
 
 

@@ -60,11 +60,26 @@
 
 
 
+        @* A barra de pesquisar *@
+        <div class="search-position">
+            <div id="container-search">
+                <div class="input-group">
+                    <div class="input-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
 
+                    </div>
+
+                    <input type="text"
+                           id="search"
+                           class="input-field"
+                           placeholder="Pesquisar Produto" />
+                </div>
+            </div>
+        </div>
 
         @*Aqui e a tabela, onde quando for adicionado ira aparecer um novo fornecedor*@
 
-        <table class="table">
+        <table class="table" id="table">
             <thead>
                 <tr>
                     <th scope="col">Codigo</th>
@@ -73,6 +88,8 @@
                     <th scope="col">Email</th>
                     <th scope="col">Telefone</th>
                     <th scope="col">Matéria Prima</th>
+                    <th scope="col">Data de Criação</th>
+                    <th scope="col">Modificar</th>
                 </tr>
             </thead>
             <tbody>
@@ -87,6 +104,7 @@
                             <td>@fornecedor.Email</td>
                             <td>@fornecedor.Telefone</td>
                             <td>@fornecedor.MateriaPrima</td>
+                            <td>@fornecedor.DataCadastro</td>
                             <td>
                                 <div role="group">
 

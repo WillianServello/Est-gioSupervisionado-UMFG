@@ -16,6 +16,8 @@ namespace cafeservellocontroler.Data
 
         public DbSet<ModelFornecedor> Fornecedor { get; set; }
 
+        public DbSet<ModelUsuario> Usuarios { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -24,6 +26,7 @@ namespace cafeservellocontroler.Data
             modelBuilder.ApplyConfiguration(new ProdutoMap());
             modelBuilder.ApplyConfiguration(new RevendedorMap());
             modelBuilder.ApplyConfiguration(new FornecedorMap());
+            modelBuilder.ApplyConfiguration(new UsuarioMap());
         }
     }
 

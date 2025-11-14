@@ -39,6 +39,11 @@ namespace cafeservellocontroler.Mapeamento
                 .Property(x => x.Estoque)
                 .HasColumnName("EstoqueProduto")
                 .IsRequired();
+
+            builder
+                .Property(x => x.DataCadastro)
+                .HasColumnName("DataCadastro")
+                .IsRequired();
         }
     }
 }

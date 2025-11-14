@@ -56,6 +56,11 @@ namespace cafeservellocontroler.Mapeamento
                 .HasMaxLength(100)
                 .IsRequired();
 
+            builder
+                .Property(x => x.DataCadastro)
+                .HasColumnName("DataCadastro")
+                .IsRequired();
+
         }
     }
 }

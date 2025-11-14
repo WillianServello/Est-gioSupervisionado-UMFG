@@ -29,6 +29,7 @@ namespace cafeservellocontroler.Controllers
                 Telefone = r.Telefone,
                 Email = r.Email,
                 MateriaPrima = r.MateriaPrima,
+                DataCadastro = r.DataCadastro.ToUniversalTime()
             }).ToList();
 
             return View(viewModels);
@@ -70,7 +71,9 @@ namespace cafeservellocontroler.Controllers
                 );
 
             //opcional
+
             fornecedor.Email = model.Email;
+            fornecedor.DataCadastro = model.DataCadastro;
 
             //adicionando ao repositorio
             _fornecedorRepositorio.Adicionar(fornecedor);

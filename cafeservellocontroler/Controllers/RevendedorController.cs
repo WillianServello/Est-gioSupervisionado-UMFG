@@ -30,7 +30,9 @@ namespace cafeservellocontroler.Controllers
                 Endereco = r.Endereco,
                 NomeFantasia = r.NomeFantasia,
                 Telefone = r.Telefone,
-                Email = r.Email
+                Email = r.Email,
+                DataCadastro = r.DataCadastro
+
             }).ToList();
 
             return View(viewModels);
@@ -41,9 +43,9 @@ namespace cafeservellocontroler.Controllers
             return PartialView();
         }
 
-        public IActionResult Editar(int Id)
+        public IActionResult Editar(int id)
         {
-            ModelRevendedor revendedor = _revendedorRepositorio.ListarPorId(Id);
+            ModelRevendedor revendedor = _revendedorRepositorio.ListarPorId(id);
             return PartialView(revendedor);
         }
 
@@ -71,6 +73,8 @@ namespace cafeservellocontroler.Controllers
                 model.Endereco,
                 model.NomeFantasia
                 );
+                
+                revendedor.DataCadastro = model.DataCadastro;
 
             //opcional
             revendedor.Email = model.Email;

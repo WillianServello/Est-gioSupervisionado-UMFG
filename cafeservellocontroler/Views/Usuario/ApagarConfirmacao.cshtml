@@ -1,0 +1,12 @@
+﻿@using cafeservellocontroler.Models.ViewModels
+@model UsuarioViewModel
+@{
+    ViewData["Title"] = "Confirmação de Apagar Revendedor";
+}
+
+<div class="text-center">
+    <h3>Realmente deseja apagar o Usuario (@Model.Email)</h3>
+
+    <a class="btn btn-primary btn-block" role="button" asp-controller="Usuario" asp-action="Index">Cancelar Exclusão</a>
+    <a class="btn btn-danger btn-block" role="button" asp-controller="Usuario" asp-route-id="@Model.Id" asp-action="Apagar">Confirmar Exclusão</a>
+</div>

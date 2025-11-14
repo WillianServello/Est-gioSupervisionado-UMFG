@@ -17,7 +17,7 @@ namespace cafeservellocontroler.Models
 
         public int Estoque { get; set; }
 
-
+        public DateTime DataCadastro { get; set; } = DateTime.UtcNow;
 
 
 
@@ -39,6 +39,7 @@ namespace cafeservellocontroler.Models
             Descricao = viewModel.Descricao;
             Preco = viewModel.Preco ?? 0;
             Estoque = viewModel.Estoque ?? 0;
+            DataCadastro = DateTime.UtcNow;
         }
     }
 }

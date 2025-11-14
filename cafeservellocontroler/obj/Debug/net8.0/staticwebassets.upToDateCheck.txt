@@ -1,5 +1,6 @@
 wwwroot\css\Avatar.png
 wwwroot\css\navbar.css
+wwwroot\css\Search_PesquisaCss\search.css
 wwwroot\css\sidebar.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
@@ -64,4 +65,3 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
-wwwroot\css\Search_PesquisaCss\search.css

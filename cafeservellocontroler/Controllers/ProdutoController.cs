@@ -22,7 +22,8 @@ namespace cafeservellocontroler.Controllers
                 Nome = p.Nome,
                 Descricao = p.Descricao,
                 Preco = p.Preco,
-                Estoque = p.Estoque
+                Estoque = p.Estoque,
+                DataCadastro = p.DataCadastro
             }).ToList();
 
             return View(viewModels);
@@ -85,6 +86,7 @@ namespace cafeservellocontroler.Controllers
 
                 
                 produto.Descricao = model.Descricao;
+                produto.DataCadastro = model.DataCadastro;
 
                 if (ModelState.IsValid)
                 {

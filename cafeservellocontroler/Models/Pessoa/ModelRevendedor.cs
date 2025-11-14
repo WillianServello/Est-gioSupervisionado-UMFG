@@ -35,6 +35,7 @@ namespace cafeservellocontroler.Models.Pessoa
             SetCnpj(viewModel.Cnpj);
             Endereco = viewModel.Endereco;
             SetNomeFantasia(viewModel.NomeFantasia);
+            DataCadastro = viewModel.DataCadastro;
 
         }
     }

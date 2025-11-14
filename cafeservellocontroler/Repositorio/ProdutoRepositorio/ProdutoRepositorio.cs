@@ -1,6 +1,6 @@
 ﻿using cafeservellocontroler.Data;
 using cafeservellocontroler.Models;
-using Npgsql;
+
 using System.Data.Common;
 
 namespace cafeservellocontroler.Repositorio.ProdutoRepositorio

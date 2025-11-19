@@ -11,6 +11,7 @@
           "Microsoft.EntityFrameworkCore": "8.0.20",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.20",
           "MySql.EntityFrameworkCore": "8.0.20",
+          "Newtonsoft.Json": "13.0.4",
           "jQuery.InputMask": "5.0.9"
         },
         "runtime": {
@@ -511,6 +512,14 @@
           }
         }
       },
+      "Newtonsoft.Json/13.0.4": {
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.4.30916"
+          }
+        }
+      },
       "System.CodeDom/4.4.0": {
         "runtime": {
           "lib/netstandard2.0/System.CodeDom.dll": {
@@ -884,6 +893,13 @@
       "sha512": "sha512-Z/iQB49k4pkrEj2UEJ0SF0NkmmT+yuRNDDuUexcRkmODt0g5XDCkkCJVpoH37nXrDvJ5oHhFWueHbHHredZZtw==",
       "path": "mysql.entityframeworkcore/8.0.20",
       "hashPath": "mysql.entityframeworkcore.8.0.20.nupkg.sha512"
+    },
+    "Newtonsoft.Json/13.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pdgNNMai3zv51W5aq268sujXUyx7SNdE2bj1wZcWjAQrKMFZV260lbqYop1d2GM67JI1huLRwxo9ZqnfF/lC6A==",
+      "path": "newtonsoft.json/13.0.4",
+      "hashPath": "newtonsoft.json.13.0.4.nupkg.sha512"
     },
     "System.CodeDom/4.4.0": {
       "type": "package",

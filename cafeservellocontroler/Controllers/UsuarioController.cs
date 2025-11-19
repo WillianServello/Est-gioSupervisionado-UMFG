@@ -1,4 +1,5 @@
-﻿using cafeservellocontroler.Models.Pessoa;
+﻿using cafeservellocontroler.Filters;
+using cafeservellocontroler.Models.Pessoa;
 using cafeservellocontroler.Models.ViewModels;
 using cafeservellocontroler.Repositorio.ProdutoRepositorio;
 using cafeservellocontroler.Repositorio.UsuarioRepositorio;
@@ -6,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace cafeservellocontroler.Controllers
 {
+    [PaginaRestritaSomenteAdmin]
+    [PaginaUsuarioLogado]
     public class UsuarioController : Controller
     {
         private readonly IUsuarioRepositorio _usuarioRepositorio;
@@ -26,6 +29,7 @@ namespace cafeservellocontroler.Controllers
                 Login = u.Login,
                 Senha = u.Senha,
                 Email = u.Email,
+                Perfil = u.Perfil,
                 DataCadastro = u.DataCadastro
 
             }).ToList();
@@ -53,31 +57,59 @@ namespace cafeservellocontroler.Controllers
         public IActionResult Criar(UsuarioViewModel model)
             {
 
+            try{ 
             var usuario = new ModelUsuario
                 (
                
                 model.Login,
                 model.Senha,
                 model.Email
-                
                 );
 
+            usuario.SetPerfil(model.Perfil);
             usuario.DataCadastro = model.DataCadastro;
 
-        
 
-            _usuarioRepositorio.Adicionar(usuario);
-            return RedirectToAction("Index");
+
+            if (ModelState.IsValid)
+            {
+
+
+                _usuarioRepositorio.Adicionar(usuario);
+                TempData["MensagemSucesso"] = "Usuário cadastrado com sucesso";
+                return RedirectToAction("Index");
+            }
+            return PartialView("_Criar", usuario);
         }
+
+
+        
+            catch(System.Exception erro)
+            {
+                TempData["MensagemErro"] = $"Não foi possivel realizar o usuário: {erro.Message}";
+                return RedirectToAction("Index");
+
+
+    }
+}
 
         [HttpPost]
         public IActionResult Alterar(UsuarioViewModel model)
         {
+
+
             var usuario = _usuarioRepositorio.ListarPorId(model.Id);
+            if(usuario == null)
+            {
+                TempData["MensagemErro"] = "Não foi possivel encontrar usuário: ";
+                return RedirectToAction("Index");
+            }
 
-            usuario.AtualizarDados(model);
-
-            _usuarioRepositorio.Atualizar(usuario);
+            
+                usuario.AtualizarDados(model);
+                _usuarioRepositorio.Atualizar(usuario);
+                TempData["MensagemSucesso"] = "Alteração realizado com sucesso! ";
+          
 
             return RedirectToAction("Index");
         }
@@ -91,11 +123,11 @@ namespace cafeservellocontroler.Controllers
 
                 if (apagado)
                 {
-                    TempData["MensagemSucesso"] = "Revendedor apagado com sucesso!";
+                    TempData["MensagemSucesso"] = "Usuário apagado com sucesso!";
                 }
                 else
                 {
-                    TempData["MensagemErro"] = "Erro ao apagar o revendedor.";
+                    TempData["MensagemErro"] = "Erro ao apagar o usuário.";
                 }
 
                 return RedirectToAction("Index");

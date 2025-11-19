@@ -30,3 +30,15 @@ body {
     width: 30px;
 
  }
+
+
+.alert {
+    position: relative !important; /* remove o efeito de popup */
+    z-index: 1; /* ou nem precisa */
+}
+
+
+.bodi {
+    margin: auto
+}
+

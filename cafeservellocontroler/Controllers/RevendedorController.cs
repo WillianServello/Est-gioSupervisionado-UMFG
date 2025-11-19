@@ -1,4 +1,5 @@
 ﻿using cafeservellocontroler.Data;
+using cafeservellocontroler.Filters;
 using cafeservellocontroler.Models;
 using cafeservellocontroler.Models.Pessoa;
 using cafeservellocontroler.Models.ViewModels;
@@ -7,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace cafeservellocontroler.Controllers
 {
+    [PaginaUsuarioLogado]
     public class RevendedorController : Controller
     {
 
@@ -62,46 +64,72 @@ namespace cafeservellocontroler.Controllers
         {
             //Aqui ele esta fazendo a entrega de infomacoes, ele ta pegando as informacoes do RevendedorViewModel e passando para o ModelRevendedor pelo controller, o que esta dentro
             // do parenteses e por pq e necessario, o que esta fora e pq e opcional
-
+            try { 
             var revendedor = new ModelRevendedor(
 
                 //necessario
-                
+
                 model.Nome,
                 model.Telefone,
                 model.Cnpj,
                 model.Endereco,
                 model.NomeFantasia
                 );
-                
-                revendedor.DataCadastro = model.DataCadastro;
+
+            revendedor.DataCadastro = model.DataCadastro;
 
             //opcional
             revendedor.Email = model.Email;
-           
-            //adicionando ao repositorio
-            _revendedorRepositorio.Adicionar(revendedor);
 
-            //direto pro Index
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+
+
+                _revendedorRepositorio.Adicionar(revendedor);
+                TempData["MensagemSucesso"] = "Revendedor cadastrado com sucesso";
+                return RedirectToAction("Index");
+            }
+            return PartialView("_Criar", revendedor);
         }
+
+
+        
+            catch(System.Exception erro)
+            {
+                TempData["MensagemErro"] = $"Não foi possivel realizar o cadastro: {erro.Message}";
+                return RedirectToAction("Index");
+
+            
+    } 
+    
+}
 
 
         [HttpPost]
         public IActionResult Alterar(RevendedorViewModel model)
         {
             var revendedorExistente = _revendedorRepositorio.ListarPorId(model.Id);
+
             if (revendedorExistente == null)
             {
-                return NotFound("Revendedor não encontrado.");
+                TempData["MensagemErro"] = "Revendedor não encontrado."; // Mensagem de erro se o produto não for encontrado
+                return RedirectToAction("Index");
             }
 
-            
-            revendedorExistente.AtualizarDados(model);
-            
 
-            // Chama o repositório para salvar as alterações
-            _revendedorRepositorio.Atualizar(revendedorExistente);
+            revendedorExistente.AtualizarDados(model);
+
+
+
+            if (ModelState.IsValid)
+            {
+                _revendedorRepositorio.Atualizar(revendedorExistente);
+                TempData["MensagemSucesso"] = "Revendedor atualizado com sucesso";
+                return RedirectToAction("Index");
+            }
+
+                // Chama o repositório para salvar as alterações
+                _revendedorRepositorio.Atualizar(revendedorExistente);
             return RedirectToAction("Index");
         }
 

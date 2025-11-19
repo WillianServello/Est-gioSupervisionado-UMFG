@@ -1,0 +1,82 @@
+﻿@using cafeservellocontroler.Models.Login
+@model ModelLogin
+@{
+    Layout = "_LayoutDeslogado";
+    ViewData["Title"] = "Login";
+}
+<link href="~/css/login.css" rel="stylesheet" />
+@if (TempData["MensagemSucesso"] != null)
+{
+    <div class="alert-centralizado">
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @TempData["MensagemSucesso"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>
+}
+@if (TempData["MensagemErro"] != null)
+{
+    
+    <div class="alert-centralizado">
+        <div class="alert alert-danger alert-dismissible fade show " role="alert">
+            @TempData["MensagemErro"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+           
+                
+           
+        </div>
+    </div>
+  
+    
+}
+
+<div class="tela-login">
+
+   
+    <img class="icone-login bemvindo-login" src="/css/LOGO CAFE.png" alt="Alternate Text" />
+        <p class="bemvindo-login letra-login">Bem vindo de volta!</p>
+        
+  
+    
+
+    
+    <form class="form-login " asp-controller="Login" asp-action="Entrar" method="post">
+    <div class="form-group ">
+
+            <label class="logo-label-input-distancia" for="login">
+                Login
+            </label>
+            <input 
+                type="text" 
+                asp-for="Login" 
+                class="form-control input-login"
+                placeholder="👤 Informe o login">
+        <span asp-validation-for="Login" class="text-danger"></span>
+
+    </div>
+    <div class="form-group">
+
+            <label class="logo-label-distancia" for="senha">
+                Senha
+            </label>
+            <input 
+                type="password" 
+                asp-for="Senha" 
+                class="form-control input-login"
+                placeholder="🔒 Informe a senha">
+
+        <span asp-validation-for="Senha" class="text-danger"></span>
+    </div>
+
+    
+    <br />
+        
+    <button type="submit" class="btn btn-primary botao-login">Entrar</button>
+        <div class="d-flex">
+            <a class="ms-auto link-tracos" asp-action="RecuperarSenha" asp-controller="Login">Esqueceu sua senha?</a>
+        </div>
+</form>
+    </div>
+  
+
+        

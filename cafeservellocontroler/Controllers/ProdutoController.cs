@@ -1,11 +1,12 @@
-﻿using cafeservellocontroler.Models;
+﻿using cafeservellocontroler.Filters;
+using cafeservellocontroler.Models;
 using cafeservellocontroler.Models.ViewModels;
 using cafeservellocontroler.Repositorio.ProdutoRepositorio;
 using Microsoft.AspNetCore.Mvc;
 
 namespace cafeservellocontroler.Controllers
 {
-
+    [PaginaUsuarioLogado]
     public class ProdutoController : Controller
     {
         private readonly IProdutoRepositorio _produtoRepositorio;
@@ -93,7 +94,7 @@ namespace cafeservellocontroler.Controllers
                     
 
                     _produtoRepositorio.Adicionar(produto);
-                    TempData["MensagemSucesso"] = "Contato cadastrado com sucesso";
+                    TempData["MensagemSucesso"] = "Produto cadastrado com sucesso";
                     return RedirectToAction("Index");
                 }
                 return PartialView("_Criar", produto);
@@ -126,7 +127,7 @@ namespace cafeservellocontroler.Controllers
                 if (ModelState.IsValid)
                 {
                     _produtoRepositorio.Atualizar(produtoExistente);
-                    TempData["MensagemSucesso"] = "Contato atualizado com sucesso";
+                    TempData["MensagemSucesso"] = "Produto atualizado com sucesso";
                     return RedirectToAction("Index");
                 }
                 return PartialView("_Editar", produtoExistente);

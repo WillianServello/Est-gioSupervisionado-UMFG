@@ -1,4 +1,5 @@
 ﻿using cafeservellocontroler.Data;
+using cafeservellocontroler.Helper;
 using cafeservellocontroler.Repositorio.FornecedorRepositorio;
 using cafeservellocontroler.Repositorio.ProdutoRepositorio;
 using cafeservellocontroler.Repositorio.RevendedorRepositorio;
@@ -19,23 +20,32 @@ namespace cafeservellocontroller
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+                  
 
-            // Configura o DbContext + SQL Server
+            // DbContext
             builder.Services.AddDbContext<BancoContext>(options =>
-            options.UseMySQL(builder.Configuration.GetConnectionString("Database")));
+                options.UseMySQL(builder.Configuration.GetConnectionString("Database")));
+
+            // Repositórios
             builder.Services.AddScoped<IProdutoRepositorio, ProdutoRepositorio>();
-
-            builder.Services.AddDbContext<BancoContext>(options =>
-            options.UseMySQL(builder.Configuration.GetConnectionString("Database")));
             builder.Services.AddScoped<IRevendedorRepositorio, RevendedorRepositorio>();
-
-            builder.Services.AddDbContext<BancoContext>(options =>
-            options.UseMySQL(builder.Configuration.GetConnectionString("Database")));
-            builder.Services.AddScoped<IFornecedorRepositorio, FornecedorRepositorio >();
-
-            builder.Services.AddDbContext<BancoContext>(options =>
-            options.UseMySQL(builder.Configuration.GetConnectionString("Database")));
+            builder.Services.AddScoped<IFornecedorRepositorio, FornecedorRepositorio>();
             builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
+
+            // Sessão
+            builder.Services.AddHttpContextAccessor();     // CORRETO
+            builder.Services.AddScoped<ISessao, Sessao>();
+
+            // Email
+            builder.Services.AddScoped<IEmail, Email>();
+
+            builder.Services.AddSession(o =>
+            {
+                o.Cookie.HttpOnly = true;
+                o.Cookie.IsEssential = true;
+            });
+
+
 
             var app = builder.Build(); // só depois de registrar tudo
 
@@ -46,6 +56,8 @@ namespace cafeservellocontroller
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
+            
+          
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
@@ -54,9 +66,11 @@ namespace cafeservellocontroller
 
             app.UseAuthorization();
 
+            app.UseSession();
+
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Login}/{action=Index}/{id?}");
 
             app.Run();
         }

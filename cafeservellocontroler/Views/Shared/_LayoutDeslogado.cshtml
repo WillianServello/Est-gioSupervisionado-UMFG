@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CAFÉ SERVELLO</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/sidebar.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/navbar.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Search_PesquisaCss/Search.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/cafeservellocontroler.styles.css" asp-append-version="true" />
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+          integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    
+        </head>
+
+
+
+        <body class="bodi">
+           
+            @* NAVBAR *@
+
+                <header >
+                    <nav class="navbarr ">
+                        <div class="navbarr">
+                            <p>CAFÉ SERVELLO</p>
+                        </div>
+                    </nav>
+                </header>
+
+
+
+                <style>
+                   
+            .navbarr{
+            box-shadow: 0 0px 0px rgba(0, 0, 0, 0.4);
+            }
+
+
+        
+                </style>
+
+
+             
+
+    
+
+    <div class="container login custom">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <style>
+        .login{
+           
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          
+        }
+        main{
+            margin: auto;
+
+        }
+
+        
+
+       
+    </style>
+    
+
+
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    
+    <script src="~/js/ValidacoesProduto/validacaoCrud.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/Search_PesquisaJs/search.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    <script src="~/js/sidebar.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+</body>
+
+</html>

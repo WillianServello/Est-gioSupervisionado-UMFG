@@ -1,0 +1,78 @@
+﻿@using cafeservellocontroler.Models.Pessoa
+@model ModelUsuario 
+
+
+@* Foto do usuario *@
+<div id="sidebar_content">
+
+<div id="user">
+    <img src="~/css/vetor-de-ícone-perfil-do-avatar-padrão-foto-usuário-mídia-social-183042379.webp" id="user_avatar" alt="Avatar" />
+
+    <p id="user_infos">
+        <span class="item-description">
+            @Model.Login
+        </span>
+        <span class="item-description">
+               @cafeservellocontroler.Enums.PerfilEnum.Admin
+        </span>
+    </p>
+</div>
+
+@* Links e icons dos botões do sidebar *@
+<ul id="side_items">
+    <li class="side-item" data-url="/Produto/Index">
+        <a>
+            <i class="fa-brands fa-product-hunt"></i>
+            <span class="item-description">
+                Produto
+            </span>
+        </a>
+    </li>
+
+    <li class="side-item" data-url="/Revendedor/Index">
+        <a>
+            <i class="fa-solid fa-user"></i>
+            <span class="item-description">
+                Revendendor
+            </span>
+        </a>
+    </li>
+
+    @if (Model.Perfil == cafeservellocontroler.Enums.PerfilEnum.Admin)
+    {
+    <li class="side-item" data-url="/Usuario/Index">
+        <a href="#">
+            <i class="fa-solid fa-hands"></i>
+            <span class="item-description">
+                Usuário
+            </span>
+        </a>
+    </li>
+    }
+
+    <li class="side-item" data-url="/AlterarSenha/Index">
+        <a href="#">
+            <i class="fa-solid fa-gear"></i>
+            <span class="item-description">
+                Alterar Senha
+            </span>
+        </a>
+    </li>
+
+</ul>
+
+@* Botão de abrir o side bar *@
+<button id="open_btn">
+    <i id="open_btn_icon" class="fa-solid fa-chevron-right"></i>
+</button>
+</div>
+
+
+<a id="logout" asp-controller="Login" asp-action="Sair">
+    <button id="logout_btn">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span class="item-description">
+            logout
+        </span>
+    </button>
+</a>

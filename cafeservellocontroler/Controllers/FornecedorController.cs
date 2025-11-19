@@ -1,4 +1,5 @@
-﻿using cafeservellocontroler.Models.Pessoa;
+﻿using cafeservellocontroler.Filters;
+using cafeservellocontroler.Models.Pessoa;
 using cafeservellocontroler.Models.ViewModels;
 using cafeservellocontroler.Repositorio.FornecedorRepositorio;
 using cafeservellocontroler.Repositorio.RevendedorRepositorio;
@@ -6,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace cafeservellocontroler.Controllers
 {
+    [PaginaUsuarioLogado]
     public class FornecedorController : Controller
     {
 

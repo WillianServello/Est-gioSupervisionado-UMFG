@@ -1,0 +1,91 @@
+﻿
+.tela-login {
+    padding: 20px;
+    border-radius: 20px;
+    background: white;
+    width: 300px;
+    max-height: 460px;
+    box-shadow: 4px 5px 0.9px gray;
+    display: flex;
+    flex-direction: column;
+}
+.input-login {
+    border-radius: 8px;
+}
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.botao-login {
+    margin-top: auto; /* mantém o botão no fim */
+    box-shadow: 1px 2px 0.9px gray;
+    border-radius: 3px;
+    background: linear-gradient(to top right, #0a4fa8, #1a7de0);
+    border: none;
+    width: 100%;
+}
+
+.icone-login {
+    width: 100px;
+    height: 100px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo-label-input-distancia {
+    margin-top: 20px
+}
+
+
+.logo-label-distancia {
+    margin-top: 10px
+}
+
+
+input {
+    margin-top: 2px;
+    height: 40px;
+}
+
+
+
+.alert-centralizado {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+    .alert-centralizado .alert {
+        width: 300px;
+        text-align: center;
+    }
+
+.letra-login {
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0px 2px 0.9px gray;
+    border: none;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.link-tracos {
+    color: deepskyblue;
+    font-size: 14px;
+    margin-top: 10px;
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    text-decoration-color: #007bff;
+    text-decoration-thickness: 1px;
+}
+

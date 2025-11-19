@@ -65,6 +65,10 @@
               "target": "Package",
               "version": "[8.0.20, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.4, )"
+            },
             "jQuery.InputMask": {
               "target": "Package",
               "version": "[5.0.9, )"

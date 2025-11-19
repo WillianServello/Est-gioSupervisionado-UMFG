@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using cafeservellocontroler.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace cafeservellocontroler.Models.ViewModels
 {
@@ -16,6 +17,12 @@ namespace cafeservellocontroler.Models.ViewModels
 
         [Required(ErrorMessage = "O campo Email é obrigatório")]
         public string Email { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "O campo Perfil é obrigatório")]
+        public PerfilEnum Perfil { get; set; }
+
         public DateTime DataCadastro { get; set; } = DateTime.Now;
+
+
     }
 }

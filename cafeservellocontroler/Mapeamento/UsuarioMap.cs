@@ -37,10 +37,17 @@ namespace cafeservellocontroler.Mapeamento
                 .IsRequired();
 
             builder
+                .Property(x => x.Perfil)
+                .HasColumnName("Perfil")
+                .IsRequired();
+
+
+            builder
                 .Property(x => x.DataCadastro)
                 .HasColumnName("DataCadastro")
                 .IsRequired();
 
+            
 
         }
     }

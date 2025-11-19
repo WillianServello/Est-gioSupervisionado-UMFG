@@ -1,7 +1,7 @@
 ﻿@using cafeservellocontroler.Models.ViewModels
 @model List<UsuarioViewModel>
 @{
-    ViewData["Title"] = "Usuario";
+    ViewData["Title"] = "Usuário";
 }
 <div style="display: flex; justify-content:center;">
     <div class="container-fluid">
@@ -86,6 +86,7 @@
                     <th scope="col">Email</th>
                     <th scope="col">Login</th>
                     <th scope="col">Senha</th>
+                    <th scope="col">Nivel</th>
                     <th scope="col">Data de Criação</th>
                     <th scope="col">Modificar</th>
 
@@ -101,6 +102,7 @@
                             <td>@usuario.Email</td>
                             <td>@usuario.Login</td>
                             <td>@usuario.Senha</td>
+                            <td>@usuario.Perfil</td>
                             <td>@usuario.DataCadastro</td>
                             <td>
                                 <div role="group">

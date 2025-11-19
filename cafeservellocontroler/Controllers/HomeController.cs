@@ -1,10 +1,13 @@
-using System.Diagnostics;
+using cafeservellocontroler.Filters;
 using cafeservellocontroler.Models;
 using cafeservellocontroler.Models.Pessoa;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
 
 namespace cafeservellocontroler.Controllers
 {
+    [PaginaUsuarioLogado]
+
     public class HomeController : Controller
     {
 

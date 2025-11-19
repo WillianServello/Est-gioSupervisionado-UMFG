@@ -11,6 +11,7 @@ body {
     min-height: 100vh;
     background-color: #e3e9f7;
     
+    
 }
 
 main.custom {
@@ -20,6 +21,7 @@ main.custom {
     transition: margin-left 0.5s ease;
 }
 #sidebar {
+    z-index: 20;
     position: fixed !important;
     left: 0;
     height: 100% !important;
@@ -29,7 +31,6 @@ main.custom {
     background-color: #2F3A4A;
     transition: all .5s ease;
     min-width: 82px !important;
-    
     box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -181,4 +182,8 @@ ul {
     html {
         font-size: 14px;
     }
+}
+
+a {
+    text-decoration: none;
 }

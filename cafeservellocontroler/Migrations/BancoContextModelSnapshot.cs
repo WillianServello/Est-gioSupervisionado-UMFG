@@ -175,6 +175,10 @@ namespace cafeservellocontroler.Migrations
                         .HasColumnType("varchar(100)")
                         .HasColumnName("Login");
 
+                    b.Property<int>("Perfil")
+                        .HasColumnType("int")
+                        .HasColumnName("Perfil");
+
                     b.Property<string>("Senha")
                         .IsRequired()
                         .HasMaxLength(100)

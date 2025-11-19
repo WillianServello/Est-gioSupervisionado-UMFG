@@ -65,3 +65,7 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
+wwwroot\css\LOGO CAFE.png
+wwwroot\css\AvatarFixo.png
+wwwroot\css\vetor-de-ícone-perfil-do-avatar-padrão-foto-usuário-mídia-social-183042379.webp
+wwwroot\css\login.css

@@ -13,7 +13,7 @@ namespace cafeservellocontroler.Repositorio.ProdutoRepositorio
             _bancoContext = bancoContext;
 
         }
-        public ModelProduto ListarPorId(int id)
+        public ModelProduto? ListarPorId(int id)
         {
             return _bancoContext.Produtos.FirstOrDefault(x => x.Id == id);
         }

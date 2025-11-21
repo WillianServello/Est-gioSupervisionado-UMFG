@@ -1,13 +1,21 @@
 wwwroot\css\Avatar.png
+wwwroot\css\AvatarFixo.png
+wwwroot\css\login.css
+wwwroot\css\LOGO CAFE.png
 wwwroot\css\navbar.css
 wwwroot\css\Search_PesquisaCss\search.css
 wwwroot\css\sidebar.css
 wwwroot\css\site.css
+wwwroot\css\vetor-de-ícone-perfil-do-avatar-padrão-foto-usuário-mídia-social-183042379.webp
 wwwroot\favicon.ico
 wwwroot\js\Search_PesquisaJs\search.js
 wwwroot\js\sidebar.js
 wwwroot\js\site.js
+wwwroot\js\validacoesEditarVenda.js
 wwwroot\js\ValidacoesProduto\validacaoCrud.js
+wwwroot\js\ValidacoesVenda\validacoesVendaCriar.js
+wwwroot\js\ValidacoesVenda\validacoesVendaEditar.js
+wwwroot\js\ValidacoesVenda\validacoesVendaIndex.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
@@ -65,7 +73,3 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
-wwwroot\css\LOGO CAFE.png
-wwwroot\css\AvatarFixo.png
-wwwroot\css\vetor-de-ícone-perfil-do-avatar-padrão-foto-usuário-mídia-social-183042379.webp
-wwwroot\css\login.css

@@ -32,8 +32,7 @@ namespace cafeservellocontroler.Models.Pessoa
             Email = viewModel.Email;
             SetCnpj(viewModel.Cnpj);
             SetMateriaPrima(viewModel.MateriaPrima);
-            DataCadastro = viewModel.DataCadastro;
-            DataCadastro = viewModel.DataCadastro;
+           
 
         }
     }

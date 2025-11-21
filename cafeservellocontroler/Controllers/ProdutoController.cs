@@ -24,7 +24,9 @@ namespace cafeservellocontroler.Controllers
                 Descricao = p.Descricao,
                 Preco = p.Preco,
                 Estoque = p.Estoque,
-                DataCadastro = p.DataCadastro
+                DataCadastro = p.DataCadastro,
+                
+
             }).ToList();
 
             return View(viewModels);
@@ -42,11 +44,19 @@ namespace cafeservellocontroler.Controllers
 
 
         }
+
         public IActionResult ApagarConfirmacao(int id)
         {
             var produto = _produtoRepositorio.ListarPorId(id);
             if (produto == null) return NotFound();
             return PartialView("_ApagarConfirmacao", produto);
+        }
+
+        public IActionResult Detalhes(int id)
+        {
+            var produto = _produtoRepositorio.ListarPorId(id);
+
+            return PartialView("_Detalhes", produto);
         }
 
         public IActionResult Apagar(int id)
@@ -87,7 +97,7 @@ namespace cafeservellocontroler.Controllers
 
                 
                 produto.Descricao = model.Descricao;
-                produto.DataCadastro = model.DataCadastro;
+                produto.DataCadastroCriacao();
 
                 if (ModelState.IsValid)
                 {
@@ -122,7 +132,7 @@ namespace cafeservellocontroler.Controllers
                 }
 
                 produtoExistente.AtualizarDados(model);
-
+                produtoExistente.AtualizarCadastro();
 
                 if (ModelState.IsValid)
                 {

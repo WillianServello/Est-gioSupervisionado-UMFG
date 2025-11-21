@@ -44,6 +44,11 @@ namespace cafeservellocontroler.Mapeamento
                 .Property(x => x.DataCadastro)
                 .HasColumnName("DataCadastro")
                 .IsRequired();
+
+            builder
+                .Property(x => x.DataAtualizacaoCadastro)
+                .HasColumnName("DataAtualizacaoCadastro")
+                .IsRequired();
         }
     }
 }

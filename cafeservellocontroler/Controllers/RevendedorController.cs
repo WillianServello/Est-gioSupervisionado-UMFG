@@ -59,6 +59,12 @@ namespace cafeservellocontroler.Controllers
             return PartialView("~/Views/Revendedor/ApagarConfirmacao.cshtml", revendedor);
         }
 
+        public IActionResult Detalhes(int id)
+        {
+            ModelRevendedor revendedor = _revendedorRepositorio.ListarPorId(id);
+            return PartialView("_Detalhes", revendedor);
+        }
+
         [HttpPost]
         public IActionResult Criar(RevendedorViewModel model)
         {
@@ -76,10 +82,10 @@ namespace cafeservellocontroler.Controllers
                 model.NomeFantasia
                 );
 
-            revendedor.DataCadastro = model.DataCadastro;
+                revendedor.CriacaoDataCadastro();
 
-            //opcional
-            revendedor.Email = model.Email;
+                //opcional
+                revendedor.Email = model.Email;
 
             if (ModelState.IsValid)
             {
@@ -116,7 +122,7 @@ namespace cafeservellocontroler.Controllers
                 return RedirectToAction("Index");
             }
 
-
+            revendedorExistente.AtualizarDataCadastro();
             revendedorExistente.AtualizarDados(model);
 
 

@@ -1,4 +1,5 @@
-﻿using cafeservellocontroler.Models.Pessoa;
+﻿using cafeservellocontroler.Enums;
+using cafeservellocontroler.Models.Pessoa;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -47,7 +48,25 @@ namespace cafeservellocontroler.Mapeamento
                 .HasColumnName("DataCadastro")
                 .IsRequired();
 
-            
+            builder
+                .Property(x => x.DataAtualizacaoCadastro)
+                .HasColumnName("DataAtualizacaoCadastro")
+                .IsRequired();
+
+            string senhaAdminHash = "123456";
+
+            builder.HasData(
+                // ➡️ USE O NOVO CONSTRUTOR EM VEZ DA SINTAXE DE INICIALIZAÇÃO DE OBJETO
+                new ModelUsuario(
+                    id: 1,
+                    login: "admin",
+                    senha: senhaAdminHash,
+                    email: "admin@cafeservello.com",
+                    perfil: PerfilEnum.Admin,
+                    dataCadastro: DateTime.Now,
+                    dataAtualizacaoCadastro: DateTime.Now
+                )
+            );
 
         }
     }

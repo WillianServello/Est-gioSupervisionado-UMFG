@@ -15,13 +15,13 @@ namespace cafeservellocontroler.Repositorio.UsuarioRepositorio
 
         
 
-        public ModelUsuario BuscarPorLogin(string login)
+        public ModelUsuario? BuscarPorLogin(string login)
         {
             return _bancoContext.Usuarios.FirstOrDefault(x => x.Login.ToUpper() == login.ToUpper());
 
            
         }
-        public ModelUsuario BuscarPorEmailELogin(string email, string login)
+        public ModelUsuario? BuscarPorEmailELogin(string email, string login)
         {
             return _bancoContext.Usuarios.FirstOrDefault(x => x.Email.ToUpper() == email.ToUpper() && x.Login.ToUpper() == login.ToUpper());
         }

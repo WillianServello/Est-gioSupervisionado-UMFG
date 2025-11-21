@@ -1,0 +1,237 @@
+﻿@using cafeservellocontroler.Models.Venda
+@model List<ModelVenda>
+
+@{
+    ViewData["Title"] = "Vendas";
+}
+
+<h1>Vendas</h1>
+<hr />
+
+<div class="d-flex justify-content-end">
+    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalCriar" onclick="limparFormulario()">
+        Novo
+    </button>
+</div>
+
+@if (TempData["MensagemSucesso"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @TempData["MensagemSucesso"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @TempData["MensagemErro"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+<div class="mt-4">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Data da Venda</th>
+                <th>Revendedor</th>
+                <th>Usuário (Vendedor)</th>
+                <th>Itens</th>
+                <th>Total</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                @foreach (var venda in Model)
+                {
+                    <tr>
+                        <td>@venda.Id</td>
+                        <td>@venda.DataVenda.ToString("dd/MM/yyyy HH:mm")</td>
+
+                        <td>@venda.Revendedor.Nome</td>
+
+                        <td>@venda.Usuario.Login</td>
+
+                        <td>@venda.ItensVendas.Count</td>
+
+                        <td>R$ @venda.TotalVenda.ToString("N2")</td>
+
+                        <td>
+
+                            <button class="btn btn-sm btn-info" onclick="detalhesVenda(@venda.Id)">
+                                Detalhes
+                            </button>
+
+                            <!-- BOTÃO APAGAR -->
+                            <button class="btn btn-sm btn-danger"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#modalApagarVenda"
+                                    data-id="@venda.Id">
+                                Apagar
+                            </button>
+
+                            <button href="#" class="btn btn-sm btn-warning"
+                                    onclick="editarVenda(@venda.Id)">
+                                Editar
+                            </button>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="7" class="text-center">Nenhuma venda registrada.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+<!-- MODAL DE CRIAR (DO JEITO QUE VOCÊ JÁ TINHA) -->
+<div class="modal fade" id="modalCriar" tabindex="-1" aria-labelledby="modalCriarLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalCriarLabel">Realizar Venda</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body" id="vendaCriarBody">
+                <div class="text-center">Carregando formulário...</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL DE CRIAR (DO JEITO QUE VOCÊ JÁ TINHA) -->
+<div class="modal fade" id="modalDetalhes" tabindex="-1" aria-labelledby="modalDetalhesLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalDetalhesLabel">Detalhes Venda</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body" id="vendaDetalhesBody">
+                <div class="text-center">Carregando formulário...</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL DE EDITAR (COM A FUNÇÃO EDITAR VENDA) -->
+<div class="modal fade" id="modalEditar" tabindex="-1" aria-labelledby="modalEditarLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Editar Venda</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body" id="vendaEditarBody">
+                <div class="text-center">Carregando...</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- NOVO: MODAL APAGAR (SEM ALTERAR O RESTO DO SEU CÓDIGO) -->
+<div class="modal fade" id="modalApagarVenda" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title">Confirmar Exclusão</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                Deseja realmente apagar esta venda?
+                <br />
+                <strong>O estoque será devolvido automaticamente.</strong>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+
+                <form method="post" id="formExcluirVenda">
+                    <button type="submit" class="btn btn-danger">Confirmar</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+
+                            function detalhesVenda(id) {
+
+            $.get('/Venda/Detalhes/' + id, function (html) {
+
+                // Coloca o HTML da partial dentro do modal
+                $("#vendaDetalhesBody").html(html);
+
+                // Caso tenha scripts específicos
+                if (typeof inicializarDetalhesVenda === "function") {
+                    inicializarDetalhesVenda();
+                }
+            });
+
+            // Abre o modal
+            $("#modalDetalhes").modal("show");
+        }
+          
+  
+
+                        function editarVenda(id) {
+            $.get('/Venda/Editar/' + id, function (html) {
+
+                $("#vendaEditarBody").html(html);
+
+                // 🚀 Inicializa tudo depois da partial ter sido carregada
+                if (typeof inicializarEdicaoVenda === "function") {
+                    inicializarEdicaoVenda();
+                }
+            });
+
+            $("#modalEditar").modal("show");
+        }
+
+
+        // Carregar formulário do modal Criar (SEU ORIGINAL)
+        $('#modalCriar').on('show.bs.modal', function (e) {
+            $.ajax({
+                url: '@Url.Action("Criar", "Venda")',
+                type: 'GET',
+                success: function (data) {
+                    $('#vendaCriarBody').html(data);
+                },
+                error: function () {
+                    $('#vendaCriarBody').html('<div class="text-danger">Erro ao carregar o formulário.</div>');
+                }
+            });
+        });
+
+        // NOVO: Script para setar ID no modal Apagar
+        var modalApagar = document.getElementById('modalApagarVenda');
+
+        modalApagar.addEventListener('show.bs.modal', function (event) {
+            var button = event.relatedTarget;
+            var id = button.getAttribute('data-id');
+
+            var form = document.getElementById('formExcluirVenda');
+            form.action = '/Venda/Apagar/' + id;
+        });
+
+        function limparFormulario() {
+            // sua lógica se quiser
+        }
+    </script>
+}

@@ -52,7 +52,11 @@ namespace cafeservellocontroler.Controllers
             var usuario = _usuarioRepositorio.ListarPorId(id);
             return PartialView(usuario);
         }
-
+        public IActionResult Detalhes(int id)
+        {
+            var usuario = _usuarioRepositorio.ListarPorId(id);
+            return PartialView("_Detalhes", usuario);
+        }
         [HttpPost]
         public IActionResult Criar(UsuarioViewModel model)
             {
@@ -67,11 +71,11 @@ namespace cafeservellocontroler.Controllers
                 );
 
             usuario.SetPerfil(model.Perfil);
-            usuario.DataCadastro = model.DataCadastro;
+            usuario.CriacaoDataCadastro();
 
 
 
-            if (ModelState.IsValid)
+                if (ModelState.IsValid)
             {
 
 
@@ -105,8 +109,8 @@ namespace cafeservellocontroler.Controllers
                 return RedirectToAction("Index");
             }
 
-            
-                usuario.AtualizarDados(model);
+                usuario.AtualizarDataCriacao();
+            usuario.AtualizarDados(model);
                 _usuarioRepositorio.Atualizar(usuario);
                 TempData["MensagemSucesso"] = "Alteração realizado com sucesso! ";
           

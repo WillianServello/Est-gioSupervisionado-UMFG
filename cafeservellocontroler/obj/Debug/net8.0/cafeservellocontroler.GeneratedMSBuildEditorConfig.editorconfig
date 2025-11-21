@@ -68,6 +68,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b1xfQ3JpYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/WillianRafael/source/repos/WillianServello/Est-gioSupervisionado-UMFG/cafeservellocontroler/Views/Produto/_Detalhes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b1xfRGV0YWxoZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/WillianRafael/source/repos/WillianServello/Est-gioSupervisionado-UMFG/cafeservellocontroler/Views/Produto/_Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b1xfRWRpdGFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -82,6 +86,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/WillianRafael/source/repos/WillianServello/Est-gioSupervisionado-UMFG/cafeservellocontroler/Views/Revendedor/_Criar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2ZW5kZWRvclxfQ3JpYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/WillianRafael/source/repos/WillianServello/Est-gioSupervisionado-UMFG/cafeservellocontroler/Views/Revendedor/_Detalhes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2ZW5kZWRvclxfRGV0YWxoZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/WillianRafael/source/repos/WillianServello/Est-gioSupervisionado-UMFG/cafeservellocontroler/Views/Revendedor/_Editar.cshtml]
@@ -114,6 +122,30 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/WillianRafael/source/repos/WillianServello/Est-gioSupervisionado-UMFG/cafeservellocontroler/Views/Usuario/_Criar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xfQ3JpYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/WillianRafael/source/repos/WillianServello/Est-gioSupervisionado-UMFG/cafeservellocontroler/Views/Usuario/_Detalhes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xfRGV0YWxoZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/WillianRafael/source/repos/WillianServello/Est-gioSupervisionado-UMFG/cafeservellocontroler/Views/Venda/ApagarConfirmacao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVuZGFcQXBhZ2FyQ29uZmlybWFjYW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/WillianRafael/source/repos/WillianServello/Est-gioSupervisionado-UMFG/cafeservellocontroler/Views/Venda/Criar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVuZGFcQ3JpYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/WillianRafael/source/repos/WillianServello/Est-gioSupervisionado-UMFG/cafeservellocontroler/Views/Venda/Detalhes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVuZGFcRGV0YWxoZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/WillianRafael/source/repos/WillianServello/Est-gioSupervisionado-UMFG/cafeservellocontroler/Views/Venda/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVuZGFcRWRpdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/WillianRafael/source/repos/WillianServello/Est-gioSupervisionado-UMFG/cafeservellocontroler/Views/Venda/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVuZGFcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/WillianRafael/source/repos/WillianServello/Est-gioSupervisionado-UMFG/cafeservellocontroler/Views/_ViewImports.cshtml]

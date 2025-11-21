@@ -26,6 +26,10 @@ namespace cafeservellocontroler.Migrations
                         .HasColumnType("int")
                         .HasColumnName("ID");
 
+                    b.Property<DateTime>("DataAtualizacaoCadastro")
+                        .HasColumnType("datetime(6)")
+                        .HasColumnName("DataAtualizacaoCadastro");
+
                     b.Property<DateTime>("DataCadastro")
                         .HasColumnType("datetime(6)")
                         .HasColumnName("DataCadastro");
@@ -67,6 +71,9 @@ namespace cafeservellocontroler.Migrations
                         .HasMaxLength(18)
                         .HasColumnType("varchar(18)")
                         .HasColumnName("Cnpj");
+
+                    b.Property<DateTime>("DataAtualizacaoCadastro")
+                        .HasColumnType("datetime(6)");
 
                     b.Property<DateTime>("DataCadastro")
                         .HasColumnType("datetime(6)")
@@ -112,6 +119,10 @@ namespace cafeservellocontroler.Migrations
                         .HasMaxLength(18)
                         .HasColumnType("varchar(18)")
                         .HasColumnName("Cnpj");
+
+                    b.Property<DateTime>("DataAtualizacaoCadastro")
+                        .HasColumnType("datetime(6)")
+                        .HasColumnName("DataAtualizacaoCadastro");
 
                     b.Property<DateTime>("DataCadastro")
                         .HasColumnType("datetime(6)")
@@ -159,6 +170,10 @@ namespace cafeservellocontroler.Migrations
                         .HasColumnType("int")
                         .HasColumnName("ID");
 
+                    b.Property<DateTime>("DataAtualizacaoCadastro")
+                        .HasColumnType("datetime(6)")
+                        .HasColumnName("DataAtualizacaoCadastro");
+
                     b.Property<DateTime>("DataCadastro")
                         .HasColumnType("datetime(6)")
                         .HasColumnName("DataCadastro");
@@ -188,6 +203,116 @@ namespace cafeservellocontroler.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Usuario", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DataAtualizacaoCadastro = new DateTime(2025, 11, 21, 16, 53, 43, 379, DateTimeKind.Local).AddTicks(9883),
+                            DataCadastro = new DateTime(2025, 11, 21, 16, 53, 43, 379, DateTimeKind.Local).AddTicks(9876),
+                            Email = "admin@cafeservello.com",
+                            Login = "admin",
+                            Perfil = 1,
+                            Senha = "7c4a8d09ca3762af61e59520943dc26494f8941b"
+                        });
+                });
+
+            modelBuilder.Entity("cafeservellocontroler.Models.Venda.ModelItensVenda", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<int>("Id_Produto")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Id_Venda")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantidade")
+                        .HasColumnType("int")
+                        .HasColumnName("Quantidade");
+
+                    b.Property<decimal>("Total")
+                        .HasColumnType("decimal(18,2)")
+                        .HasColumnName("Total");
+
+                    b.Property<decimal>("Valor")
+                        .HasColumnType("decimal(18,2)")
+                        .HasColumnName("Valor");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Id_Produto");
+
+                    b.HasIndex("Id_Venda");
+
+                    b.ToTable("ItensVenda", (string)null);
+                });
+
+            modelBuilder.Entity("cafeservellocontroler.Models.Venda.ModelVenda", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("DataVenda")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("Id_Revendedor")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Id_Usuario")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Id_Revendedor");
+
+                    b.HasIndex("Id_Usuario");
+
+                    b.ToTable("Vendas", (string)null);
+                });
+
+            modelBuilder.Entity("cafeservellocontroler.Models.Venda.ModelItensVenda", b =>
+                {
+                    b.HasOne("cafeservellocontroler.Models.ModelProduto", "Produto")
+                        .WithMany()
+                        .HasForeignKey("Id_Produto")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("cafeservellocontroler.Models.Venda.ModelVenda", null)
+                        .WithMany("ItensVendas")
+                        .HasForeignKey("Id_Venda")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Produto");
+                });
+
+            modelBuilder.Entity("cafeservellocontroler.Models.Venda.ModelVenda", b =>
+                {
+                    b.HasOne("cafeservellocontroler.Models.Pessoa.ModelRevendedor", "Revendedor")
+                        .WithMany()
+                        .HasForeignKey("Id_Revendedor")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("cafeservellocontroler.Models.Pessoa.ModelUsuario", "Usuario")
+                        .WithMany()
+                        .HasForeignKey("Id_Usuario")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Revendedor");
+
+                    b.Navigation("Usuario");
+                });
+
+            modelBuilder.Entity("cafeservellocontroler.Models.Venda.ModelVenda", b =>
+                {
+                    b.Navigation("ItensVendas");
                 });
 #pragma warning restore 612, 618
         }

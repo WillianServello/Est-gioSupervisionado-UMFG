@@ -10,7 +10,7 @@ namespace cafeservellocontroler.Models.Pessoa
     {
 
 
-        protected ModelUsuario()
+        public ModelUsuario()
         {
         }
         //o JsonProperty consegue fazer que a Session consiga intepretar esse set privado
@@ -21,6 +21,7 @@ namespace cafeservellocontroler.Models.Pessoa
         public string Email { get; set; }
         public PerfilEnum Perfil { get; set; }
         public DateTime DataCadastro { get; set; } = DateTime.Now;
+        public DateTime DataAtualizacaoCadastro { get; set; } = DateTime.Now;
 
 
         public ModelUsuario(string login, string senha, string email)
@@ -32,6 +33,15 @@ namespace cafeservellocontroler.Models.Pessoa
         }
 
         
+        public void AtualizarDataCriacao()
+        {
+            DataAtualizacaoCadastro = DateTime.Now;
+        }
+
+        public void CriacaoDataCadastro()
+        {
+            DataCadastro = DateTime.Now;
+        }
 
         public void SetPerfil(PerfilEnum perfil)
         {
@@ -47,8 +57,6 @@ namespace cafeservellocontroler.Models.Pessoa
 
         }
 
-      
-
         public bool SenhaCorreta(string senha)
         {
             return Senha == senha.GerarHash();
@@ -62,6 +70,7 @@ namespace cafeservellocontroler.Models.Pessoa
         public void SetNovaSenha(string novaSenha)
         {
             Senha = novaSenha.GerarHash();
+            
         }
 
         public string GerarNovaSenha()
@@ -71,6 +80,18 @@ namespace cafeservellocontroler.Models.Pessoa
             return novaSenha;
         }
 
-       
+        public ModelUsuario(int id, string login, string senha, string email, PerfilEnum perfil, DateTime dataCadastro, DateTime dataAtualizacaoCadastro)
+        {
+            // Atribuição direta para campos privados (só funciona DENTRO da classe)
+            Id = id;
+            Login = login;
+            Senha = senha.GerarHash();
+            Email = email;
+            Perfil = perfil;
+            DataCadastro = dataCadastro;
+            DataAtualizacaoCadastro = dataAtualizacaoCadastro;
+        }
+
+
     }
 }

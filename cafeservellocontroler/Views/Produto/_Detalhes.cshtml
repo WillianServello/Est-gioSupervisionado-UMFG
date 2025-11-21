@@ -1,0 +1,55 @@
+﻿@using cafeservellocontroler.Models.ViewModels
+@model ProdutoViewModel
+@{
+    ViewData["Title"] = "Detalhes do Produtos";
+}
+<table>
+    <tr>
+        <td>
+            <h2>Detalhes do Produto</h2>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-2">
+                    Nome
+                </dt>
+                <dd class="col-sm-10">
+                    @Model.Nome
+                </dd>
+                <dt class="col-sm-2">
+                    Descrição
+                </dt>
+                <dd class="col-sm-10">
+                    @Model.Descricao
+                </dd>
+                <dt class="col-sm-2">
+                    Preço
+                </dt>
+                <dd class="col-sm-10">
+                    @Model.Preco
+                </dd>
+                <dt class="col-sm-2">
+                    Estoque
+                </dt>
+                <dd class="col-sm-10">
+                    @Model.Estoque
+                </dd>
+                <dt class="col-sm-2">
+                    Data Cadastro
+                </dt>
+                <dd class="col-sm-10">
+                    @Model.DataCadastro
+                </dd>
+                <dt class="col-sm-2">
+                    Data da ultima Atualização Cadastro
+                </dt>
+                <dd class="col-sm-10">
+                    @Model.DataAtualizacaoCadastro
+                </dd>
+            </dl>
+            <div>
+                <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+            </div>
+        </td>
+    </tr>
+</table>
+

@@ -32,5 +32,7 @@ namespace cafeservellocontroler.Models.ViewModels
 
         public DateTime DataCadastro { get; set; } = DateTime.Now;
 
+        public DateTime DataAtualizacaoCadastro { get; set; } = DateTime.Now;
+
     }
 }

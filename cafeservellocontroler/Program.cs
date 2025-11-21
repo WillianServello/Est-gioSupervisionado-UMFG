@@ -1,9 +1,11 @@
 ﻿using cafeservellocontroler.Data;
 using cafeservellocontroler.Helper;
 using cafeservellocontroler.Repositorio.FornecedorRepositorio;
+using cafeservellocontroler.Repositorio.ItensVendaRepositorio;
 using cafeservellocontroler.Repositorio.ProdutoRepositorio;
 using cafeservellocontroler.Repositorio.RevendedorRepositorio;
 using cafeservellocontroler.Repositorio.UsuarioRepositorio;
+using cafeservellocontroler.Repositorio.VendaRepositorio;
 using Microsoft.EntityFrameworkCore;
 using System.Data.Common;
 using System.Globalization;
@@ -31,6 +33,8 @@ namespace cafeservellocontroller
             builder.Services.AddScoped<IRevendedorRepositorio, RevendedorRepositorio>();
             builder.Services.AddScoped<IFornecedorRepositorio, FornecedorRepositorio>();
             builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
+            builder.Services.AddScoped<IVendaRepositorio, VendaRepositorio>();
+            builder.Services.AddScoped<IItensVendaRepositorio, ItensVendaRepositorio>();
 
             // Sessão
             builder.Services.AddHttpContextAccessor();     // CORRETO

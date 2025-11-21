@@ -1,6 +1,9 @@
-﻿using cafeservellocontroler.Mapeamento;
+﻿using cafeservellocontroler.Enums;
+using cafeservellocontroler.Mapeamento;
 using cafeservellocontroler.Models;
 using cafeservellocontroler.Models.Pessoa;
+using cafeservellocontroler.Models.Venda;
+using cafeservellocontroler.Models.ViewModels;
 using Microsoft.EntityFrameworkCore;
 
 namespace cafeservellocontroler.Data
@@ -18,15 +21,23 @@ namespace cafeservellocontroler.Data
 
         public DbSet<ModelUsuario> Usuarios { get; set; }
 
+        public DbSet<ModelItensVenda> ItensVendas { get; set; }
+
+        public DbSet<ModelVenda> Vendas { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+           
+
 
             modelBuilder.ApplyConfiguration(new ProdutoMap());
             modelBuilder.ApplyConfiguration(new RevendedorMap());
             modelBuilder.ApplyConfiguration(new FornecedorMap());
             modelBuilder.ApplyConfiguration(new UsuarioMap());
+            modelBuilder.ApplyConfiguration(new ItensVendaMap());
+            modelBuilder.ApplyConfiguration(new VendaMap());
         }
     }
 

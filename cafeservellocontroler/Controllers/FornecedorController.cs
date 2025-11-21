@@ -75,7 +75,7 @@ namespace cafeservellocontroler.Controllers
             //opcional
 
             fornecedor.Email = model.Email;
-            fornecedor.DataCadastro = model.DataCadastro;
+           
 
             //adicionando ao repositorio
             _fornecedorRepositorio.Adicionar(fornecedor);

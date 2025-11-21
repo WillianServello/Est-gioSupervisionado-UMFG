@@ -10,7 +10,9 @@ namespace cafeservellocontroler.Models.Pessoa
         public string Cnpj { get; private set; }
         public string Email { get; set; }
         public string Telefone { get; set; } 
-        public DateTime DataCadastro { get; set; } = DateTime.Now;
+        public DateTime DataCadastro { get; private set; } = DateTime.Now;
+
+        public DateTime DataAtualizacaoCadastro { get; private set; } = DateTime.Now;
 
         public ModelPessoa(string nome, string cnpj, string telefone)
         {
@@ -23,7 +25,15 @@ namespace cafeservellocontroler.Models.Pessoa
         {
         }
 
-        
+        public void AtualizarDataCadastro()
+        {
+            DataAtualizacaoCadastro = DateTime.Now;
+        }
+
+        public void CriacaoDataCadastro()
+        {
+            DataCadastro = DateTime.Now;
+        }
 
         public void SetNome (string nome)
         {

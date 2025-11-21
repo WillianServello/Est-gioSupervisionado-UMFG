@@ -114,6 +114,25 @@
 
                                     @*Esse daqui e o modal de EDITAR REVENDEDOR (OBSERVACAO, DEVE FAZER UM JAVASCRIPT PRA CONFIRMAR REALMENTE) *@
 
+                                    <a role="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDetalhes-@revendedor.Id">
+                                        Detalhes
+                                    </a>
+
+                                    <div class="modal fade" id="modalDetalhes-@revendedor.Id" tabindex="-1" aria-labelledby="modalDetalhesLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">Alterar Revendedor</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    @Html.Partial("_Detalhes", revendedor)
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
 
                                     <a role="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalEditar-@revendedor.Id">
                                         Editar

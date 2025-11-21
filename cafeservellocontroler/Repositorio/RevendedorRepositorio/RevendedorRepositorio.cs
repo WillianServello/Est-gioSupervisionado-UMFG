@@ -42,7 +42,7 @@ namespace cafeservellocontroler.Repositorio.RevendedorRepositorio
             return _bancoContext.Revendedor.ToList();
         }
 
-        public ModelRevendedor ListarPorId(int id)
+        public ModelRevendedor? ListarPorId(int id)
         {
             return _bancoContext.Revendedor.FirstOrDefault(x => x.Id == id);
         }

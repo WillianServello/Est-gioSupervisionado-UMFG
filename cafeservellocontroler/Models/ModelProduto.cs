@@ -17,7 +17,9 @@ namespace cafeservellocontroler.Models
 
         public int Estoque { get; set; }
 
-        public DateTime DataCadastro { get; set; } = DateTime.UtcNow;
+        public DateTime DataCadastro { get; private set; } = DateTime.Now;
+
+        public DateTime DataAtualizacaoCadastro { get; private set; } = DateTime.Now;
 
 
 
@@ -32,6 +34,37 @@ namespace cafeservellocontroler.Models
         public ModelProduto()
         {
         }
+        public void AbaterEstoque(int quantidadeVendida)
+        {
+            if (quantidadeVendida > Estoque)
+            {
+                // Lançar exceção que o Controller irá capturar
+                throw new InvalidOperationException($"Estoque insuficiente para este produto. Disponível: {Estoque}");
+            }
+            Estoque -= quantidadeVendida;
+        }
+
+        public void AdicionarEstoque(int quantidade)
+        {
+            if (quantidade <= 0)
+                throw new InvalidOperationException("Quantidade inválida para adicionar estoque.");
+
+            Estoque += quantidade;
+        }
+
+        public void AtualizarCadastro()
+        {
+            DataAtualizacaoCadastro = DateTime.Now;
+        }
+
+        public void DataCadastroCriacao()
+        {
+            DataCadastro = DateTime.Now;
+        }
+
+
+
+
 
         public void AtualizarDados(ProdutoViewModel viewModel)
         {
@@ -39,7 +72,7 @@ namespace cafeservellocontroler.Models
             Descricao = viewModel.Descricao;
             Preco = viewModel.Preco ?? 0;
             Estoque = viewModel.Estoque ?? 0;
-            DataCadastro = DateTime.UtcNow;
+           
         }
     }
 }

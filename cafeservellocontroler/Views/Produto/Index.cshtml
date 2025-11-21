@@ -114,6 +114,23 @@
 
                             @*Esse daqui e o modal de EDITAR PRODUTO (OBSERVACAO, DEVE FAZER UM JAVASCRIPT PRA CONFIRMAR REALMENTE) *@
 
+                                <a role="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDetalhes-@produto.Id">
+                                    Detalhes
+                                </a>
+                                    <div class="modal fade" id="modalDetalhes-@produto.Id" tabindex="-1" aria-labelledby="modalDetlahesLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">Detalhes do Produto</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    @Html.Partial("_Detalhes", produto)
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
 
                                 <a role="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalEditar-@produto.Id">
                                     Editar
@@ -127,13 +144,13 @@
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
                                             </div>
                                             <div class="modal-body">
-                                                @Html.Partial("_Editar", produto)
+                                                    @await Html.PartialAsync("_Editar", produto)
                                             </div>
                                         </div>
                                    </div>
                                </div>
 
-
+                                    
 
                             @*Esse daqui e o modal de APAGAR O PRODUTO (OBSERVACAO, DEVE FAZER UM JAVASCRIPT PRA CONFIRMAR REALMENTE) *@
 

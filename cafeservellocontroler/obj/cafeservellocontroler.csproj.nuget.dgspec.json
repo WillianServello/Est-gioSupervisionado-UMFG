@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\cafeservellocontroler.csproj": {}
+    "C:\\Users\\AdminUser\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\cafeservellocontroler.csproj": {}
   },
   "projects": {
-    "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\cafeservellocontroler.csproj": {
+    "C:\\Users\\AdminUser\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\cafeservellocontroler.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\cafeservellocontroler.csproj",
+        "projectUniqueName": "C:\\Users\\AdminUser\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\cafeservellocontroler.csproj",
         "projectName": "cafeservellocontroler",
-        "projectPath": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\cafeservellocontroler.csproj",
-        "packagesPath": "C:\\Users\\WillianRafael\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\obj\\",
+        "projectPath": "C:\\Users\\AdminUser\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\cafeservellocontroler.csproj",
+        "packagesPath": "C:\\Users\\AdminUser\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\AdminUser\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\WillianRafael\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\AdminUser\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -45,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -68,6 +67,14 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.4, )"
+            },
+            "itext7": {
+              "target": "Package",
+              "version": "[9.4.0, )"
+            },
+            "itext7.bouncy-castle-adapter": {
+              "target": "Package",
+              "version": "[9.4.0, )"
             },
             "jQuery.InputMask": {
               "target": "Package",
@@ -93,7 +100,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,0 +1,106 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\AdminUser\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\adminuser\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\controllers\\relatoriocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|solutionrelative:cafeservellocontroler\\controllers\\relatoriocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\adminuser\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\views\\relatorio\\lucroporproduto.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|solutionrelative:cafeservellocontroler\\views\\relatorio\\lucroporproduto.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\adminuser\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\views\\relatorio\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|solutionrelative:cafeservellocontroler\\views\\relatorio\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\adminuser\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\views\\relatorio\\revendedormaisativo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|solutionrelative:cafeservellocontroler\\views\\relatorio\\revendedormaisativo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\adminuser\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\views\\relatorio\\produtomaisvendido.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|solutionrelative:cafeservellocontroler\\views\\relatorio\\produtomaisvendido.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\AdminUser\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Relatorio\\Index.cshtml",
+              "RelativeDocumentMoniker": "cafeservellocontroler\\Views\\Relatorio\\Index.cshtml",
+              "ToolTip": "C:\\Users\\AdminUser\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Relatorio\\Index.cshtml",
+              "RelativeToolTip": "cafeservellocontroler\\Views\\Relatorio\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-22T19:04:19.048Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RevendedorMaisAtivo.cshtml",
+              "DocumentMoniker": "C:\\Users\\AdminUser\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Relatorio\\RevendedorMaisAtivo.cshtml",
+              "RelativeDocumentMoniker": "cafeservellocontroler\\Views\\Relatorio\\RevendedorMaisAtivo.cshtml",
+              "ToolTip": "C:\\Users\\AdminUser\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Relatorio\\RevendedorMaisAtivo.cshtml",
+              "RelativeToolTip": "cafeservellocontroler\\Views\\Relatorio\\RevendedorMaisAtivo.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-22T19:04:20.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProdutoMaisVendido.cshtml",
+              "DocumentMoniker": "C:\\Users\\AdminUser\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Relatorio\\ProdutoMaisVendido.cshtml",
+              "RelativeDocumentMoniker": "cafeservellocontroler\\Views\\Relatorio\\ProdutoMaisVendido.cshtml",
+              "ToolTip": "C:\\Users\\AdminUser\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Relatorio\\ProdutoMaisVendido.cshtml",
+              "RelativeToolTip": "cafeservellocontroler\\Views\\Relatorio\\ProdutoMaisVendido.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAABsAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-22T19:04:20.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LucroPorProduto.cshtml",
+              "DocumentMoniker": "C:\\Users\\AdminUser\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Relatorio\\LucroPorProduto.cshtml",
+              "RelativeDocumentMoniker": "cafeservellocontroler\\Views\\Relatorio\\LucroPorProduto.cshtml",
+              "ToolTip": "C:\\Users\\AdminUser\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Relatorio\\LucroPorProduto.cshtml",
+              "RelativeToolTip": "cafeservellocontroler\\Views\\Relatorio\\LucroPorProduto.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-22T19:04:19.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RelatorioController.cs",
+              "DocumentMoniker": "C:\\Users\\AdminUser\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Controllers\\RelatorioController.cs",
+              "RelativeDocumentMoniker": "cafeservellocontroler\\Controllers\\RelatorioController.cs",
+              "ToolTip": "C:\\Users\\AdminUser\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Controllers\\RelatorioController.cs",
+              "RelativeToolTip": "cafeservellocontroler\\Controllers\\RelatorioController.cs",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAcwHoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T18:42:49.4Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

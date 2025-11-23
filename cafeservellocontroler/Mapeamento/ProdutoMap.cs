@@ -29,6 +29,10 @@ namespace cafeservellocontroler.Mapeamento
                 .HasMaxLength(200)
                 .IsRequired();
 
+            builder.Property(x => x.PrecoCompra)
+                .HasColumnType("decimal(18,2)")
+                .IsRequired();
+
             builder
                 .Property(x => x.Preco)
                 .HasColumnName("PrecoProduto")

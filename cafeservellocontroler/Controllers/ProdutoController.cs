@@ -22,6 +22,7 @@ namespace cafeservellocontroler.Controllers
                 Id = p.Id,
                 Nome = p.Nome,
                 Descricao = p.Descricao,
+                PrecoCompra = p.PrecoCompra,
                 Preco = p.Preco,
                 Estoque = p.Estoque,
                 DataCadastro = p.DataCadastro,
@@ -90,6 +91,7 @@ namespace cafeservellocontroler.Controllers
                 var produto = new ModelProduto(
 
                         model.Nome,
+                        model.PrecoCompra ?? 0,
                         model.Preco ?? 0,
                         model.Estoque ?? 0
 

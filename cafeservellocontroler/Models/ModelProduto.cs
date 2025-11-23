@@ -8,10 +8,15 @@ namespace cafeservellocontroler.Models
         public int Id { get; set; } 
         [Required(ErrorMessage = "Digite o nome do produto")]
         public string Nome { get; set; } = string.Empty;
+
         [Required(ErrorMessage = "Digite a descrição do produto")]
         public string Descricao { get; set; } = string.Empty;
-        [Required(ErrorMessage = "Digite o preço do produto")]
 
+        [Required(ErrorMessage = "Digite o preço de compra do produto")]
+        [DisplayFormat(DataFormatString = "{0:F2}", ApplyFormatInEditMode = true)]
+        public decimal PrecoCompra { get; set; } = decimal.Zero;
+
+        [Required(ErrorMessage = "Digite o preço do produto")]
         [DisplayFormat(DataFormatString = "{0:F2}", ApplyFormatInEditMode = true)]
         public decimal Preco { get; set; } = decimal.Zero;
 
@@ -23,10 +28,12 @@ namespace cafeservellocontroler.Models
 
 
 
-        public ModelProduto(string nome, decimal preco, int estoque)
+
+        public ModelProduto(string nome, decimal precocompra, decimal preco, int estoque)
         {
 
             Nome = nome;
+            PrecoCompra = precocompra;
             Preco = preco;
             Estoque = estoque;
         }
@@ -70,6 +77,7 @@ namespace cafeservellocontroler.Models
         {
             Nome = viewModel.Nome;
             Descricao = viewModel.Descricao;
+            PrecoCompra = viewModel.PrecoCompra ?? 0;
             Preco = viewModel.Preco ?? 0;
             Estoque = viewModel.Estoque ?? 0;
            

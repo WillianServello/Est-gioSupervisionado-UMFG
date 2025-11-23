@@ -1,5 +1,7 @@
-﻿using cafeservellocontroler.Data;
+﻿using cafeservellocontroler.Controllers;
+using cafeservellocontroler.Data;
 using cafeservellocontroler.Helper;
+using cafeservellocontroler.Repositorio;
 using cafeservellocontroler.Repositorio.FornecedorRepositorio;
 using cafeservellocontroler.Repositorio.ItensVendaRepositorio;
 using cafeservellocontroler.Repositorio.ProdutoRepositorio;
@@ -35,6 +37,7 @@ namespace cafeservellocontroller
             builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
             builder.Services.AddScoped<IVendaRepositorio, VendaRepositorio>();
             builder.Services.AddScoped<IItensVendaRepositorio, ItensVendaRepositorio>();
+            builder.Services.AddScoped<IRelatorioRepositorio, RelatorioRepositorio>();
 
             // Sessão
             builder.Services.AddHttpContextAccessor();     // CORRETO

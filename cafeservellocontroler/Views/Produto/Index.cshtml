@@ -90,6 +90,7 @@
                 <th scope="col">Codigo</th>
                 <th scope="col">Nome</th>
                 <th scope="col">Tipo</th>
+                <th scope="col">Preço Compra</th>
                 <th scope="col">Preço</th>
                 <th scope="col">Estoque</th>
                 <th scope="col">Data de Criação</th>
@@ -105,6 +106,7 @@
                         <th scope="row">@produto.Id</th>
                         <td>@produto.Nome</td>
                         <td>@produto.Descricao</td>
+                        <td>@(produto.PrecoCompra.HasValue ? produto.PrecoCompra.Value.ToString("C") : "0,00")</td>
                         <td>@(produto.Preco.HasValue ? produto.Preco.Value.ToString("C") : "0,00")</td>
                         <td>@produto.Estoque</td>
                         <td>@produto.DataCadastro</td>

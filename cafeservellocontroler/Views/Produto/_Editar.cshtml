@@ -22,6 +22,12 @@
          </div>
 
         <div class="form-group">
+            <label for="precoCompra">Preço Compra</label>
+        <input asp-for="PrecoCompra" id="precoCompraEditar" name="PrecoCompra" type="text" class="form-control mask-money" autocomplete="off" inputmode="decimal" placeholder="Informe o valor" />
+            <span asp-validation-for="PrecoCompra" class="text-danger"></span>
+         </div>
+
+        <div class="form-group">
             <label for="preco">Preço</label>
         <input asp-for="Preco" id="precoEditar" name="Preco" type="text" class="form-control mask-money" autocomplete="off" inputmode="decimal" placeholder="Informe o valor" />
             <span asp-validation-for="Preco" class="text-danger"></span>

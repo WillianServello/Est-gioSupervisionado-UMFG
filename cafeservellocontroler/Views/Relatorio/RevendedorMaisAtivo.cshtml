@@ -1,0 +1,57 @@
+@model IEnumerable<dynamic>
+
+@{
+    ViewData["Title"] = "Revendedor mais ativo";
+}
+
+<div style="display:flex; justify-content:center;">
+    <div class="container-fluid">
+
+        <h1 class="display-4">Revendedor mais ativo</h1>
+
+        @if (TempData["MensagemSucesso"] != null)
+        {
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                @TempData["MensagemSucesso"]
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+
+        @if (TempData["MensagemErro"] != null)
+        {
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                @TempData["MensagemErro"]
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+
+        <br /><br />
+
+        <table class="table" id="table">
+            <thead>
+                <tr>
+                    <th>Revendedor</th>
+                    <th>Total vendido</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @if (Model != null && Model.Any())
+                {
+                    foreach (var r in Model)
+                    {
+                        <tr>
+                            <td>@r.Nome</td>
+                            <td>R$ @r.TotalVendido.ToString("N2")</td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr><td colspan="6">Nenhum dado encontrado.</td></tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>

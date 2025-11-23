@@ -54,6 +54,9 @@ namespace cafeservellocontroler.Migrations
                         .HasColumnType("numeric(10, 2)")
                         .HasColumnName("PrecoProduto");
 
+                    b.Property<decimal>("PrecoCompra")
+                        .HasColumnType("decimal(18,2)");
+
                     b.HasKey("Id");
 
                     b.ToTable("Produtos", (string)null);
@@ -208,8 +211,8 @@ namespace cafeservellocontroler.Migrations
                         new
                         {
                             Id = 1,
-                            DataAtualizacaoCadastro = new DateTime(2025, 11, 21, 16, 53, 43, 379, DateTimeKind.Local).AddTicks(9883),
-                            DataCadastro = new DateTime(2025, 11, 21, 16, 53, 43, 379, DateTimeKind.Local).AddTicks(9876),
+                            DataAtualizacaoCadastro = new DateTime(2025, 11, 22, 15, 11, 39, 16, DateTimeKind.Local).AddTicks(3242),
+                            DataCadastro = new DateTime(2025, 11, 22, 15, 11, 39, 16, DateTimeKind.Local).AddTicks(3236),
                             Email = "admin@cafeservello.com",
                             Login = "admin",
                             Perfil = 1,

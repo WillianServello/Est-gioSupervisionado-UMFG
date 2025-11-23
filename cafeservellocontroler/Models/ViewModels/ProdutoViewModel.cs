@@ -17,13 +17,16 @@ namespace cafeservellocontroler.Models.ViewModels
         [RegularExpression(@"^[a-zA-ZÀ-ÿ\s]+$", ErrorMessage = "Use apenas letras.")]
         public string? Nome { get; set; }
 
-        [Required(ErrorMessage = "Digete uma descrição")]
+        [Required(ErrorMessage = "Digite uma descrição")]
         [MaxLength(255, ErrorMessage = "Atingiu o limite de caracteres")]
         public string? Descricao { get; set; }
 
+        [Required(ErrorMessage = "Digite o preço de compra")]
+        [DisplayFormat(DataFormatString = "{0:F2}", ApplyFormatInEditMode = true)]
+        public decimal? PrecoCompra { get; set; }
+
         [Required(ErrorMessage = "Digite um preço")]
         [DisplayFormat(DataFormatString = "{0:F2}", ApplyFormatInEditMode = true)]
-       
         public decimal? Preco { get; set; }
 
         [Required(ErrorMessage = "Digite um estoque disponivel")]

@@ -2,8 +2,14 @@
   "ExpandedNodes": [
     "",
     "\\cafeservellocontroler",
-    "\\cafeservellocontroler\\Models\\Pessoa"
+    "\\cafeservellocontroler\\Views",
+    "\\cafeservellocontroler\\Views\\AlterarSenha",
+    "\\cafeservellocontroler\\Views\\Fornecedor",
+    "\\cafeservellocontroler\\Views\\Home",
+    "\\cafeservellocontroler\\Views\\Login",
+    "\\cafeservellocontroler\\Views\\Usuario",
+    "\\cafeservellocontroler\\Views\\Venda",
+    "\\cafeservellocontroler\\wwwroot"
   ],
-  "SelectedNode": "\\cafeservellocontroler\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

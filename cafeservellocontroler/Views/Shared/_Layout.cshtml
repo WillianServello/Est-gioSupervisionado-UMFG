@@ -10,7 +10,12 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/sidebar.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/navbar.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/tabelas.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/modal.css" asp-append-version="true" />
+
     <link rel="stylesheet" href="~/css/Search_PesquisaCss/Search.css" asp-append-version="true" />
+   
+
     <link rel="stylesheet" href="~/cafeservellocontroler.styles.css" asp-append-version="true" />
 
 
@@ -42,18 +47,20 @@
 
 
         @* SIDEBAR *@
+        <div class="layout">
         <nav id="sidebar">
             
                 @await Component.InvokeAsync("Menu")
             
         </nav>
+        </div>
     </div>
 
            
 
     
 
-    <div class="container-fluid">
+    <div>
         <main role="main" class=" custom">
             @RenderBody()
         </main>

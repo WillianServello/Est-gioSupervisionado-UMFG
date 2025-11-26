@@ -1,0 +1,102 @@
+﻿table th, table td {
+    white-space: nowrap;
+    padding: 8px 12px;
+    vertical-align: middle;
+}
+
+.table-responsive {
+    margin-top: 15px;
+    background: white;
+    border-radius: 7px;
+}
+
+table {
+    table-layout: auto !important;
+    width: 100% !important;
+    font-size: 15px
+}
+
+.table-wrapper {
+    max-height: 500px;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+table {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.table-thead {
+    background-color: #3B4656;
+    color: white;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #e6e6e6;
+    border-radius: 5px;
+}
+
+
+table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+tbody, td, tfoot, th, thead, tr {
+    border-color: #ffffff;
+    border-style: solid;
+    border-width: 0;
+}
+
+.espacoPadraoTabela {
+    width: 20%;
+}
+
+td.espacoModificarOpcoes {
+    width: 5%;
+    white-space: nowrap;
+}
+
+td.espacoApagarOpcoes {
+    text-align: center;
+    width: 5%;
+    white-space: nowrap;
+}
+
+.idTR {
+    text-align: center;
+}
+
+.idTH {
+    width: 2%;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.btnApagar {
+    padding: 12px 14px;
+}
+
+.btnModificadoTamanhoIgual {
+    min-width: 85px;
+    max-width: 140px;
+    font-size: 14px;
+    color: white;
+}
+
+
+.alinharModificar-ApagarTh {
+    text-align: center;
+}
+
+.titulo {
+    background: white;
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-p {
+    margin: auto;
+    text-align: center;
+}

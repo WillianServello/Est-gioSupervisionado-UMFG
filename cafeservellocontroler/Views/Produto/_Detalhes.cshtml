@@ -1,61 +1,81 @@
 ﻿@using cafeservellocontroler.Models.ViewModels
 @model ProdutoViewModel
+
 @{
-    ViewData["Title"] = "Detalhes do Produtos";
+    ViewData["Title"] = "Detalhes do Produto";
 }
-<table>
-    <tr>
-        <td>
-            <h2>Detalhes do Produto</h2>
-            <hr />
-            <dl class="row">
-                <dt class="col-sm-2">
-                    Nome
-                </dt>
-                <dd class="col-sm-10">
-                    @Model.Nome
-                </dd>
-                <dt class="col-sm-2">
-                    Descrição
-                </dt>
-                <dd class="col-sm-10">
-                    @Model.Descricao
-                </dd>
-                <dt class="col-sm-2">
-                    Preço Compra
-                </dt>
-                <dd class="col-sm-10">
-                    @Model.PrecoCompra
-                </dd>
-                <dt class="col-sm-2">
-                    Preço
-                </dt>
-                <dd class="col-sm-10">
-                    @Model.Preco
-                </dd>
-                <dt class="col-sm-2">
-                    Estoque
-                </dt>
-                <dd class="col-sm-10">
-                    @Model.Estoque
-                </dd>
-                <dt class="col-sm-2">
-                    Data Cadastro
-                </dt>
-                <dd class="col-sm-10">
-                    @Model.DataCadastro
-                </dd>
-                <dt class="col-sm-2">
-                    Data da ultima Atualização Cadastro
-                </dt>
-                <dd class="col-sm-10">
-                    @Model.DataAtualizacaoCadastro
-                </dd>
-            </dl>
-            <div>
-                <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+
+
+
+    <div class=" div-Criar responsivo mb-3 shadow-sm">
+        <div class="card-body">
+
+
+        <div class="row div-conteudo">
+            <p class="p-horario"><strong>Nome:</strong> @Model.Nome</p>
+
+            <p class="p-horario">
+                <strong>Descrição:</strong>
+                <span >@Model.Descricao</span>
+            </p>
+
+            
+            <div class="col-md-6 ps-0">
+                <p class="p-horario">
+                    <strong>Preço de Compra:</strong>
+                    <span class="fw-bold text-primary">R$ @Model.PrecoCompra</span>
+                </p>
             </div>
-        </td>
-    </tr>
-</table>
+            <div class="col-md-6 pe-0">
+                <p class="p-horario">
+                    <strong>Preço Venda:</strong>
+                    <span class="fw-bold text-success">R$ @Model.Preco</span>
+                </p>
+            </div>
+            
+
+            <p class="p-horario">
+                <strong>Estoque:</strong>
+                <span class="fw-bold">@Model.Estoque</span>
+            </p>
+        </div>
+
+        <br />
+        <div class="row div-horario">
+            <div class="col-12 col-md-6 mb-3">
+                <strong>Data Cadastro:</strong>
+                <p class="m-auto p-horario">
+                    <i class="fa-regular fa-calendar"></i>
+                    <strong>Data:</strong>
+                    @Model.DataCadastro.ToString("dd/MM/yyyy")
+                    <br />
+
+                    <i class="fa-regular fa-alarm-clock"></i>
+                    <strong>Horas:</strong>
+                    @Model.DataCadastro.ToString("HH:mm")
+                </p>
+            </div>
+
+            <div class="col-12 col-md-6 mb-3">
+                <strong>Data Atualizações:</strong>
+                <p class="m-auto p-horario">
+                    <i class="fa-solid fa-calendar"></i>
+                    <strong>Data:</strong>
+                    @Model.DataAtualizacaoCadastro.ToString("dd/MM/yyyy")
+                    <br />
+
+                    <i class="fa-solid fa-alarm-clock"></i>
+                    <strong>Horas:</strong>
+                    @Model.DataAtualizacaoCadastro.ToString("HH:mm")
+                </p>
+            </div>
+        </div>
+
+
+        </div>
+    
+  
+    
+
+</div>
 

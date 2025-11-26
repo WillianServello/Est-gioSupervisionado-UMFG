@@ -4,44 +4,15 @@
 @{
     ViewData["Title"] = "Produtos";
     }
-    <div style="display: flex; justify-content:center;">
-    <div class="container-fluid"> 
-    <h1 class="display-4">Produtos</h1>
 
-    @*Esse daqui e o BOTAO DE CRIAR PRODUTO*@
+    <div class="titulo mt-4 mb-4 p-3" >
 
-    <div class="d-flex justify-content-end">
-    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalCriar" onclick="limparFormulario()">
-        Novo
-    </button>
+    <p class="titulo-p display-4  ">Produtos</p>
+
     </div>
-
-
-    @*Esse daqui e o modal de CRIAR PRODUTO*@
-
-    <div class="modal fade" id="modalCriar" tabindex="-1" aria-labelledby="modalCriarLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalCriarLabel">Adicionar Produto</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-                </div>
-                <div class="modal-body">
-                    @Html.Partial("_Criar", new ProdutoViewModel())
-                </div>
-            </div>
-        </div>
-    </div>
-    <br />
-    <br />
-    <br />
-    <br />
-
-
-
+   
 
     @*Sao mensagens de erro, que pegam as informacoes da controller, sao descritas la*@
-
 
     @if (TempData["MensagemSucesso"] != null)
     {
@@ -60,132 +31,167 @@
     }
 
 
-
-
-
-    @*Aqui e a tabela, onde quando for adicionado ira aparecer um novo produto*@
         
     @* A barra de pesquisar *@
-         <div class="search-position">   
-            <div id="container-search">
-                <div class="input-group">
-                    <div class="input-icon">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        
-                    </div>
+<div class="search-position">
+    <div id="container-search">
 
-                    <input type="text"
-                           id="search"
-                           class="input-field"
-                           placeholder="Pesquisar Produto" />
-                </div>
+        <div class="input-group">
+            <div class="input-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-         </div>
 
+            <input type="text"
+                   id="search"
+                   class="input-field"
+                   placeholder="Pesquisar Produto" />
+        </div>
+
+        <div class="d-flex justify-content-end">
+            <button class="btn-lg btn-success"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalCriar"
+                    onclick="limparFormulario()">
+                <i class="fa-regular fa-square-plus"></i>
+            </button>
+        </div>
+
+    </div>
+</div>
+
+@*Esse daqui e o modal de CRIAR PRODUTO*@
+<div class="modal fade" id="modalCriar" tabindex="-1" aria-labelledby="modalCriarLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalCriarLabel">Adicionar Produto</h5>
+                <button type="button" class="btn-close btn-close-modal" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body">
+                @await Html.PartialAsync("_Criar", new ProdutoViewModel())
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*Aqui e a tabela, onde quando for adicionado ira aparecer um novo produto*@
+<div class="table-responsive table-wrapper p-3">
+    <table class="table table-bordered table-striped" id="table">
         
-
-        <table class="table" id="table">
-        <thead >
-            <tr>
-                <th scope="col">Codigo</th>
+        
+        <thead class="table-thead">
+            <tr class="div-thead">
+                <th scope="col" class="idTR">ID</th>
                 <th scope="col">Nome</th>
-                <th scope="col">Tipo</th>
                 <th scope="col">Preço Compra</th>
                 <th scope="col">Preço</th>
                 <th scope="col">Estoque</th>
-                <th scope="col">Data de Criação</th>
-                <th scope="col">Modificar</th>
+                <th scope="col" class="alinharModificar-ApagarTh">Modificar</th>
+                <th scope="col" class="alinharModificar-ApagarTh">Apagar</th>
             </tr>
+           
         </thead>
+        
         <tbody>
             @if (Model != null && Model.Any())
             {
                 foreach (ProdutoViewModel produto in Model)
                 {
+
+
                     <tr>
-                        <th scope="row">@produto.Id</th>
-                        <td>@produto.Nome</td>
-                        <td>@produto.Descricao</td>
-                        <td>@(produto.PrecoCompra.HasValue ? produto.PrecoCompra.Value.ToString("C") : "0,00")</td>
-                        <td>@(produto.Preco.HasValue ? produto.Preco.Value.ToString("C") : "0,00")</td>
-                        <td>@produto.Estoque</td>
-                        <td>@produto.DataCadastro</td>
-                        <td>
-                            <div role="group">
+                        <th scope="row" class="idTH">@produto.Id</th>
+                        <td scope="row" class="espacoPadraoTabela">@produto.Nome</td>
+                        <td scope="row" class="espacoPadraoTabela">@(produto.PrecoCompra.HasValue? produto.PrecoCompra.Value.ToString("C") : "0,00")</td>
+                        <td scope="row" class="espacoPadraoTabela">@(produto.Preco.HasValue? produto.Preco.Value.ToString("C") : "0,00")</td>
+                        <td scope="row" class="espacoPadraoTabela">@produto.Estoque</td>
+                        <td scope="row" class="espacoModificarOpcoes">
+                            <div role="group" class="d-grid gap-1 formatacaoBotaoTabela">
 
-
-                            @*Esse daqui e o modal de EDITAR PRODUTO (OBSERVACAO, DEVE FAZER UM JAVASCRIPT PRA CONFIRMAR REALMENTE) *@
-
-                                <a role="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDetalhes-@produto.Id">
-                                    Detalhes
-                                </a>
-                                    <div class="modal fade" id="modalDetalhes-@produto.Id" tabindex="-1" aria-labelledby="modalDetlahesLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title">Detalhes do Produto</h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    @Html.Partial("_Detalhes", produto)
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                <a role="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalEditar-@produto.Id">
-                                    Editar
+                                @*-----Botão DETALHES-----*@
+                                <a role="button" class="btn-sm btn-primary btnModificadoTamanhoIgual" data-bs-toggle="modal" data-bs-target="#modalDetalhes-@produto.Id">
+                                    <i class="fa-solid fa-calendar-week"></i>
+                                     Detalhes
                                 </a>
 
-                                <div class="modal fade" id="modalEditar-@produto.Id" tabindex="-1" aria-labelledby="modalEditarLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
+                                @*Esse daqui e o modal de DETALHES DO PRODUTO  *@
+                                <div class="modal fade" id="modalDetalhes-@produto.Id" tabindex="-1" aria-labelledby="modalDetlahesLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title">Alterar Produto</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                                                <h5 class="modal-title">Detalhes do Produto</h5>
+                                                <button type="button" class="btn-close btn-close-modal" data-bs-dismiss="modal" aria-label="Fechar"></button>
                                             </div>
                                             <div class="modal-body">
-                                                    @await Html.PartialAsync("_Editar", produto)
+                                                @await Html.PartialAsync("_Detalhes", produto)
                                             </div>
-                                        </div>
-                                   </div>
-                               </div>
-
-                                    
-
-                            @*Esse daqui e o modal de APAGAR O PRODUTO (OBSERVACAO, DEVE FAZER UM JAVASCRIPT PRA CONFIRMAR REALMENTE) *@
-
-                            <a role="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalApagarConfirmacao-@produto.Id">
-                                Apagar
-                            </a>
-
-                            <div class="modal fade" id="modalApagarConfirmacao-@produto.Id" tabindex="-1" aria-labelledby="modalApagarConfirmacaoLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title">Apagar Produto</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            @Html.Partial("_ApagarConfirmacao", produto)
                                         </div>
                                     </div>
                                 </div>
-                            </div>   
-                        </div>
-                    </td>
-                </tr>
+
+                                @*-----Botão EDITAR-----*@
+                                <a role="button" class="btn-sm btn-success btnModificadoTamanhoIgual" data-bs-toggle="modal" data-bs-target="#modalEditar-@produto.Id">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                     Editar
+                                </a>
+
+
+                                @*Esse daqui e o modal de EDITAR PRODUTO  *@
+                                <div class="modal fade" id="modalEditar-@produto.Id" tabindex="-1" aria-labelledby="modalEditarLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Editar Produto</h5>
+                                                <button type="button" class="btn-close btn-close-modal" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                @await Html.PartialAsync("_Editar", produto)
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        
+                           
+                        <td scope="row" class="espacoApagarOpcoes">
+
+                            @*-----Botão APAGAR-----*@
+                            <a role="button" class="btn-sm btn-outline-danger btnApagar" data-bs-toggle="modal" data-bs-target="#modalApagarConfirmacao-@produto.Id">
+                                <i class="fa-regular fa-trash-can fa-lg"></i>
+                            </a>
+
+                            @*Esse daqui e o modal de APAGAR O PRODUTO *@
+                            <div class="modal fade" id="modalApagarConfirmacao-@produto.Id" tabindex="-1" aria-labelledby="modalApagarConfirmacaoLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Apagar Produto</h5>
+                                            <button type="button" class="btn-close btn-close-color" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            @await Html.PartialAsync("_ApagarConfirmacao", produto)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </td>
+                    </tr>
                 }
-            }
+            }  
 
-                
-        </tbody>
-    </table>
+            </tbody>
+        </table>
 
-     
+        
+
 </div>
-</div>
+
+
+
 
 
 

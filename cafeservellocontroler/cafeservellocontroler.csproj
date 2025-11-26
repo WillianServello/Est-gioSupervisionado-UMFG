@@ -14,6 +14,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\css\Avatar.png" />
+    <Content Remove="wwwroot\css\AvatarFixo.png" />
+    <Content Remove="wwwroot\css\vetor-de-ícone-perfil-do-avatar-padrão-foto-usuário-mídia-social-183042379.webp" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="itext7" Version="9.4.0" />
     <PackageReference Include="itext7.bouncy-castle-adapter" Version="9.4.0" />
     <PackageReference Include="jQuery.InputMask" Version="5.0.9" />
@@ -24,6 +30,10 @@
     </PackageReference>
     <PackageReference Include="MySql.EntityFrameworkCore" Version="8.0.20" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\css\NovaPasta\" />
   </ItemGroup>
 
 </Project>

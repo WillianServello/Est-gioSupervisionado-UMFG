@@ -2,12 +2,12 @@
 @using cafeservellocontroler.Models.ViewModels
 @model ProdutoViewModel
 @{
-    ViewData["Title"] = "Produtos";
+    ViewData["Title"] = "Editar Produtos";
 }
 
 
 <form id="formEditarProduto" asp-controller="Produto" asp-action="Alterar" method="post">
-         
+    <div class="div-Criar responsivo">
         <input type="hidden" asp-for="Id"/>
          <div class="form-group">
             <label for="nome">Nome</label>
@@ -21,39 +21,47 @@
             <span asp-validation-for="Descricao" class="text-danger"></span>
          </div>
 
-        <div class="form-group">
-            <label for="precoCompra">Preço Compra</label>
-        <input asp-for="PrecoCompra" id="precoCompraEditar" name="PrecoCompra" type="text" class="form-control mask-money" autocomplete="off" inputmode="decimal" placeholder="Informe o valor" />
-            <span asp-validation-for="PrecoCompra" class="text-danger"></span>
-         </div>
+        <div class="row">
+             <div class="form-group col-md-6">
+                <label for="precoCompra">Preço Compra</label>
+                <input asp-for="PrecoCompra" id="precoCompraEditar" name="PrecoCompra" type="text" class="form-control mask-money" autocomplete="off" inputmode="decimal" placeholder="Informe o valor" />
+                <span asp-validation-for="PrecoCompra" class="text-danger"></span>
+             </div>
 
-        <div class="form-group">
-            <label for="preco">Preço</label>
-        <input asp-for="Preco" id="precoEditar" name="Preco" type="text" class="form-control mask-money" autocomplete="off" inputmode="decimal" placeholder="Informe o valor" />
-            <span asp-validation-for="Preco" class="text-danger"></span>
-         </div>
+            <div class="form-group col-md-6">
+                <label for="preco">Preço</label>
+                <input asp-for="Preco" id="precoEditar" name="Preco" type="text" class="form-control mask-money" autocomplete="off" inputmode="decimal" placeholder="Informe o valor" />
+                <span asp-validation-for="Preco" class="text-danger"></span>
+             </div>
+        </div>
 
-         <div class="form-group">
-            <label for="estoque">Estoque</label>
-        <input type="text" asp-for="Estoque" class="form-control" placeholder="Informe a quantidade em estoque">
-            <span asp-validation-for="Estoque" class="text-danger"></span>
-         </div>
+        <div class="row " >
+            <div class="form-group col-md-6">
+                <label for="estoque">Estoque</label>
+                <input type="text" asp-for="Estoque" class="form-control" placeholder="Informe a quantidade em estoque">
+                <span asp-validation-for="Estoque" class="text-danger"></span>
+             </div>
+        </div>         
+   </div>
 
-            <div class="d-grid gap-2">
-            <button type="submit" class="btn btn-primary btn-criar" role="button">Alterar</button>
-            <a class="btn btn-secondary" asp-controller="Produto" asp-action="Index" role="button">Voltar</a>
-            </div>
+    <div class=" d-flex justify-content-end   ">
+
+        <button type="submit" class="btn btn-primary mt-3 button-submit-close " style="margin-right: 15px">
+            <i class="fa-regular fa-floppy-disk fa-lg"></i>
+            Atualizar
 
 
-   
+        </button>
+
+        <a role="button" class="btn btn-outline-danger mt-3 button-submit-close" data-bs-dismiss="modal">
+            <i class="fa-solid fa-eject fa-lg"></i>
+            Cancelar
+        </a>
+    </div>
 
 
 </form>
 
 
-      <style>
-          .btn-criar{
-              margin-top: 20px;
-          }
-      </style>
+    
 

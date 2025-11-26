@@ -1,12 +1,11 @@
-wwwroot\css\Avatar.png
-wwwroot\css\AvatarFixo.png
 wwwroot\css\login.css
 wwwroot\css\LOGO CAFE.png
+wwwroot\css\modal.css
 wwwroot\css\navbar.css
 wwwroot\css\Search_PesquisaCss\search.css
 wwwroot\css\sidebar.css
 wwwroot\css\site.css
-wwwroot\css\vetor-de-ícone-perfil-do-avatar-padrão-foto-usuário-mídia-social-183042379.webp
+wwwroot\css\tabelas.css
 wwwroot\favicon.ico
 wwwroot\js\Search_PesquisaJs\search.js
 wwwroot\js\sidebar.js

@@ -5,41 +5,52 @@
 }
 
 
-<form id="formEditarUsuario" asp-controller="Usuario" asp-action="Alterar" method="post">
-
+<form id="formProduto" asp-controller="Usuario" asp-action="Alterar" method="post">
     <input type="hidden" asp-for="Id" />
-    <div class="form-group">
-        <label for="login">Login</label>
-        <input type="text" asp-for="Login" class="form-control" placeholder="Informe o novo nome de login">
-        <span asp-validation-for="Login" class="text-danger"></span>
+    <div class="div-Criar reponsivo">
+        <div class="form-group">
+            <label for="login">Login</label>
+            <input type="text" asp-for="Login" class="form-control" placeholder="Informe o nome de login">
+            <span asp-validation-for="Login" class="text-danger"></span>
+        </div>
+
+
+
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" asp-for="Email" class="form-control" placeholder="Informe o email">
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+
+       
+
+            <div class="form-group col-md-6">
+                <label for="nivelAcesso">Nível de Acesso</label>
+                <select asp-for="Perfil" class="form-control">
+                    <option value="">Selecione</option>
+                    <option value="1">Administrador</option>
+                    <option value="2">Funcionário</option>
+                </select>
+                <span asp-validation-for="Perfil" class="text-danger"></span>
+            </div>
+        
     </div>
 
-    <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" asp-for="Email" class="form-control" placeholder="Informe o email">
-        <span asp-validation-for="Email" class="text-danger"></span>
-    </div>
+    <div class=" d-flex justify-content-end   ">
 
-    <div class="form-group">
-        <label for="nivelAcesso">Nível de Acesso</label>
-        <select asp-for="Perfil" class="form-control">
-            <option value="">Selecione</option>
-            <option value="Admin">Administrador</option>
-            <option value="Funcionario">Funcionário</option>
-        </select>
-        <span asp-validation-for="Perfil" class="text-danger"></span>
+        <button type="submit" class="btn btn-primary mt-3 button-submit-close " style="margin-right: 15px">
+            <i class="fa-regular fa-floppy-disk fa-lg"></i>
+            Editar
 
-    </div>
 
-    <div class="d-grid gap-2">
-        <button type="submit" class="btn btn-primary btn-criar" role="button">Alterar</button>
-        <a class="btn btn-secondary" asp-controller="Usuario" asp-action="Index" role="button">Voltar</a>
+        </button>
+
+        <a role="button" class="btn btn-outline-danger mt-3 button-submit-close" data-bs-dismiss="modal">
+            <i class="fa-solid fa-eject fa-lg"></i>
+            Cancelar
+        </a>
     </div>
 </form>
-
-<style>
-    .btn-criar {
-        margin-top: 20px;
-    }
-</style>
 

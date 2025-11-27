@@ -2,43 +2,66 @@
 @using cafeservellocontroler.Models.ViewModels
 @model RevendedorViewModel
 
+@{
+    ViewData["Title"] = "Cadastrar Revendedores";
+}
 <form id="formProduto" asp-controller="Revendedor" asp-action="Criar" method="post">
-    <div class="form-group">
-        <label for="nome">Nome</label>
-        <input type="text" asp-for="Nome" class="form-control" placeholder="Informe o nome do revendedor">
-        <span asp-validation-for="Nome" class="text-danger"></span>
+    <div class="div-Criar reponsivo">
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="nome">Nome</label>
+                <input type="text" asp-for="Nome" class="form-control" placeholder="Informe o Nome do Revendedor">
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="nomefantasia">Nome Fantasia</label>
+                <input type="text" asp-for="NomeFantasia" class="form-control" placeholder="Informe o Nome Fantasia">
+                <span asp-validation-for="NomeFantasia" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-md-12">
+                <label for="email">Email</label>
+                <input type="email" asp-for="Email" class="form-control" placeholder="Informe o email">
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>
+            <div class="form-group col-md-6">
+                <label for="telefone">Telefone</label>
+                <input type="text" asp-for="Telefone" class="form-control" placeholder="Informe o telefone">
+                <span asp-validation-for="Telefone" class="text-danger"></span>
+            </div>
+        
+
+        
+            <div class="form-group col-md-6">
+                <label for="cnpj">Cnpj</label>
+                <input type="text" asp-for="Cnpj" class="form-control" placeholder="Informe o Cnpj">
+                <span asp-validation-for="Cnpj" class="text-danger"></span>
+            </div>
+       
+            <div class="form-group col-md-6">
+                <label for="endereco">Endereço</label>
+                <input type="text" asp-for="Endereco" class="form-control" placeholder="Informe o endereço">
+                <span asp-validation-for="Endereco" class="text-danger"></span>
+            </div>
+        
     </div>
 
-    <div class="form-group">
-        <label for="telefone">Telefone</label>
-        <input type="text" asp-for="Telefone" class="form-control" placeholder="Informe o telefone">
-        <span asp-validation-for="Telefone" class="text-danger"></span>
-    </div>
+    <div class=" d-flex justify-content-end">
 
-    <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" asp-for="Email" class="form-control" placeholder="Informe o email">
-        <span asp-validation-for="Email" class="text-danger"></span>
-    </div>
+        <button type="submit" class="btn btn-primary mt-3 button-submit-close " style="margin-right: 15px">
+            <i class="fa-regular fa-floppy-disk fa-lg"></i>
+            Adicionar
 
-    <div class="form-group">
-        <label for="cnpj">Cnpj</label>
-        <input type="text" asp-for="Cnpj" class="form-control" placeholder="Informe o Cnpj">
-        <span asp-validation-for="Cnpj" class="text-danger"></span>
-    </div>
 
-    <div class="form-group">
-        <label for="endereco">Endereço</label>
-        <input type="text" asp-for="Endereco" class="form-control" placeholder="Informe o endereço">
-        <span asp-validation-for="Endereco" class="text-danger"></span>
-    </div>
+        </button>
 
-    <div class="form-group">
-        <label for="nomefantasia">Nome Fantasia</label>
-        <input type="text" asp-for="NomeFantasia" class="form-control" placeholder="Informe o Nome Fantasia">
-        <span asp-validation-for="NomeFantasia" class="text-danger"></span>
+        <a role="button" class="btn btn-outline-danger mt-3 button-submit-close" data-bs-dismiss="modal">
+            <i class="fa-solid fa-eject fa-lg"></i>
+            Cancelar
+        </a>
     </div>
-
-    <button type="submit" class="btn btn-primary w-100 mt-3">Adicionar</button>
-    <button type="button" class="btn btn-danger w-100 mt-3" data-bs-dismiss="modal">Cancelar</button>
 </form>

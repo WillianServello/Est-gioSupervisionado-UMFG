@@ -5,17 +5,15 @@
 }
 
 <form id="formProduto" asp-controller="Usuario" asp-action="Criar" method="post">
+    <div class="div-Criar reponsivo">
     <div class="form-group">
         <label for="login">Login</label>
         <input type="text" asp-for="Login" class="form-control" placeholder="Informe o nome de login">
         <span asp-validation-for="Login" class="text-danger"></span>
     </div>
 
-    <div class="form-group">
-        <label for="senha">Senha</label>
-        <input type="password" asp-for="Senha" class="form-control" placeholder="Informe a senha">
-        <span asp-validation-for="Senha" class="text-danger"></span>
-    </div>
+   
+
 
     <div class="form-group">
         <label for="email">Email</label>
@@ -23,18 +21,38 @@
         <span asp-validation-for="Email" class="text-danger"></span>
     </div>
 
-    <div class="form-group">
-        <label for="nivelAcesso">Nível de Acesso</label>
-        <select asp-for="Perfil" class="form-control">
-            <option value="">Selecione</option>
-            <option value="1">Administrador</option>
-            <option value="2">Funcionário</option>
-        </select>
-        <span asp-validation-for="Perfil" class="text-danger"></span>
 
+    <div class="row">
+        <div class="form-group col-md-6">
+            <label for="senha">Senha</label>
+            <input type="password" asp-for="Senha" class="form-control" placeholder="Informe a senha">
+            <span asp-validation-for="Senha" class="text-danger"></span>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label for="nivelAcesso">Nível de Acesso</label>
+            <select asp-for="Perfil" class="form-control">
+                <option value="">Selecione</option>
+                <option value="1">Administrador</option>
+                <option value="2">Funcionário</option>
+            </select>
+            <span asp-validation-for="Perfil" class="text-danger"></span>
+        </div>
+    </div>
     </div>
 
+    <div class=" d-flex justify-content-end   ">
 
-    <button type="submit" class="btn btn-primary w-100 mt-3">Adicionar</button>
-    <button type="button" class="btn btn-danger w-100 mt-3" data-bs-dismiss="modal">Cancelar</button>
+        <button type="submit" class="btn btn-primary mt-3 button-submit-close " style="margin-right: 15px">
+            <i class="fa-regular fa-floppy-disk fa-lg"></i>
+            Adicionar
+
+
+        </button>
+
+        <a role="button" class="btn btn-outline-danger mt-3 button-submit-close" data-bs-dismiss="modal">
+            <i class="fa-solid fa-eject fa-lg"></i>
+            Cancelar
+        </a>
+    </div>
 </form>

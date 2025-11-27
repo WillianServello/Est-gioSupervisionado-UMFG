@@ -3,7 +3,114 @@
 @{
     ViewData["Title"] = "Detalhes do Revendedor";
 }
-<table>
+
+
+<div class=" div-Criar responsivo mb-3 shadow-sm">
+    <div class="card-body">
+        <div class="div-conteudo">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="p-horario ">
+                        <strong>Nome:</strong>
+                        @Model.Nome
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <p class="p-horario ">
+                        <strong>Nome Fantasia:</strong>
+                        <span>@Model.NomeFantasia</span>
+                    </p>
+               </div>
+            </div>
+
+            <div class="col-md-12">
+                <p class="p-horario ">
+                    <strong>Email:</strong>
+                    <span>@Model.Email</span>
+                </p>
+            </div>
+
+            
+                <div class="col-md-6">
+                    <p class="p-horario ">
+                        <strong>Telefone:</strong>
+                        <span>@Model.Telefone</span>
+                    </p>
+                </div>
+
+                <div class="col-md-6">
+                    <p class="p-horario ">
+                        <strong>CNPJ:</strong>
+                        <span>@Model.Cnpj</span>
+                    </p>
+                </div>
+                
+            <div class="col-md-6">
+                <p class="p-horario ">
+                    <strong>Endereço:</strong>
+                    <span>@Model.Endereco</span>
+                </p>
+            </div>
+
+
+         </div>
+        <br />
+        <div class="div-horario">
+            <div class="row ">
+                <div class="col-12 col-md-6 mb-3">
+                    <strong>Data Cadastro:</strong>
+                    <p class="m-auto p-horario">
+                        <i class="fa-regular fa-calendar"></i>
+                        <strong>Data:</strong>
+                        @Model.DataCadastro.ToString("dd/MM/yyyy")
+                        <br />
+
+                        <i class="fa-regular fa-alarm-clock"></i>
+                        <strong>Horas:</strong>
+                        @Model.DataCadastro.ToString("HH:mm")
+                    </p>
+                </div>
+
+                <div class="col-12 col-md-6 mb-3">
+                    <strong>Data Atualizações:</strong>
+                    <p class="m-auto p-horario">
+                        <i class="fa-solid fa-calendar"></i>
+                        <strong>Data:</strong>
+                        @Model.DataAtualizacaoCadastro.ToString("dd/MM/yyyy")
+                        <br />
+
+                        <i class="fa-solid fa-alarm-clock"></i>
+                        <strong>Horas:</strong>
+                        @Model.DataAtualizacaoCadastro.ToString("HH:mm")
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@* <table>
     <tr>
         <td>
             <h2>Detalhes do Revendedor</h2>
@@ -51,4 +158,4 @@
             </div>
         </td>
     </tr>
-</table>
+</table> *@

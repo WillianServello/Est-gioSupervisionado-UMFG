@@ -7,19 +7,31 @@
 <div class="div-Criar responsivo">
 <div class="text-center">
     <p class="btn-danger p-4">Aviso, o produto selecionado será excluído permanentemente!</p>
-    <p class="display-6">Realmente deseja apagar o Produto
-        (@Model.Nome)</p>
 
-
-   
-    <a class="btn btn-primary btn-block" role="button" asp-controller="Produto" asp-action="Index">Cancelar Exclusão</a>
-
-    <a role="button" class="btn-sm btn-outline-danger btnApagar" asp-controller="Produto" asp-route-id="@Model.Id" asp-action="Apagar">
-        
-        <i class="fa-regular fa-trash-can fa-lg"></i>
-        Excluir
-    </a>
+    <div class="div-conteudo">
+       <p class="display-6">
+            Realmente deseja apagar o Produto
+            <br />(@Model.Nome)
+       </p>
+    </div>
     
-</div>
+        <br />
+   <div class="d-flex justify-content-between">
+            <a class="btn btn-outline-primary btnApagar btn-block" role="button" data-bs-dismiss="modal"
+                asp-controller="Produto" asp-action="Index">
+                <i class="fa-solid fa-arrow-left fa-lg"></i>
+                Cancelar Exclusão
+            </a>
+
+            <a role="button" 
+                class="btn btn-outline-danger btnApagar"  
+                asp-controller="Produto" asp-route-id="@Model.Id" 
+                asp-action="Apagar">
+        
+                <i class="fa-regular fa-trash-can fa-lg"></i>
+                Excluir
+            </a>
+        </div>
+    </div>
 </div>
 

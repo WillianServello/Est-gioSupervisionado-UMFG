@@ -25,6 +25,7 @@ table {
 table {
     border-radius: 12px;
     overflow: hidden;
+    table-layout: fixed;
 }
 
 .table-thead {
@@ -68,7 +69,7 @@ td.espacoApagarOpcoes {
 }
 
 .idTH {
-    width: 2%;
+    width: 1%;
     white-space: nowrap;
     text-align: center;
 }
@@ -89,14 +90,14 @@ td.espacoApagarOpcoes {
     text-align: center;
 }
 
-.titulo {
-    background: white;
-    display: inline-block;
-    border-radius: 10px;
-    box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.1);
+.tamanho-font-titulo {
+    font-size: 30px;
+    line-height: 1;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+    border-radius: 3px;
 }
 
-.titulo-p {
-    margin: auto;
-    text-align: center;
+.borda-titulo {
+    margin: 0;
+    padding: 0;
 }

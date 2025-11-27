@@ -5,11 +5,15 @@
     ViewData["Title"] = "Produtos";
     }
 
-    <div class="titulo mt-4 mb-4 p-3" >
-
-    <p class="titulo-p display-4  ">Produtos</p>
-
-    </div>
+<div class=" mt-4 mb-4 p-3 shadow-sm d-inline-flex" >
+       
+        
+    <i class="fa-solid fa-mug-hot fa-xl d-flex align-items-center" style=""></i>
+   
+    <p class="tamanho-font-titulo borda-titulo ">
+        Produtos
+    </p>
+</div>
    
 
     @*Sao mensagens de erro, que pegam as informacoes da controller, sao descritas la*@
@@ -64,7 +68,7 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="modalCriarLabel">Adicionar Produto</h5>
+                <h5 class="modal-title" id="modalCriarLabel">Cadastrar Produto</h5>
                 <button type="button" class="btn-close btn-close-modal" data-bs-dismiss="modal" aria-label="Fechar"></button>
             </div>
             <div class="modal-body">
@@ -117,11 +121,31 @@
 
                                 @*Esse daqui e o modal de DETALHES DO PRODUTO  *@
                                 <div class="modal fade" id="modalDetalhes-@produto.Id" tabindex="-1" aria-labelledby="modalDetlahesLabel" aria-hidden="true">
-                                    <div class="modal-dialog modal-lg">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
+                                    <div class="modal-dialog modal-lg ">
+                                        <div class="modal-content ">
+                                            <div class="modal-header d-flex justify-content-between align-items-center">
+
                                                 <h5 class="modal-title">Detalhes do Produto</h5>
-                                                <button type="button" class="btn-close btn-close-modal" data-bs-dismiss="modal" aria-label="Fechar"></button>
+
+                                                <div class="d-flex gap-2">
+                                                    <a role="button"
+                                                       class="btn btn-outline-success btnApagar btnAbrirModal"
+                                                       data-modal-target="#modalEditar-@produto.Id"
+                                                       data-current-modal="#modalDetalhes-@produto.Id">
+                                                        <i class="fa-solid fa-pen-to-square fa-lg"></i>
+                                                    </a>
+
+                                                    <a role="button"
+                                                       class="btn btn-outline-danger btnApagar btnAbrirModal"
+                                                       data-modal-target="#modalApagarConfirmacao-@produto.Id"
+                                                       data-current-modal="#modalDetalhes-@produto.Id">
+                                                        <i class="fa-regular fa-trash-can fa-lg"></i>
+                                                    </a>
+
+
+                                                    <button type="button" class="btn-close btn-close-modal"
+                                                            data-bs-dismiss="modal" aria-label="Fechar"></button>
+                                                </div>
                                             </div>
                                             <div class="modal-body">
                                                 @await Html.PartialAsync("_Detalhes", produto)
@@ -153,7 +177,7 @@
                                 </div>
 
                             </div>
-                        
+                        </td>
                            
                         <td scope="row" class="espacoApagarOpcoes">
 
@@ -189,6 +213,27 @@
         
 
 </div>
+
+<script>
+        document.addEventListener('click', function (e) {
+        if (e.target.closest('.btnAbrirModal')) {
+
+            const btn = e.target.closest('.btnAbrirModal');
+            const currentModal = document.querySelector(btn.dataset.currentModal);
+            const nextModal = document.querySelector(btn.dataset.modalTarget);
+
+            // Fecha o modal atual
+            const modalInstance = bootstrap.Modal.getInstance(currentModal);
+            modalInstance.hide();
+
+            // Aguarda o fade-out do modal atual (~300ms)
+            currentModal.addEventListener('hidden.bs.modal', function () {
+                const newModal = new bootstrap.Modal(nextModal);
+                newModal.show();
+            }, { once: true });
+        }
+    });
+</script>
 
 
 

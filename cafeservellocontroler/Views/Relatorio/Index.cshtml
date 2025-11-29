@@ -1,3 +1,106 @@
-﻿<a asp-action="LucroPorProduto" asp-controller="Relatorio" class="btn btn-primary">Lucro por Produto</a>
-<a asp-action="ProdutoMaisVendido" asp-controller="Relatorio" class="btn btn-primary">Produto mais vendido</a>
-<a asp-action="RevendedorMaisAtivo" asp-controller="Relatorio" class="btn btn-primary">Revendedor mais ativo</a>
+﻿@using cafeservellocontroler.Models.ViewModels
+@{
+    ViewData["Title"] = "Relatorios";
+}
+<div class="mt-4 background-div ">
+    <div class="ma-auto p-3  d-flex justify-content-center align-content-center">
+        <p class="tamanho-font-titulo  ">
+            Qual relatório você deseja gerar?
+        </p>
+    </div>
+
+
+    <div class="row p-3 mb-3 d-flex flex-column justify-content-center align-items-center">
+        <div >
+                <a data-bs-toggle="modal"
+                   data-bs-target="#modalLucroPorProdutoIndex"
+                   onclick="limparFormulario()" class="btn btn-secondary tamanho">Lucro por produto
+               </a>
+            </div>
+            <br />
+        <div class="">
+                <a data-bs-toggle="modal"
+                   data-bs-target="#modalProdutoMaisVendidoIndex"
+                   onclick="limparFormulario()" class="btn btn-secondary tamanho">Produto mais vendido
+               </a>
+            </div>
+        <br />
+        <div >
+                <a data-bs-toggle="modal"
+                   data-bs-target="#modalRevendedorMaisAtivoIndex"
+                   onclick="limparFormulario()" class="btn btn-secondary tamanho">Revendedor mais ativo
+               </a>
+            </div>
+
+            
+        
+    </div>
+</div>
+
+<div class="modal fade" id="modalLucroPorProdutoIndex" tabindex="-1" aria-labelledby="modalLucroPorProdutoIndexLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLucroPorProdutoIndexLabel">Lucro Por Produto - Filtro</h5>
+                <button type="button" class="btn-close btn-close-modal" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body">
+                @await Html.PartialAsync("LucroPorProdutoIndex")
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalProdutoMaisVendidoIndex" tabindex="-1" aria-labelledby="modalProdutoMaisVendidoIndexLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalProdutoMaisVendidoIndexLabel">Produto Mais Vendido - Filtro</h5>
+                <button type="button" class="btn-close btn-close-modal" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body">
+                @await Html.PartialAsync("ProdutoMaisVendidoIndex")
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalRevendedorMaisAtivoIndex" tabindex="-1" aria-labelledby="modalRevendedorMaisAtivoIndexLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalRevendedorMaisAtivoIndexLabel">Revendedor mais ativo - Filtro</h5>
+                <button type="button" class="btn-close btn-close-modal" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body">
+                @await Html.PartialAsync("RevendedorMaisAtivoIndex")
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .btn-secondary{
+        background-color: #2F3A4A;
+        
+    }
+
+    .btn-secondary:hover {
+            background-color: #181D25;
+    }
+
+    .tamanho{
+        width: 300px;
+        font-size: 16px;
+    }
+
+    .background-div{
+        background: white;
+        border-radius: 3px;
+        min-height: 100vh; /* Garante que a altura ocupe toda a tela */
+        width: 100%; /* Garante que a largura ocupe 100% da tela */
+        overflow-x: auto; /* Se o conteúdo for muito largo, aparece o rolamento lateral */
+        overflow-y: auto;
+        
+    }
+</style>

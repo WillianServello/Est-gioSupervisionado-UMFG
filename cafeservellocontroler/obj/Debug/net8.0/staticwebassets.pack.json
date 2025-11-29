@@ -2,11 +2,23 @@
   "Files": [
     {
       "Id": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\cafeservellocontroler.bundle.scp.css",
-      "PackagePath": "staticwebassets\\cafeservellocontroler.pxzcj48odn.bundle.scp.css"
+      "PackagePath": "staticwebassets\\cafeservellocontroler.n4puluitje.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\wwwroot\\css\\Avatar.png",
-      "PackagePath": "staticwebassets\\css\\Avatar.png"
+      "Id": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\wwwroot\\css\\LOGO CAFE.png",
+      "PackagePath": "staticwebassets\\css\\LOGO CAFE.png"
+    },
+    {
+      "Id": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\wwwroot\\css\\Search_PesquisaCss\\search.css",
+      "PackagePath": "staticwebassets\\css\\Search_PesquisaCss\\search.css"
+    },
+    {
+      "Id": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
+      "Id": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\wwwroot\\css\\modal.css",
+      "PackagePath": "staticwebassets\\css\\modal.css"
     },
     {
       "Id": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\wwwroot\\css\\navbar.css",
@@ -21,12 +33,32 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\wwwroot\\css\\tabelas.css",
+      "PackagePath": "staticwebassets\\css\\tabelas.css"
+    },
+    {
       "Id": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\wwwroot\\js\\Search_PesquisaJs\\search.js",
+      "PackagePath": "staticwebassets\\js\\Search_PesquisaJs\\search.js"
+    },
+    {
       "Id": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\wwwroot\\js\\ValidacoesProduto\\validacaoCrud.js",
       "PackagePath": "staticwebassets\\js\\ValidacoesProduto\\validacaoCrud.js"
+    },
+    {
+      "Id": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\wwwroot\\js\\ValidacoesVenda\\validacoesVendaCriar.js",
+      "PackagePath": "staticwebassets\\js\\ValidacoesVenda\\validacoesVendaCriar.js"
+    },
+    {
+      "Id": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\wwwroot\\js\\ValidacoesVenda\\validacoesVendaEditar.js",
+      "PackagePath": "staticwebassets\\js\\ValidacoesVenda\\validacoesVendaEditar.js"
+    },
+    {
+      "Id": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\wwwroot\\js\\ValidacoesVenda\\validacoesVendaIndex.js",
+      "PackagePath": "staticwebassets\\js\\ValidacoesVenda\\validacoesVendaIndex.js"
     },
     {
       "Id": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\wwwroot\\js\\sidebar.js",
@@ -35,6 +67,10 @@
     {
       "Id": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\wwwroot\\js\\validacoesEditarVenda.js",
+      "PackagePath": "staticwebassets\\js\\validacoesEditarVenda.js"
     },
     {
       "Id": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\wwwroot\\lib\\bootstrap\\LICENSE",

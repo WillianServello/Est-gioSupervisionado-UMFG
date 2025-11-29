@@ -25,23 +25,20 @@ namespace cafeservellocontroler.Controllers
             return View();
         }
 
-        // Relatório: Produto mais vendido
-
-        /* public IActionResult ProdutoMaisVendido()
+        public IActionResult LucroPorProdutoIndex()
         {
-            var resultado = _context.ItensVendas
-                .GroupBy(i => new { i.Produto.Id, i.Produto.Nome })
-                .Select(g => new
-                {
-                    ProdutoId = g.Key.Id,
-                    Nome = g.Key.Nome,
-                    QuantidadeVendida = g.Sum(x => x.Quantidade)
-                })
-                .OrderByDescending(x => x.QuantidadeVendida)
-                .ToList();
+            return PartialView();
+        }
 
-            return View(resultado);
-        } */
+        public IActionResult ProdutoMaisVendidoIndex()
+        {
+            return PartialView();
+        }
+
+        public IActionResult RevendedorMaisAtivoIndex()
+        {
+            return PartialView();
+        }        
 
         public IActionResult ProdutoMaisVendido()
         {
@@ -93,37 +90,6 @@ namespace cafeservellocontroler.Controllers
             return File(ms.ToArray(), "application/pdf", "ProdutosMaisVendidos.pdf");
         }
 
-
-        // Relatório: Revendedor mais ativo
-
-        /* public IActionResult RevendedorMaisAtivo()
-        {
-            var agregados = _context.Vendas
-                .GroupBy(v => new { v.Revendedor.Id, v.Revendedor.NomeFantasia })
-                .Select(g => new
-                {
-                    RevendedorId = g.Key.Id,
-                    Nome = g.Key.NomeFantasia,
-
-                    TotalVendido = g
-                        .SelectMany(v => v.ItensVendas)
-                        .Sum(iv => iv.Total)  
-                })
-                .ToList();
-
-            var resultado = agregados
-                .Select(a => new
-                {
-                    RevendedorId = a.RevendedorId,
-                    Nome = a.Nome,
-                    TotalVendido = a.TotalVendido
-                })
-                .OrderByDescending(x => x.TotalVendido)
-                .ToList();
-
-            return View(resultado);
-        } */
-
         public IActionResult RevendedorMaisAtivo()
         {
             var revendedores = _context.Vendas
@@ -172,39 +138,6 @@ namespace cafeservellocontroler.Controllers
             }
             return File(ms.ToArray(), "application/pdf", "RevendedorMaisAtivo.pdf");
         }
-
-
-        // Relatório: Lucro por produto
-        /* public IActionResult LucroPorProduto()
-        {
-            var agregados = _context.ItensVendas
-                .GroupBy(i => new { i.Produto.Id, i.Produto.Nome, i.Produto.Preco, i.Produto.PrecoCompra })
-                .Select(g => new
-                {
-                    ProdutoId = g.Key.Id,
-                    Nome = g.Key.Nome,
-                    PrecoCompra = g.Key.PrecoCompra,
-                    PrecoVenda = g.Key.Preco,
-                    QuantidadeVendida = g.Sum(x => x.Quantidade)
-                })
-                .ToList();
-
-            var resultado = agregados
-                .Select(a => new
-                {
-                    ProdutoId = a.ProdutoId,
-                    Nome = a.Nome,
-                    PrecoCompra = a.PrecoCompra,
-                    PrecoVenda = a.PrecoVenda,
-                    LucroUnidade = a.PrecoVenda - a.PrecoCompra,
-                    QuantidadeVendida = a.QuantidadeVendida,
-                    LucroTotal = (a.PrecoVenda - a.PrecoCompra) * a.QuantidadeVendida
-                })
-                .OrderByDescending(x => x.LucroTotal)
-                .ToList();
-
-            return View(resultado);
-        } */
 
         public IActionResult LucroPorProduto()
         {

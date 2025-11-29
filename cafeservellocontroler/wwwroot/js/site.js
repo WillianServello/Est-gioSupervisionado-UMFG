@@ -24,6 +24,7 @@ function limparFormulario() {
      spansErro.forEach(s => s.innerText = "");
 }
 
+
 //abrir modal pelo detalhes
 document.addEventListener("DOMContentLoaded", function () {
 

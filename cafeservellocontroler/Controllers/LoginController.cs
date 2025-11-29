@@ -37,6 +37,7 @@ namespace cafeservellocontroler.Controllers
 
         public IActionResult Sair()
         {
+            
             _sessao.RemoverSessaoUsuario();
             return RedirectToAction("Index", "Login");
         }
@@ -56,6 +57,7 @@ namespace cafeservellocontroler.Controllers
                     {
                         if (usuario.SenhaCorreta(modelLogin.Senha))
                         {
+                            _sessao.RemoverSessaoUsuario();
                             _sessao.CriarSessaoUsuario(usuario);
                             return RedirectToAction("Index", "Home");
 

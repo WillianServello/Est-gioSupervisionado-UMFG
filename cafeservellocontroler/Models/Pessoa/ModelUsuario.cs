@@ -16,7 +16,7 @@ namespace cafeservellocontroler.Models.Pessoa
         //o JsonProperty consegue fazer que a Session consiga intepretar esse set privado
         [JsonProperty]
         public int Id { get; private set; }
-        public string Login { get; private set; }
+        public string Login { get; set; }
         public string Senha { get; private set; }
         public string Email { get; set; }
         public PerfilEnum Perfil { get; set; }

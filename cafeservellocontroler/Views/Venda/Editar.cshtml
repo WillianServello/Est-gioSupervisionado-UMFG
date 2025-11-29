@@ -4,13 +4,13 @@
 @model VendaViewModel
 
 <form id="formVendas" asp-controller="Venda" asp-action="Atualizar" method="post">
-
+    <div class="div-Criar reponsivo">
     <input type="hidden" asp-for="Id" />
 
     <div class="row mb-3">
         <div class="col-12">
-            <label class="form-label">Revendedor</label>
-            <select asp-for="RevendedorId" class="form-select" required>
+            <label class="">Revendedor</label>
+            <select asp-for="RevendedorId" class="form-select form-control" required>
                 <option value="">Selecione o revendedor</option>
                 @foreach (var r in Model.Revendedores)
                 {
@@ -32,8 +32,8 @@
             <div class="row item-row mb-3 border-bottom pb-3" data-index="@i">
 
                 <div class="col-6">
-                    <label class="form-label">Produto</label>
-                    <select asp-for="Itens[i].ProdutoId" class="form-select select-produto"
+                    <label class="">Produto</label>
+                        <select asp-for="Itens[i].ProdutoId" class="form-select select-produto form-control"
                             onchange="atualizarValor(this)" required>
                         <option value="">Selecione o produto</option>
 
@@ -56,7 +56,7 @@
                 </div>
 
                 <div class="col-3">
-                    <label class="form-label">Quantidade</label>
+                    <label class="">Quantidade</label>
                     <input type="number" asp-for="Itens[i].Quantidade" class="form-control input-quantidade"
                            oninput="atualizarQuantidade(this)" min="1" required />
                     <span asp-validation-for="Itens[i].Quantidade" class="text-danger"></span>
@@ -95,16 +95,30 @@
     <h5 class="mt-3">
         Total da venda: R$ <span id="totalGeral" class="text-success fw-bold">0.00</span>
     </h5>
+    </div>
+            <div class=" d-flex justify-content-end   ">
 
-    <button type="submit" class="btn btn-primary w-100 mt-3">Salvar Alterações</button>
-    <button type="button" class="btn btn-danger w-100 mt-2" data-bs-dismiss="modal">Cancelar</button>
+                <button type="submit" class="btn btn-primary mt-3 button-submit-close " style="margin-right: 15px">
+                    <i class="fa-regular fa-floppy-disk fa-lg"></i>
+                    Adicionar
+
+
+                </button>
+
+                <a role="button" class="btn btn-outline-danger mt-3 button-submit-close" data-bs-dismiss="modal">
+                    <i class="fa-solid fa-eject fa-lg"></i>
+                    Cancelar
+                </a>
+            </div>
 
 </form>
 
 
 
 <script>
-    let nextItemIndex = @Model.Itens.Count;
+
+
+        nextItemIndex = document.querySelectorAll("#vendaEditarBody .item-row").length;
 
     // ==========================================
     // FUNÇÃO PARA REINDEXAR APÓS REMOVER
@@ -260,7 +274,7 @@
 
     <div class="col-6">
         <label class="form-label">Produto</label>
-        <select name="Itens[${index}].ProdutoId" class="form-select select-produto"
+        <select name="Itens[${index}].ProdutoId" class="form-select select-produto "
                 onchange="atualizarValor(this)" required>
             <option value="">Selecione o produto</option>
             @foreach (var p in Model.Produtos)

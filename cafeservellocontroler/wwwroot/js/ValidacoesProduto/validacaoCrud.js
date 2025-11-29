@@ -91,13 +91,7 @@
     });
 
 
-        const elementos = document.querySelectorAll('[data-val-number]');
-
-        // Itera sobre a lista de elementos e remove o atributo de cada um
-        elementos.forEach(elemento => {
-            elemento.removeAttribute('data-val-number');
-        });
- 
+        
 
 
    

@@ -8,6 +8,8 @@ namespace cafeservellocontroler.Models.Venda
 
         public DateTime DataVenda { get; private set; } = DateTime.Now;
 
+        public DateTime DataAtualizarVenda { get; private set; } = DateTime.Now;
+
 
         //protagonistas da venda 
         public ModelUsuario Usuario { get; private set; }
@@ -47,6 +49,11 @@ namespace cafeservellocontroler.Models.Venda
         {
             Usuario = usuario;
             Revendedor = revendedor;
+        }
+
+        public void AtualizarDataVenda()
+        {
+            DataAtualizarVenda = DateTime.Now;
         }
     }
 

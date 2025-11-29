@@ -211,10 +211,10 @@ namespace cafeservellocontroler.Migrations
                         new
                         {
                             Id = 1,
-                            DataAtualizacaoCadastro = new DateTime(2025, 11, 22, 15, 11, 39, 16, DateTimeKind.Local).AddTicks(3242),
-                            DataCadastro = new DateTime(2025, 11, 22, 15, 11, 39, 16, DateTimeKind.Local).AddTicks(3236),
+                            DataAtualizacaoCadastro = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DataCadastro = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "admin@cafeservello.com",
-                            Login = "admin",
+                            Login = "adminWillian",
                             Perfil = 1,
                             Senha = "7c4a8d09ca3762af61e59520943dc26494f8941b"
                         });
@@ -259,8 +259,13 @@ namespace cafeservellocontroler.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    b.Property<DateTime>("DataAtualizarVenda")
+                        .HasColumnType("datetime(6)")
+                        .HasColumnName("DataAtualizarVenda");
+
                     b.Property<DateTime>("DataVenda")
-                        .HasColumnType("datetime(6)");
+                        .HasColumnType("datetime(6)")
+                        .HasColumnName("DataVenda");
 
                     b.Property<int>("Id_Revendedor")
                         .HasColumnType("int");

@@ -1,4 +1,5 @@
-﻿using cafeservellocontroler.Helper;
+﻿using cafeservellocontroler.Filters;
+using cafeservellocontroler.Helper;
 using cafeservellocontroler.Models.Venda;
 using cafeservellocontroler.Models.ViewModels;
 using cafeservellocontroler.Repositorio.ProdutoRepositorio;
@@ -9,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace cafeservellocontroler.Controllers
 {
+    [PaginaUsuarioLogado]
     public class VendaController : Controller
     {
         private readonly IRevendedorRepositorio _revendedorRepositorio;
@@ -53,8 +55,8 @@ namespace cafeservellocontroler.Controllers
 
         public IActionResult ApagarConfirmacao(int Id) {
 
-            var fornecedor = _vendaRepositorio.BuscarPorIdComItens(Id);
-            return PartialView(fornecedor);
+            var venda = _vendaRepositorio.BuscarPorIdComItens(Id);
+            return PartialView(venda);
         }
 
         public IActionResult Editar(int id)
@@ -238,6 +240,7 @@ namespace cafeservellocontroler.Controllers
                 }
 
                 // 8. Salvar no banco
+                vendaDB.AtualizarDataVenda();
                 _vendaRepositorio.Atualizar(vendaDB);
 
                 TempData["MensagemSucesso"] = "Venda atualizada com sucesso!";

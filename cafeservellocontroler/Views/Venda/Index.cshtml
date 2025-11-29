@@ -5,13 +5,17 @@
     ViewData["Title"] = "Vendas";
 }
 
-<h1>Vendas</h1>
-<hr />
 
-<div class="d-flex justify-content-end">
-    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalCriar" onclick="limparFormulario()">
-        Novo
-    </button>
+
+<div class=" mt-4 mb-4 p-3 shadow-sm d-inline-flex">
+
+
+   
+    
+    <i class="fa-solid fa-tags fa-xl d-flex align-items-center"></i>
+    <p class="tamanho-font-titulo borda-titulo ">
+        Vendas
+    </p>
 </div>
 
 @if (TempData["MensagemSucesso"] != null)
@@ -30,17 +34,51 @@
     </div>
 }
 
-<div class="mt-4">
-    <table class="table">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Data da Venda</th>
+
+
+<div class="search-position">
+    <div id="container-search">
+
+        <div class="input-group">
+            <div class="input-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <input type="text"
+                   id="search"
+                   class="input-field"
+                   placeholder="Pesquisar Produto" />
+        </div>
+
+        <div class="d-flex justify-content-end">
+            <button class="btn-lg btn-success"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalCriar"
+                    onclick="limparFormulario()">
+                <i class="fa-regular fa-square-plus"></i>
+            </button>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+<div class="table-responsive table-wrapper p-3">
+    <table class="table table-bordered table-striped" id="table">
+        <thead class="table-thead">
+            <tr class="div-thead">
+                <th class="idTR">ID</th>
+                
                 <th>Revendedor</th>
                 <th>Usuário (Vendedor)</th>
                 <th>Itens</th>
                 <th>Total</th>
-                <th>Ações</th>
+                <th class="alinharModificar-ApagarTh" >Modificar</th>
+                <th class="alinharModificar-ApagarTh" >Apagar</th>
             </tr>
         </thead>
         <tbody>
@@ -49,37 +87,79 @@
                 @foreach (var venda in Model)
                 {
                     <tr>
-                        <td>@venda.Id</td>
-                        <td>@venda.DataVenda.ToString("dd/MM/yyyy HH:mm")</td>
+                        <td class="idTH">@venda.Id</td>
 
-                        <td>@venda.Revendedor.Nome</td>
 
-                        <td>@venda.Usuario.Login</td>
+                        <td class="espacoPadraoTabela">@venda.Revendedor.Nome</td>
 
-                        <td>@venda.ItensVendas.Count</td>
+                        <td class="espacoPadraoTabela">@venda.Usuario.Login</td>
 
-                        <td>R$ @venda.TotalVenda.ToString("N2")</td>
+                        <td class="espacoPadraoTabela">@venda.ItensVendas.Count</td>
 
-                        <td>
+                        <td class="espacoPadraoTabela">R$ @venda.TotalVenda.ToString("N2")</td>
 
-                            <button class="btn btn-sm btn-info" onclick="detalhesVenda(@venda.Id)">
-                                Detalhes
-                            </button>
+                        <td class="espacoModificarOpcoes">
+                            <div role="group" class="d-grid gap-1 formatacaoBotaoTabela">
 
+                                <a role="button" class="btn-sm btn-primary btnModificadoTamanhoIgual" onclick="detalhesVenda(@venda.Id)">
+                                    <i class="fa-solid fa-calendar-week"></i>
+                                    Detalhes
+                                </a>
+
+                                <div class="modal fade" id="modalDetalhes" tabindex="-1" aria-labelledby="modalDetalhesLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+
+                                                <h5 class="modal-title" id="modalCriarLabel">Detalhes da Venda</h5>
+
+
+                                                <div class="d-flex gap-2">
+                                                    <a role="button"
+                                                       class="btn btn-outline-success btnApagar btnAbrirModal"
+                                                       data-current-modal="#modalDetalhes"
+                                                       data-modal-target="#modalEditarVenda"
+                                                       data-id="@venda.Id">
+                                                        <i class="fa-solid fa-pen-to-square"></i>
+                                                    </a>
+
+                                                    <a role="button"
+                                                       class="btn btn-outline-danger btnApagar btnAbrirModal"
+                                                       data-current-modal="#modalDetalhes"
+                                                       data-modal-target="#modalApagarVenda"
+                                                       data-id="@venda.Id">
+                                                        <i class="fa-regular fa-trash-can fa-lg"></i>
+                                                    </a>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                                                </div>
+                                            </div>
+                                            <div class="modal-body" id="vendaDetalhesBody">
+                                                <div class="text-center">Carregando formulário...</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <a role="button" class="btn-sm btn-success btnModificadoTamanhoIgual"
+                                        onclick="editarVenda(@venda.Id)">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                    Editar
+                                </a>
+                            </div>
+                        </td>
+
+                        <td scope="row" class="espacoApagarOpcoes">
                             <!-- BOTÃO APAGAR -->
-                            <button class="btn btn-sm btn-danger"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#modalApagarVenda"
-                                    data-id="@venda.Id">
-                                Apagar
-                            </button>
+                            <a role="button" class="btn-sm btn-outline-danger btnApagar"
+                               data-bs-toggle="modal"
+                               data-bs-target="#modalApagarVenda"
+                               data-id="@venda.Id">
 
-                            <button href="#" class="btn btn-sm btn-warning"
-                                    onclick="editarVenda(@venda.Id)">
-                                Editar
-                            </button>
+                                <i class="fa-regular fa-trash-can fa-lg"></i>
+                            </a>
                         </td>
                     </tr>
+
                 }
             }
             else
@@ -98,9 +178,10 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="modalCriarLabel">Realizar Venda</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                <h5 class="modal-title">Realizar Venda</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
+            
             <div class="modal-body" id="vendaCriarBody">
                 <div class="text-center">Carregando formulário...</div>
             </div>
@@ -109,19 +190,7 @@
 </div>
 
 <!-- MODAL DE CRIAR (DO JEITO QUE VOCÊ JÁ TINHA) -->
-<div class="modal fade" id="modalDetalhes" tabindex="-1" aria-labelledby="modalDetalhesLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modalDetalhesLabel">Detalhes Venda</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-            </div>
-            <div class="modal-body" id="vendaDetalhesBody">
-                <div class="text-center">Carregando formulário...</div>
-            </div>
-        </div>
-    </div>
-</div>
+
 
 <!-- MODAL DE EDITAR (COM A FUNÇÃO EDITAR VENDA) -->
 <div class="modal fade" id="modalEditar" tabindex="-1" aria-labelledby="modalEditarLabel" aria-hidden="true">
@@ -141,35 +210,104 @@
 
 
 <!-- NOVO: MODAL APAGAR (SEM ALTERAR O RESTO DO SEU CÓDIGO) -->
+
 <div class="modal fade" id="modalApagarVenda" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
 
-            <div class="modal-header bg-danger text-white">
+            <div class="modal-header">
                 <h5 class="modal-title">Confirmar Exclusão</h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
             </div>
 
             <div class="modal-body">
-                Deseja realmente apagar esta venda?
-                <br />
-                <strong>O estoque será devolvido automaticamente.</strong>
-            </div>
-
-            <div class="modal-footer">
-                <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <div class="div-Criar responsivo">
+                    <div class="text-center">
+                        <p class="btn-danger p-4">Aviso, o produto selecionado será excluído permanentemente!</p>
+                        <div class="div-conteudo">
+                            <p class="display-6">
+                                Realmente deseja apagar a Venda?
+                                
+                                
+                            </p>
+                        </div>
+                        <br />
+            <div class="d-flex justify-content-between">
+                <button class="btn btn-outline-primary btnApagar btn-block" data-bs-dismiss="modal">
+                    <i class="fa-solid fa-arrow-left fa-lg"></i>
+                    Cancelar Exclusão
+                </button>
 
                 <form method="post" id="formExcluirVenda">
-                    <button type="submit" class="btn btn-danger">Confirmar</button>
+                    <button type="submit" class="btn btn-outline-danger btnApagar">
+                        <i class="fa-regular fa-trash-can fa-lg"></i>
+                        Excluir
+                    </button>
                 </form>
             </div>
-
+            </div>
+            </div>
+            </div>
         </div>
     </div>
 </div>
 
+
 @section Scripts {
     <script>
+                    $('#modalCriar, #modalEditar').on('hidden.bs.modal', function () {
+            $(this).find('.modal-body').html('');
+        });
+
+
+
+
+                       document.addEventListener('click', function (e) {
+            const btn = e.target.closest('.btnAbrirModal');
+            if (!btn) return;
+
+            const currentModal = document.querySelector(btn.dataset.currentModal);
+            const nextModalSelector = btn.dataset.modalTarget;
+            const id = btn.dataset.id;
+
+            const modalInstance = bootstrap.Modal.getInstance(currentModal);
+            modalInstance.hide();
+
+            currentModal.addEventListener('hidden.bs.modal', function () {
+
+                // 👉 Se for o modal de edição
+                if (nextModalSelector === "#modalEditarVenda" && id) {
+
+                    editarVenda(id, function () {
+                        const nextModal = document.querySelector(nextModalSelector);
+                        new bootstrap.Modal(nextModal).show();
+                    });
+
+                }
+                // 👉 Se for o modal de apagar venda
+                else if (nextModalSelector === "#modalApagarVenda" && id) {
+
+                    // 🔥 Aqui setamos o action ANTES de abrir o modal (solução final!)
+                    const form = document.getElementById('formExcluirVenda');
+                    form.action = '/Venda/Apagar/' + id;
+
+                    const nextModal = document.querySelector(nextModalSelector);
+                    new bootstrap.Modal(nextModal).show();
+                }
+                // 👉 Outros modais
+                else {
+                    const nextModal = document.querySelector(nextModalSelector);
+                    new bootstrap.Modal(nextModal).show();
+                }
+
+            }, { once: true });
+        });
+
+
+
+            
+
+
 
                             function detalhesVenda(id) {
 
@@ -183,26 +321,31 @@
                     inicializarDetalhesVenda();
                 }
             });
-
-            // Abre o modal
+              // Abre o modal
             $("#modalDetalhes").modal("show");
         }
-          
-  
 
-                        function editarVenda(id) {
+
+
+
+                  function editarVenda(id) {
             $.get('/Venda/Editar/' + id, function (html) {
 
                 $("#vendaEditarBody").html(html);
 
-                // 🚀 Inicializa tudo depois da partial ter sido carregada
-                if (typeof inicializarEdicaoVenda === "function") {
-                    inicializarEdicaoVenda();
-                }
+                // RESETAR index assim que o HTML do editar é INJETADO
+                nextItemIndex = $("#vendaEditarBody .item-row").length;
+
+                setTimeout(() => inicializarEdicaoVenda(), 0);
             });
 
             $("#modalEditar").modal("show");
         }
+
+          
+  
+
+           
 
 
         // Carregar formulário do modal Criar (SEU ORIGINAL)

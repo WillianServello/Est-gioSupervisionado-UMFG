@@ -13,6 +13,14 @@ namespace cafeservellocontroler.Mapeamento
             builder.HasKey(v => v.Id);
 
             builder.Property(v => v.DataVenda)
+                .HasColumnName("DataVenda")
+                .IsRequired();
+
+            builder.Property(v => v.DataAtualizarVenda)
+                .HasColumnName("DataAtualizarVenda")
+                .IsRequired();
+
+            builder.Property(v => v.DataVenda)
                 .IsRequired();
 
             builder.Ignore(x => x.TotalVenda);

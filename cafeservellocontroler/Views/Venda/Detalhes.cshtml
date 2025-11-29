@@ -1,41 +1,85 @@
 ﻿@using cafeservellocontroler.Models.Venda
 @model ModelVenda
+@{
+    ViewData["Title"] = "Detalhes da Venda";
+}
 
-<div class="container">
+<div class=" div-Criar responsivo  shadow-sm">
+    <div class="card-body">
 
-    <div class="card mb-3 shadow-sm">
-        <div class="card-body">
-            <h5 class="card-title">Informações da Venda</h5>
+        <div class="row div-conteudo">
+            
 
-            <p><strong>ID da Venda:</strong> @Model.Id</p>
-            <p><strong>Data:</strong> @Model.DataVenda.ToString("dd/MM/yyyy")</p>
-            <p><strong>Revendedor:</strong> @Model.Revendedor.Nome</p>
-            <p>
-                <strong>Total:</strong>
-                <span class="text-success fw-bold">R$ @Model.TotalVenda.ToString("N2")</span>
+            <p class="p-horario">
+                <strong>Nome Fantasia:</strong>
+                @Model.Revendedor.NomeFantasia
+            </p>
+            <p class="p-horario">
+                <strong>Nome Revendedor:</strong>
+                @Model.Revendedor.Nome
             </p>
         </div>
     </div>
 
-    <h6 class="mt-3">Itens da Venda</h6>
+    
 
-    <div class="list-group">
-        @foreach (var item in Model.ItensVendas)
-        {
-            <div class="list-group-item d-flex justify-content-between align-items-center">
-                <div>
-                    <strong>@item.Produto.Nome</strong><br />
-                    <small class="text-muted">@item.Quantidade unidade(s)</small>
-                </div>
+    <div class="card-body">
 
-                <div class="text-end">
-                    <div>R$ @item.Valor.ToString("N2")</div>
-                    <small class="text-muted">
-                        Total: R$ @((item.Quantidade * item.Valor).ToString("N2"))
-                    </small>
+        <div class="row div-conteudo">
+            <h6 class="mt-3 display-6">Itens da Venda</h6>
+            @foreach (var item in Model.ItensVendas)
+            {
+                <div class="list-group-item p-horario mb-2 d-flex justify-content-between align-items-center">
+                    <div>
+                        <strong>@item.Produto.Nome</strong><br />
+                        <small class="text-muted ">@item.Quantidade unidade(s)</small>
+                    </div>
+
+                    <div class="text-end">
+                        <div>R$ @item.Valor.ToString("N2")</div>
+                        <small class="text-muted">
+                            Total: R$ @((item.Quantidade * item.Valor).ToString("N2"))
+                        </small>
+                    </div>
                 </div>
+            }
+            <div class="p-0 mt-1 d-flex justify-content-end">
+                <p class="p-horario col-md-4 ">
+                    <strong>Total da Venda:</strong>
+                    <span class="text-success fw-bold">R$ @Model.TotalVenda.ToString("N2")</span>
+                </p>
             </div>
-        }
-    </div>
+        </div>
+   <br />
+        <div class="row div-horario ">
+            <div class="col-12 col-md-6 mb-3">
+                <strong>Data Cadastro:</strong>
+                <p class="m-auto p-horario">
+                    <i class="fa-regular fa-calendar"></i>
+                    <strong>Data:</strong>
+                    @Model.DataVenda.ToString("dd/MM/yyyy")
+                    <br />
 
+                    <i class="fa-regular fa-alarm-clock"></i>
+                    <strong>Horas:</strong>
+                    @Model.DataVenda.ToString("HH:mm")
+                </p>
+            </div>
+
+            <div class="col-12 col-md-6 mb-3">
+                <strong>Data Atualizações:</strong>
+                <p class="m-auto p-horario">
+                    <i class="fa-solid fa-calendar"></i>
+                    <strong>Data:</strong>
+                    @Model.DataAtualizarVenda.ToString("dd/MM/yyyy")
+                    <br />
+
+                    <i class="fa-solid fa-alarm-clock"></i>
+                    <strong>Horas:</strong>
+                    @Model.DataAtualizarVenda.ToString("HH:mm")
+                </p>
+            </div>
+        </div>
+   
+    </div>
 </div>

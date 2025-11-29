@@ -1,11 +1,50 @@
 ﻿@using cafeservellocontroler.Models.Pessoa
 @model ModelPessoa
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Página Inicial";
 }
-<h1>CaféServello</h1>
-<div class="d-flex justify-content-end">
-    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalCriar" onclick="limparFormulario()">
-        Novo
-    </button>
-</div>
+
+
+
+
+
+@await Component.InvokeAsync("HomeMenu")
+
+
+
+<style>
+    .templates-pagina-inicial {
+        aspect-ratio: 4 / 4; /* deixa o card perfeitamente quadrado */
+        background: white;
+        border-radius: 5px;
+        box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        transition: 0.3s;
+        margin-bottom: 20px;
+        max-width: 150px
+    }
+        .templates-pagina-inicial:hover {
+           
+            background-color: #3B4656;
+            box-shadow: 2px 2px 6px rgba(0,0,0,0.35);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        
+
+        
+    .dentro{
+        padding: 20px;
+        border-radius: 5px;
+        display: flex; /* IMPORTANTE */
+        justify-content: center; /* centraliza horizontal */
+        align-items: center; /* centraliza vertical */
+        background-color: #3B4656
+    }
+
+    
+</style>

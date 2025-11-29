@@ -63,8 +63,8 @@ namespace cafeservellocontroler.Mapeamento
                     senha: senhaAdminHash,
                     email: "admin@cafeservello.com",
                     perfil: PerfilEnum.Admin,
-                    dataCadastro: DateTime.Now,
-                    dataAtualizacaoCadastro: DateTime.Now
+                    dataCadastro: new DateTime(2024, 1, 1),
+                    dataAtualizacaoCadastro: new DateTime(2024, 1, 1)
                 )
             );
 

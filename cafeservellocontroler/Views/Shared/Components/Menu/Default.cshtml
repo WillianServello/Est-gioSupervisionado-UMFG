@@ -20,6 +20,17 @@
 
 @* Links e icons dos botões do sidebar *@
 <ul id="side_items">
+
+        <li class="side-item" data-url="/Home/Index">
+            <a>
+                @* <i class="fa-brands fa-product-hunt"></i> *@
+                <i class="fa-solid fa-house"></i>
+                <span class="item-description">
+                    Página Inicial
+                </span>
+            </a>
+        </li>
+
     <li class="side-item" data-url="/Produto/Index">
         <a>
             @* <i class="fa-brands fa-product-hunt"></i> *@
@@ -63,6 +74,16 @@
         </li>
 
 
+        <li class="side-item" data-url="/Relatorio/Index">
+            <a href="#">
+                <i class="fa-solid fa-print"></i>
+                <span class="item-description">
+                    Gerar Relatório
+                </span>
+            </a>
+        </li>
+
+
     <li class="side-item" data-url="/AlterarSenha/Index">
         <a href="#">
             <i class="fa-solid fa-lock"></i>
@@ -72,14 +93,7 @@
         </a>
     </li>
 
-    <li class="side-item" data-url="/Relatorio/Index">
-        <a href="#">
-            <i class="fa-solid fa-lock"></i>
-            <span class="item-description">
-                Alterar Senha
-            </span>
-        </a>
-    </li>
+    
 
     
 
@@ -96,7 +110,7 @@
     <button id="logout_btn">
         <i class="fa-solid fa-right-from-bracket"></i>
         <span class="item-description">
-            logout
+            Sair
         </span>
     </button>
 </a>

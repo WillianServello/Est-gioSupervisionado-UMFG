@@ -1,4 +1,5 @@
 ﻿using cafeservellocontroler.Data;
+using cafeservellocontroler.Filters;
 using iText.IO.Font.Constants;
 using iText.Kernel.Font;
 using iText.Kernel.Pdf;
@@ -9,6 +10,7 @@ using System.Linq;
 
 namespace cafeservellocontroler.Controllers
 {
+    [PaginaUsuarioLogado]
     public class RelatorioController : Controller
     {
         private readonly BancoContext _context;

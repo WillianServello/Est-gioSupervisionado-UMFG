@@ -7,7 +7,7 @@ using MySql.EntityFrameworkCore.Metadata;
 namespace cafeservellocontroler.Migrations
 {
     /// <inheritdoc />
-    public partial class PrimeiraMigracao : Migration
+    public partial class NovaMigr : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -102,6 +102,7 @@ namespace cafeservellocontroler.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     DataVenda = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    DataAtualizarVenda = table.Column<DateTime>(type: "datetime(6)", nullable: false),
                     Id_Usuario = table.Column<int>(type: "int", nullable: false),
                     Id_Revendedor = table.Column<int>(type: "int", nullable: false)
                 },
@@ -156,7 +157,7 @@ namespace cafeservellocontroler.Migrations
             migrationBuilder.InsertData(
                 table: "Usuario",
                 columns: new[] { "ID", "DataAtualizacaoCadastro", "DataCadastro", "Email", "Login", "Perfil", "Senha" },
-                values: new object[] { 1, new DateTime(2025, 11, 22, 15, 11, 39, 16, DateTimeKind.Local).AddTicks(3242), new DateTime(2025, 11, 22, 15, 11, 39, 16, DateTimeKind.Local).AddTicks(3236), "admin@cafeservello.com", "admin", 1, "7c4a8d09ca3762af61e59520943dc26494f8941b" });
+                values: new object[] { 1, new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "admin@cafeservello.com", "adminWillian", 1, "7c4a8d09ca3762af61e59520943dc26494f8941b" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_ItensVenda_Id_Produto",

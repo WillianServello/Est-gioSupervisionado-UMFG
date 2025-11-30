@@ -1,4 +1,17 @@
-﻿<a asp-action="LucroPorProduto" asp-controller="Relatorio" class="btn btn-success tamanho">
-	<i class="fa-solid fa-print">
-	</i>Gerar Relatório PDF
-</a>
+﻿<form asp-action="LucroPorProduto" asp-controller="Relatorio" method="get" class="d-flex gap-3 align-items-end">
+
+    <div>
+        <label class="form-label">Data Inicial</label>
+        <input type="date" name="dataInicial" class="form-control" />
+    </div>
+
+    <div>
+        <label class="form-label">Data Final</label>
+        <input type="date" name="dataFinal" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-success tamanho">
+        <i class="fa-solid fa-print"></i>Gerar Relatório PDF
+    </button>
+
+</form>

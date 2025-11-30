@@ -2,9 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\cafeservellocontroler",
-    "\\cafeservellocontroler\\Models",
-    "\\cafeservellocontroler\\Models\\Pessoa"
+    "\\cafeservellocontroler\\Controllers",
+    "\\cafeservellocontroler\\Views",
+    "\\cafeservellocontroler\\Views\\Usuario"
   ],
-  "SelectedNode": "\\cafeservellocontroler.sln",
+  "SelectedNode": "\\cafeservellocontroler\\Views\\Usuario\\ApagarConfirmacao.cshtml",
   "PreviewInSolutionExplorer": false
 }

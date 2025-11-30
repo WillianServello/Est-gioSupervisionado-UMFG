@@ -6,6 +6,7 @@ using iText.Kernel.Pdf;
 using iText.Layout;
 using iText.Layout.Element;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
 namespace cafeservellocontroler.Controllers
@@ -38,11 +39,21 @@ namespace cafeservellocontroler.Controllers
         public IActionResult RevendedorMaisAtivoIndex()
         {
             return PartialView();
-        }        
+        }
 
-        public IActionResult ProdutoMaisVendido()
+        public IActionResult ProdutoMaisVendido(DateTime? dataInicial, DateTime? dataFinal)
         {
-            var produtos = _context.ItensVendas
+            // 1. Filtrar itens pela data da venda
+            var itensFiltrados =
+                from item in _context.ItensVendas
+                join venda in _context.Vendas
+                    on EF.Property<int>(item, "Id_Venda") equals venda.Id
+                where (!dataInicial.HasValue || venda.DataVenda >= dataInicial.Value)
+                where (!dataFinal.HasValue || venda.DataVenda <= dataFinal.Value)
+                select item;
+
+            // 2. Agrupar produtos filtrados
+            var produtos = itensFiltrados
                 .GroupBy(i => new { i.Produto.Id, i.Produto.Nome })
                 .Select(g => new
                 {
@@ -53,7 +64,7 @@ namespace cafeservellocontroler.Controllers
                 .OrderByDescending(x => x.QuantidadeVendida)
                 .ToList();
 
-            // Fonte padrão
+            // Fontes
             var fontNormal = PdfFontFactory.CreateFont(StandardFonts.HELVETICA);
             var fontBold = PdfFontFactory.CreateFont(StandardFonts.HELVETICA_BOLD);
 
@@ -70,14 +81,12 @@ namespace cafeservellocontroler.Controllers
 
                 document.Add(titulo);
 
-                // Tabela com 2 colunas
+                // Tabela
                 var table = new Table(2).UseAllAvailableWidth();
 
-                // Cabeçalho
                 table.AddHeaderCell(new Cell().Add(new Paragraph("Produto").SetFont(fontBold)));
                 table.AddHeaderCell(new Cell().Add(new Paragraph("Quantidade Vendida").SetFont(fontBold)));
 
-                // Corpo da tabela
                 foreach (var p in produtos)
                 {
                     table.AddCell(new Cell().Add(new Paragraph(p.Nome).SetFont(fontNormal)));
@@ -90,33 +99,46 @@ namespace cafeservellocontroler.Controllers
             return File(ms.ToArray(), "application/pdf", "ProdutosMaisVendidos.pdf");
         }
 
-        public IActionResult RevendedorMaisAtivo()
+
+        public IActionResult RevendedorMaisAtivo(DateTime? dataInicial, DateTime? dataFinal)
         {
-            var revendedores = _context.Vendas
-                .GroupBy(v => new { v.Revendedor.Id, v.Revendedor.NomeFantasia })
+            // JOIN manual usando VendaId (igual ao que fizemos no outro relatório)
+            var itensFiltrados =
+                from item in _context.ItensVendas
+                join venda in _context.Vendas
+                    on EF.Property<int>(item, "Id_Venda") equals venda.Id
+                where (!dataInicial.HasValue || venda.DataVenda >= dataInicial.Value)
+                where (!dataFinal.HasValue || venda.DataVenda <= dataFinal.Value)
+                select new
+                {
+                    item.Total,
+                    venda.Revendedor.Id,
+                    venda.Revendedor.NomeFantasia
+                };
+
+            // Agrupamento por Revendedor
+            var revendedores = itensFiltrados
+                .GroupBy(r => new { r.Id, r.NomeFantasia })
                 .Select(g => new
                 {
                     RevendedorId = g.Key.Id,
                     Nome = g.Key.NomeFantasia,
-                    TotalVendido = g
-                        .SelectMany(v => v.ItensVendas)
-                        .Sum(iv => iv.Total)
+                    TotalVendido = g.Sum(x => x.Total)
                 })
                 .OrderByDescending(x => x.TotalVendido)
                 .ToList();
 
-            using var ms = new MemoryStream();
 
+            // Gerar PDF
+            using var ms = new MemoryStream();
             using (var writer = new iText.Kernel.Pdf.PdfWriter(ms))
             using (var pdf = new iText.Kernel.Pdf.PdfDocument(writer))
             using (var document = new iText.Layout.Document(pdf))
             {
-                // Fonte negrito
                 var boldFont = iText.Kernel.Font.PdfFontFactory.CreateFont(
                     iText.IO.Font.Constants.StandardFonts.HELVETICA_BOLD
                 );
 
-                // Título
                 document.Add(
                     new iText.Layout.Element.Paragraph("Relatório - Revendedores Mais Ativos")
                         .SetFontSize(20)
@@ -124,7 +146,6 @@ namespace cafeservellocontroler.Controllers
                         .SetMarginBottom(20)
                 );
 
-                // Tabela
                 var table = new iText.Layout.Element.Table(2);
                 table.AddHeaderCell("Revendedor");
                 table.AddHeaderCell("Total Vendido (R$)");
@@ -134,14 +155,28 @@ namespace cafeservellocontroler.Controllers
                     table.AddCell(r.Nome);
                     table.AddCell(r.TotalVendido.ToString("N2"));
                 }
+
                 document.Add(table);
             }
+
             return File(ms.ToArray(), "application/pdf", "RevendedorMaisAtivo.pdf");
         }
 
-        public IActionResult LucroPorProduto()
+
+
+        public IActionResult LucroPorProduto(DateTime? dataInicial, DateTime? dataFinal)
         {
-            var agregados = _context.ItensVendas
+            // 1. Filtrar itens pela data da venda
+            var itensFiltrados =
+                from item in _context.ItensVendas
+                join venda in _context.Vendas
+                    on EF.Property<int>(item, "Id_Venda") equals venda.Id
+                where (!dataInicial.HasValue || venda.DataVenda >= dataInicial.Value)
+                where (!dataFinal.HasValue || venda.DataVenda <= dataFinal.Value)
+                select item;
+
+            // 2. Agrupar os produtos filtrados
+            var agregados = itensFiltrados
                 .GroupBy(i => new { i.Produto.Id, i.Produto.Nome, i.Produto.Preco, i.Produto.PrecoCompra })
                 .Select(g => new
                 {
@@ -153,20 +188,22 @@ namespace cafeservellocontroler.Controllers
                 })
                 .ToList();
 
+            // 3. Calcular lucros
             var resultado = agregados
                 .Select(a => new
                 {
-                    ProdutoId = a.ProdutoId,
-                    Nome = a.Nome,
-                    PrecoCompra = a.PrecoCompra,
-                    PrecoVenda = a.PrecoVenda,
+                    a.ProdutoId,
+                    a.Nome,
+                    a.PrecoCompra,
+                    a.PrecoVenda,
                     LucroUnidade = a.PrecoVenda - a.PrecoCompra,
-                    QuantidadeVendida = a.QuantidadeVendida,
+                    a.QuantidadeVendida,
                     LucroTotal = (a.PrecoVenda - a.PrecoCompra) * a.QuantidadeVendida
                 })
                 .OrderByDescending(x => x.LucroTotal)
                 .ToList();
 
+            // 4. Gerar PDF
             using var ms = new MemoryStream();
 
             using (var writer = new iText.Kernel.Pdf.PdfWriter(ms))
@@ -177,7 +214,6 @@ namespace cafeservellocontroler.Controllers
                     iText.IO.Font.Constants.StandardFonts.HELVETICA_BOLD
                 );
 
-                // Título
                 document.Add(
                     new iText.Layout.Element.Paragraph("Relatório - Lucro por Produto")
                         .SetFontSize(20)
@@ -185,7 +221,6 @@ namespace cafeservellocontroler.Controllers
                         .SetMarginBottom(20)
                 );
 
-                // Tabela com 5 colunas
                 var table = new iText.Layout.Element.Table(5);
 
                 table.AddHeaderCell("Produto");
@@ -205,8 +240,12 @@ namespace cafeservellocontroler.Controllers
 
                 document.Add(table);
             }
+
             return File(ms.ToArray(), "application/pdf", "LucroPorProduto.pdf");
         }
+
+
+
 
     }
 }

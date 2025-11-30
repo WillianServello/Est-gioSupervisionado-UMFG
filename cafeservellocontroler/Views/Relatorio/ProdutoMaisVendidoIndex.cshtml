@@ -1,5 +1,19 @@
-﻿
+﻿<form asp-action="ProdutoMaisVendido" asp-controller="Relatorio" method="get" class="d-flex gap-3 align-items-end">
 
-<a asp-action="ProdutoMaisVendido" asp-controller="Relatorio" class="btn btn-success tamanho">
-	<i class="fa-solid fa-print">
-	</i>Gerar Relatório PDF</a>
+    <div class="col-md-4">
+        <label class="form-label">Data Inicial</label>
+        <input type="date" name="dataInicial" class="form-control" />
+    </div>
+
+    <div class="col-md-4">
+        <label class="form-label">Data Final</label>
+        <input type="date" name="dataFinal" class="form-control" />
+    </div>
+
+    <div class="col-md-4 d-flex align-items-end">
+        <button type="submit" class="btn btn-success w-100">
+            <i class="fa-solid fa-print"></i> Gerar Relatório PDF
+        </button>
+    </div>
+
+</form>

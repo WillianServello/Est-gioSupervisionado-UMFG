@@ -2,40 +2,59 @@
 @{
     ViewData["Title"] = "Relatorios";
 }
-<div class="mt-4 background-div ">
-    <div class="ma-auto p-3  d-flex justify-content-center align-content-center">
-        <p class="tamanho-font-titulo  ">
-            Qual relatório você deseja gerar?
-        </p>
-    </div>
+<div class=" mt-4 mb-2 p-3 shadow-sm d-inline-flex">
 
 
-    <div class="row p-3 mb-3 d-flex flex-column justify-content-center align-items-center">
-        <div >
-                <a data-bs-toggle="modal"
-                   data-bs-target="#modalLucroPorProdutoIndex"
-                   onclick="limparFormulario()" class="btn btn-secondary tamanho">Lucro por produto
-               </a>
-            </div>
-            <br />
-        <div class="">
-                <a data-bs-toggle="modal"
-                   data-bs-target="#modalProdutoMaisVendidoIndex"
-                   onclick="limparFormulario()" class="btn btn-secondary tamanho">Produto mais vendido
-               </a>
-            </div>
-        <br />
-        <div >
-                <a data-bs-toggle="modal"
-                   data-bs-target="#modalRevendedorMaisAtivoIndex"
-                   onclick="limparFormulario()" class="btn btn-secondary tamanho">Revendedor mais ativo
-               </a>
-            </div>
+    <i class="fa-solid fa-print fa-xl d-flex align-items-center" style=""></i>
 
-            
-        
-    </div>
+    <p class="tamanho-font-titulo borda-titulo ">
+        Relatórios
+    </p>
 </div>
+
+<div class="table-responsive table-wrapper p-3">
+    <table class="table table-bordered table-striped" id="table">
+        <thead class="table-thead">
+            <tr class="div-thead">
+                <th class="text-center fs-4 py-3">
+                    Qual relatório você deseja gerar?
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>
+                    <div class="d-flex justify-content-center gap-3 py-4">
+
+                        <a data-bs-toggle="modal"
+                           data-bs-target="#modalLucroPorProdutoIndex"
+                           onclick="limparFormulario()"
+                           class="btn btn-secondary tamanho">
+                            Lucro por produto
+                        </a>
+
+                        <a data-bs-toggle="modal"
+                           data-bs-target="#modalProdutoMaisVendidoIndex"
+                           onclick="limparFormulario()"
+                           class="btn btn-secondary tamanho">
+                            Produto mais vendido
+                        </a>
+
+                        <a data-bs-toggle="modal"
+                           data-bs-target="#modalRevendedorMaisAtivoIndex"
+                           onclick="limparFormulario()"
+                           class="btn btn-secondary tamanho">
+                            Revendedor mais ativo
+                        </a>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
 
 <div class="modal fade" id="modalLucroPorProdutoIndex" tabindex="-1" aria-labelledby="modalLucroPorProdutoIndexLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -91,6 +110,11 @@
 
     .tamanho{
         width: 300px;
+        font-size: 17px;
+    }
+
+    .tamanho-botao {
+        width: 200px;
         font-size: 16px;
     }
 

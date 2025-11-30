@@ -1,6 +1,7 @@
 ﻿using cafeservellocontroler.Data;
 using cafeservellocontroler.Filters;
 using iText.IO.Font.Constants;
+using iText.Kernel.Colors;
 using iText.Kernel.Font;
 using iText.Kernel.Pdf;
 using iText.Layout;
@@ -73,31 +74,81 @@ namespace cafeservellocontroler.Controllers
             using (var pdf = new PdfDocument(writer))
             using (var document = new Document(pdf))
             {
-                // Título
+                // ======= TÍTULO GRANDE ========
                 var titulo = new Paragraph("Relatório - Produtos Mais Vendidos")
                     .SetFont(fontBold)
                     .SetFontSize(20)
-                    .SetMarginBottom(20);
+                    .SetFontColor(ColorConstants.WHITE)
+                    .SetBackgroundColor(new DeviceRgb(47, 58, 74))
+                    .SetPadding(10)
+                    .SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER)
+                    .SetMarginBottom(10);
 
                 document.Add(titulo);
 
-                // Tabela
+                // ======= PERÍODO ========
+                string textoPeriodo =
+                    $"Período: {(dataInicial.HasValue ? dataInicial.Value.ToString("dd/MM/yyyy") : "--")}  até  {(dataFinal.HasValue ? dataFinal.Value.ToString("dd/MM/yyyy") : "--")}";
+
+                var periodo = new Paragraph(textoPeriodo)
+                    .SetFont(fontBold)
+                    .SetFontSize(12)
+                    .SetFontColor(ColorConstants.BLACK)
+                    .SetMarginBottom(20);
+
+                document.Add(periodo);
+
+                // ====== TABELA ======
                 var table = new Table(2).UseAllAvailableWidth();
 
-                table.AddHeaderCell(new Cell().Add(new Paragraph("Produto").SetFont(fontBold)));
-                table.AddHeaderCell(new Cell().Add(new Paragraph("Quantidade Vendida").SetFont(fontBold)));
+                var headerBackground = new DeviceRgb(47, 58, 74);
+
+                table.AddHeaderCell(
+                    new Cell()
+                        .Add(new Paragraph("Produto").SetFont(fontBold).SetFontColor(ColorConstants.WHITE))
+                        .SetBackgroundColor(headerBackground)
+                        .SetPadding(8)
+                );
+
+                table.AddHeaderCell(
+                    new Cell()
+                        .Add(new Paragraph("Quantidade Vendida").SetFont(fontBold).SetFontColor(ColorConstants.WHITE))
+                        .SetBackgroundColor(headerBackground)
+                        .SetPadding(8)
+                );
 
                 foreach (var p in produtos)
                 {
-                    table.AddCell(new Cell().Add(new Paragraph(p.Nome).SetFont(fontNormal)));
-                    table.AddCell(new Cell().Add(new Paragraph(p.QuantidadeVendida.ToString()).SetFont(fontNormal)));
+                    table.AddCell(
+                        new Cell()
+                            .Add(new Paragraph(p.Nome).SetFont(fontNormal))
+                            .SetPadding(6)
+                    );
+
+                    table.AddCell(
+                        new Cell()
+                            .Add(new Paragraph(p.QuantidadeVendida.ToString()).SetFont(fontNormal))
+                            .SetPadding(6)
+                    );
                 }
 
                 document.Add(table);
+
+                // ======= RODAPÉ - GERADO EM =======
+                var rodape = new Paragraph($"Gerado em: {DateTime.Now:dd/MM/yyyy HH:mm}")
+                    .SetFont(fontNormal)
+                    .SetFontSize(9)
+                    .SetTextAlignment(iText.Layout.Properties.TextAlignment.RIGHT)
+                    .SetMarginTop(25);
+
+                document.Add(rodape);
             }
 
             return File(ms.ToArray(), "application/pdf", "ProdutosMaisVendidos.pdf");
         }
+
+
+
 
 
         public IActionResult RevendedorMaisAtivo(DateTime? dataInicial, DateTime? dataFinal)
@@ -138,31 +189,83 @@ namespace cafeservellocontroler.Controllers
                 var boldFont = iText.Kernel.Font.PdfFontFactory.CreateFont(
                     iText.IO.Font.Constants.StandardFonts.HELVETICA_BOLD
                 );
-
-                document.Add(
-                    new iText.Layout.Element.Paragraph("Relatório - Revendedores Mais Ativos")
-                        .SetFontSize(20)
-                        .SetFont(boldFont)
-                        .SetMarginBottom(20)
+                var regularFont = iText.Kernel.Font.PdfFontFactory.CreateFont(
+                    iText.IO.Font.Constants.StandardFonts.HELVETICA
                 );
 
-                var table = new iText.Layout.Element.Table(2);
-                table.AddHeaderCell("Revendedor");
-                table.AddHeaderCell("Total Vendido (R$)");
+                // ======= TÍTULO GRANDE ========
+                var titulo = new iText.Layout.Element.Paragraph("Relatório - Revendedores Mais Ativos")
+                    .SetFont(boldFont)
+                    .SetFontSize(20)
+                    .SetFontColor(iText.Kernel.Colors.ColorConstants.WHITE)
+                    .SetBackgroundColor(new iText.Kernel.Colors.DeviceRgb(47, 58, 74)) // #2F3A4A
+                    .SetPadding(10)
+                    .SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER)
+                    .SetMarginBottom(10);
+
+                document.Add(titulo);
+
+                // ======= PERÍODO (IDÊNTICO AO OUTRO) ========
+                string textoPeriodo =
+                    $"Período: {(dataInicial.HasValue ? dataInicial.Value.ToString("dd/MM/yyyy") : "--")}  até  {(dataFinal.HasValue ? dataFinal.Value.ToString("dd/MM/yyyy") : "--")}";
+
+                var periodo = new iText.Layout.Element.Paragraph(textoPeriodo)
+                    .SetFont(boldFont)
+                    .SetFontSize(12)
+                    .SetFontColor(iText.Kernel.Colors.ColorConstants.BLACK)
+                    .SetMarginBottom(20);
+
+                document.Add(periodo);
+
+                // ====== TABELA ESTILIZADA ======
+                var table = new iText.Layout.Element.Table(new float[] { 3, 2 })
+                    .UseAllAvailableWidth();
+
+                var headerBackground = new iText.Kernel.Colors.DeviceRgb(47, 58, 74);
+
+                table.AddHeaderCell(
+                    new iText.Layout.Element.Cell()
+                        .Add(new iText.Layout.Element.Paragraph("Revendedor").SetFont(boldFont).SetFontColor(iText.Kernel.Colors.ColorConstants.WHITE))
+                        .SetBackgroundColor(headerBackground)
+                        .SetPadding(8)
+                );
+
+                table.AddHeaderCell(
+                    new iText.Layout.Element.Cell()
+                        .Add(new iText.Layout.Element.Paragraph("Total Vendido (R$)").SetFont(boldFont).SetFontColor(iText.Kernel.Colors.ColorConstants.WHITE))
+                        .SetBackgroundColor(headerBackground)
+                        .SetPadding(8)
+                );
 
                 foreach (var r in revendedores)
                 {
-                    table.AddCell(r.Nome);
-                    table.AddCell(r.TotalVendido.ToString("N2"));
+                    table.AddCell(
+                        new iText.Layout.Element.Cell()
+                            .Add(new iText.Layout.Element.Paragraph(r.Nome).SetFont(regularFont))
+                            .SetPadding(6)
+                    );
+
+                    table.AddCell(
+                        new iText.Layout.Element.Cell()
+                            .Add(new iText.Layout.Element.Paragraph(r.TotalVendido.ToString("N2")).SetFont(regularFont))
+                            .SetPadding(6)
+                    );
                 }
 
                 document.Add(table);
+
+                // ====== RODAPÉ ======
+                var rodape = new iText.Layout.Element.Paragraph($"Gerado em: {DateTime.Now:dd/MM/yyyy HH:mm}")
+                    .SetFont(regularFont)
+                    .SetFontSize(9)
+                    .SetTextAlignment(iText.Layout.Properties.TextAlignment.RIGHT)
+                    .SetMarginTop(25);
+
+                document.Add(rodape);
             }
 
             return File(ms.ToArray(), "application/pdf", "RevendedorMaisAtivo.pdf");
         }
-
-
 
         public IActionResult LucroPorProduto(DateTime? dataInicial, DateTime? dataFinal)
         {
@@ -203,49 +306,105 @@ namespace cafeservellocontroler.Controllers
                 .OrderByDescending(x => x.LucroTotal)
                 .ToList();
 
-            // 4. Gerar PDF
+            // ===================== PDF COM A MESMA ESTILIZAÇÃO =====================
+
+            // Fontes
+            var fontNormal = PdfFontFactory.CreateFont(StandardFonts.HELVETICA);
+            var fontBold = PdfFontFactory.CreateFont(StandardFonts.HELVETICA_BOLD);
+
             using var ms = new MemoryStream();
-
-            using (var writer = new iText.Kernel.Pdf.PdfWriter(ms))
-            using (var pdf = new iText.Kernel.Pdf.PdfDocument(writer))
-            using (var document = new iText.Layout.Document(pdf))
+            using (var writer = new PdfWriter(ms))
+            using (var pdf = new PdfDocument(writer))
+            using (var document = new Document(pdf))
             {
-                var boldFont = iText.Kernel.Font.PdfFontFactory.CreateFont(
-                    iText.IO.Font.Constants.StandardFonts.HELVETICA_BOLD
+                // ======= TÍTULO =======
+                var titulo = new Paragraph("Relatório - Lucro por Produto")
+                    .SetFont(fontBold)
+                    .SetFontSize(20)
+                    .SetFontColor(ColorConstants.WHITE)
+                    .SetBackgroundColor(new DeviceRgb(47, 58, 74))
+                    .SetPadding(10)
+                    .SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER)
+                    .SetMarginBottom(10);
+
+                document.Add(titulo);
+
+                // ======= PERÍODO =======
+                string textoPeriodo =
+                    $"Período: {(dataInicial.HasValue ? dataInicial.Value.ToString("dd/MM/yyyy") : "--")}  até  {(dataFinal.HasValue ? dataFinal.Value.ToString("dd/MM/yyyy") : "--")}";
+
+                var periodo = new Paragraph(textoPeriodo)
+                    .SetFont(fontBold)
+                    .SetFontSize(12)
+                    .SetFontColor(ColorConstants.BLACK)
+                    .SetMarginBottom(20);
+
+                document.Add(periodo);
+
+                // ======= TABELA =======
+                var table = new Table(5).UseAllAvailableWidth();
+
+                var headerBackground = new DeviceRgb(47, 58, 74);
+
+                table.AddHeaderCell(
+                    new Cell()
+                        .Add(new Paragraph("Produto").SetFont(fontBold).SetFontColor(ColorConstants.WHITE))
+                        .SetBackgroundColor(headerBackground)
+                        .SetPadding(8)
                 );
 
-                document.Add(
-                    new iText.Layout.Element.Paragraph("Relatório - Lucro por Produto")
-                        .SetFontSize(20)
-                        .SetFont(boldFont)
-                        .SetMarginBottom(20)
+                table.AddHeaderCell(
+                    new Cell()
+                        .Add(new Paragraph("Preço Compra").SetFont(fontBold).SetFontColor(ColorConstants.WHITE))
+                        .SetBackgroundColor(headerBackground)
+                        .SetPadding(8)
                 );
 
-                var table = new iText.Layout.Element.Table(5);
+                table.AddHeaderCell(
+                    new Cell()
+                        .Add(new Paragraph("Preço Venda").SetFont(fontBold).SetFontColor(ColorConstants.WHITE))
+                        .SetBackgroundColor(headerBackground)
+                        .SetPadding(8)
+                );
 
-                table.AddHeaderCell("Produto");
-                table.AddHeaderCell("Preço Compra");
-                table.AddHeaderCell("Preço Venda");
-                table.AddHeaderCell("Qtd Vendida");
-                table.AddHeaderCell("Lucro Total");
+                table.AddHeaderCell(
+                    new Cell()
+                        .Add(new Paragraph("Qtd Vendida").SetFont(fontBold).SetFontColor(ColorConstants.WHITE))
+                        .SetBackgroundColor(headerBackground)
+                        .SetPadding(8)
+                );
 
+                table.AddHeaderCell(
+                    new Cell()
+                        .Add(new Paragraph("Lucro Total").SetFont(fontBold).SetFontColor(ColorConstants.WHITE))
+                        .SetBackgroundColor(headerBackground)
+                        .SetPadding(8)
+                );
+
+                // LINHAS
                 foreach (var p in resultado)
                 {
-                    table.AddCell(p.Nome);
-                    table.AddCell(p.PrecoCompra.ToString("N2"));
-                    table.AddCell(p.PrecoVenda.ToString("N2"));
-                    table.AddCell(p.QuantidadeVendida.ToString());
-                    table.AddCell(p.LucroTotal.ToString("N2"));
+                    table.AddCell(new Cell().Add(new Paragraph(p.Nome).SetFont(fontNormal)).SetPadding(6));
+                    table.AddCell(new Cell().Add(new Paragraph(p.PrecoCompra.ToString("N2")).SetFont(fontNormal)).SetPadding(6));
+                    table.AddCell(new Cell().Add(new Paragraph(p.PrecoVenda.ToString("N2")).SetFont(fontNormal)).SetPadding(6));
+                    table.AddCell(new Cell().Add(new Paragraph(p.QuantidadeVendida.ToString()).SetFont(fontNormal)).SetPadding(6));
+                    table.AddCell(new Cell().Add(new Paragraph(p.LucroTotal.ToString("N2")).SetFont(fontNormal)).SetPadding(6));
                 }
 
                 document.Add(table);
+
+                // ======= RODAPÉ =======
+                var rodape = new Paragraph($"Gerado em: {DateTime.Now:dd/MM/yyyy HH:mm}")
+                    .SetFont(fontNormal)
+                    .SetFontSize(9)
+                    .SetTextAlignment(iText.Layout.Properties.TextAlignment.RIGHT)
+                    .SetMarginTop(25);
+
+                document.Add(rodape);
             }
 
             return File(ms.ToArray(), "application/pdf", "LucroPorProduto.pdf");
         }
-
-
-
 
     }
 }

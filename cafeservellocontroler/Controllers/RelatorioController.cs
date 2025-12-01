@@ -54,23 +54,23 @@ namespace cafeservellocontroler.Controllers
                 select item;
 
             // 2. Agrupar produtos filtrados
-            var produtos = itensFiltrados
-                .GroupBy(i => new { i.Produto.Id, i.Produto.Nome })
-                .Select(g => new
+            var produtosAgrupados = itensFiltrados
+                .GroupBy(itemGroup => new { itemGroup.Produto.Id, itemGroup.Produto.Nome })
+                .Select(group => new
                 {
-                    ProdutoId = g.Key.Id,
-                    Nome = g.Key.Nome,
-                    QuantidadeVendida = g.Sum(x => x.Quantidade)
+                    ProdutoId = group.Key.Id,
+                    Nome = group.Key.Nome,
+                    QuantidadeVendida = group.Sum(itemSomado => itemSomado.Quantidade)
                 })
-                .OrderByDescending(x => x.QuantidadeVendida)
+                .OrderByDescending(resultado => resultado.QuantidadeVendida)
                 .ToList();
 
             // Fontes
             var fontNormal = PdfFontFactory.CreateFont(StandardFonts.HELVETICA);
             var fontBold = PdfFontFactory.CreateFont(StandardFonts.HELVETICA_BOLD);
 
-            using var ms = new MemoryStream();
-            using (var writer = new PdfWriter(ms))
+            using var memoryStream = new MemoryStream();
+            using (var writer = new PdfWriter(memoryStream))
             using (var pdf = new PdfDocument(writer))
             using (var document = new Document(pdf))
             {
@@ -108,6 +108,7 @@ namespace cafeservellocontroler.Controllers
                         .Add(new Paragraph("Produto").SetFont(fontBold).SetFontColor(ColorConstants.WHITE))
                         .SetBackgroundColor(headerBackground)
                         .SetPadding(8)
+                        .SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER)
                 );
 
                 table.AddHeaderCell(
@@ -115,37 +116,39 @@ namespace cafeservellocontroler.Controllers
                         .Add(new Paragraph("Quantidade Vendida").SetFont(fontBold).SetFontColor(ColorConstants.WHITE))
                         .SetBackgroundColor(headerBackground)
                         .SetPadding(8)
+                        .SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER)
                 );
 
-                foreach (var p in produtos)
+                foreach (var produto in produtosAgrupados)
                 {
                     table.AddCell(
                         new Cell()
-                            .Add(new Paragraph(p.Nome).SetFont(fontNormal))
+                            .Add(new Paragraph(produto.Nome).SetFont(fontNormal))
                             .SetPadding(6)
                     );
 
                     table.AddCell(
                         new Cell()
-                            .Add(new Paragraph(p.QuantidadeVendida.ToString()).SetFont(fontNormal))
+                            .Add(new Paragraph(produto.QuantidadeVendida.ToString()).SetFont(fontNormal).SetTextAlignment(iText.Layout.Properties.TextAlignment.RIGHT))
                             .SetPadding(6)
                     );
                 }
 
                 document.Add(table);
 
-                // ======= RODAPÉ - GERADO EM =======
+                // ======= RODAPÉ =======
                 var rodape = new Paragraph($"Gerado em: {DateTime.Now:dd/MM/yyyy HH:mm}")
                     .SetFont(fontNormal)
-                    .SetFontSize(9)
+                    .SetFontSize(11)
                     .SetTextAlignment(iText.Layout.Properties.TextAlignment.RIGHT)
                     .SetMarginTop(25);
 
                 document.Add(rodape);
             }
 
-            return File(ms.ToArray(), "application/pdf", "ProdutosMaisVendidos.pdf");
+            return File(memoryStream.ToArray(), "application/pdf", "ProdutosMaisVendidos.pdf");
         }
+
 
 
 
@@ -153,32 +156,31 @@ namespace cafeservellocontroler.Controllers
 
         public IActionResult RevendedorMaisAtivo(DateTime? dataInicial, DateTime? dataFinal)
         {
-            // JOIN manual usando VendaId (igual ao que fizemos no outro relatório)
+            // JOIN manual usando VendaId
             var itensFiltrados =
-                from item in _context.ItensVendas
+                from itemVenda in _context.ItensVendas
                 join venda in _context.Vendas
-                    on EF.Property<int>(item, "Id_Venda") equals venda.Id
+                    on EF.Property<int>(itemVenda, "Id_Venda") equals venda.Id
                 where (!dataInicial.HasValue || venda.DataVenda >= dataInicial.Value)
                 where (!dataFinal.HasValue || venda.DataVenda <= dataFinal.Value)
                 select new
                 {
-                    item.Total,
-                    venda.Revendedor.Id,
-                    venda.Revendedor.NomeFantasia
+                    TotalItem = itemVenda.Total,
+                    RevendedorId = venda.Revendedor.Id,
+                    NomeFantasiaRevendedor = venda.Revendedor.NomeFantasia
                 };
 
             // Agrupamento por Revendedor
-            var revendedores = itensFiltrados
-                .GroupBy(r => new { r.Id, r.NomeFantasia })
-                .Select(g => new
+            var listaRevendedores = itensFiltrados
+                .GroupBy(item => new { item.RevendedorId, item.NomeFantasiaRevendedor })
+                .Select(grupo => new
                 {
-                    RevendedorId = g.Key.Id,
-                    Nome = g.Key.NomeFantasia,
-                    TotalVendido = g.Sum(x => x.Total)
+                    RevendedorId = grupo.Key.RevendedorId,
+                    NomeRevendedor = grupo.Key.NomeFantasiaRevendedor,
+                    ValorTotalVendido = grupo.Sum(x => x.TotalItem)
                 })
-                .OrderByDescending(x => x.TotalVendido)
+                .OrderByDescending(x => x.ValorTotalVendido)
                 .ToList();
-
 
             // Gerar PDF
             using var ms = new MemoryStream();
@@ -193,19 +195,19 @@ namespace cafeservellocontroler.Controllers
                     iText.IO.Font.Constants.StandardFonts.HELVETICA
                 );
 
-                // ======= TÍTULO GRANDE ========
+                // ======= TÍTULO ========
                 var titulo = new iText.Layout.Element.Paragraph("Relatório - Revendedores Mais Ativos")
                     .SetFont(boldFont)
                     .SetFontSize(20)
                     .SetFontColor(iText.Kernel.Colors.ColorConstants.WHITE)
-                    .SetBackgroundColor(new iText.Kernel.Colors.DeviceRgb(47, 58, 74)) // #2F3A4A
+                    .SetBackgroundColor(new iText.Kernel.Colors.DeviceRgb(47, 58, 74))
                     .SetPadding(10)
                     .SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER)
                     .SetMarginBottom(10);
 
                 document.Add(titulo);
 
-                // ======= PERÍODO (IDÊNTICO AO OUTRO) ========
+                // ======= PERÍODO ========
                 string textoPeriodo =
                     $"Período: {(dataInicial.HasValue ? dataInicial.Value.ToString("dd/MM/yyyy") : "--")}  até  {(dataFinal.HasValue ? dataFinal.Value.ToString("dd/MM/yyyy") : "--")}";
 
@@ -217,47 +219,49 @@ namespace cafeservellocontroler.Controllers
 
                 document.Add(periodo);
 
-                // ====== TABELA ESTILIZADA ======
-                var table = new iText.Layout.Element.Table(new float[] { 3, 2 })
+                // ====== TABELA ======
+                var tabela = new iText.Layout.Element.Table(new float[] { 3, 2 })
                     .UseAllAvailableWidth();
 
-                var headerBackground = new iText.Kernel.Colors.DeviceRgb(47, 58, 74);
+                var corCabecalho = new iText.Kernel.Colors.DeviceRgb(47, 58, 74);
 
-                table.AddHeaderCell(
+                tabela.AddHeaderCell(
                     new iText.Layout.Element.Cell()
                         .Add(new iText.Layout.Element.Paragraph("Revendedor").SetFont(boldFont).SetFontColor(iText.Kernel.Colors.ColorConstants.WHITE))
-                        .SetBackgroundColor(headerBackground)
+                        .SetBackgroundColor(corCabecalho)
                         .SetPadding(8)
+                        .SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER)
                 );
 
-                table.AddHeaderCell(
+                tabela.AddHeaderCell(
                     new iText.Layout.Element.Cell()
                         .Add(new iText.Layout.Element.Paragraph("Total Vendido (R$)").SetFont(boldFont).SetFontColor(iText.Kernel.Colors.ColorConstants.WHITE))
-                        .SetBackgroundColor(headerBackground)
+                        .SetBackgroundColor(corCabecalho)
                         .SetPadding(8)
+                        .SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER)
                 );
 
-                foreach (var r in revendedores)
+                foreach (var revendedor in listaRevendedores)
                 {
-                    table.AddCell(
+                    tabela.AddCell(
                         new iText.Layout.Element.Cell()
-                            .Add(new iText.Layout.Element.Paragraph(r.Nome).SetFont(regularFont))
+                            .Add(new iText.Layout.Element.Paragraph(revendedor.NomeRevendedor).SetFont(regularFont))
                             .SetPadding(6)
                     );
 
-                    table.AddCell(
+                    tabela.AddCell(
                         new iText.Layout.Element.Cell()
-                            .Add(new iText.Layout.Element.Paragraph(r.TotalVendido.ToString("N2")).SetFont(regularFont))
+                            .Add(new iText.Layout.Element.Paragraph(revendedor.ValorTotalVendido.ToString("N2")).SetFont(regularFont).SetTextAlignment(iText.Layout.Properties.TextAlignment.RIGHT))
                             .SetPadding(6)
                     );
                 }
 
-                document.Add(table);
+                document.Add(tabela);
 
                 // ====== RODAPÉ ======
                 var rodape = new iText.Layout.Element.Paragraph($"Gerado em: {DateTime.Now:dd/MM/yyyy HH:mm}")
                     .SetFont(regularFont)
-                    .SetFontSize(9)
+                    .SetFontSize(11)
                     .SetTextAlignment(iText.Layout.Properties.TextAlignment.RIGHT)
                     .SetMarginTop(25);
 
@@ -267,46 +271,51 @@ namespace cafeservellocontroler.Controllers
             return File(ms.ToArray(), "application/pdf", "RevendedorMaisAtivo.pdf");
         }
 
+
         public IActionResult LucroPorProduto(DateTime? dataInicial, DateTime? dataFinal)
         {
             // 1. Filtrar itens pela data da venda
             var itensFiltrados =
-                from item in _context.ItensVendas
+                from itemVenda in _context.ItensVendas
                 join venda in _context.Vendas
-                    on EF.Property<int>(item, "Id_Venda") equals venda.Id
+                    on EF.Property<int>(itemVenda, "Id_Venda") equals venda.Id
                 where (!dataInicial.HasValue || venda.DataVenda >= dataInicial.Value)
                 where (!dataFinal.HasValue || venda.DataVenda <= dataFinal.Value)
-                select item;
+                select itemVenda;
 
             // 2. Agrupar os produtos filtrados
-            var agregados = itensFiltrados
-                .GroupBy(i => new { i.Produto.Id, i.Produto.Nome, i.Produto.Preco, i.Produto.PrecoCompra })
-                .Select(g => new
+            var produtosAgrupados = itensFiltrados
+                .GroupBy(item => new
                 {
-                    ProdutoId = g.Key.Id,
-                    Nome = g.Key.Nome,
-                    PrecoCompra = g.Key.PrecoCompra,
-                    PrecoVenda = g.Key.Preco,
-                    QuantidadeVendida = g.Sum(x => x.Quantidade)
+                    ProdutoId = item.Produto.Id,
+                    Nome = item.Produto.Nome,
+                    PrecoVenda = item.Produto.Preco,
+                    PrecoCompra = item.Produto.PrecoCompra
+                })
+                .Select(grupoProduto => new
+                {
+                    ProdutoId = grupoProduto.Key.ProdutoId,
+                    Nome = grupoProduto.Key.Nome,
+                    PrecoCompra = grupoProduto.Key.PrecoCompra,
+                    PrecoVenda = grupoProduto.Key.PrecoVenda,
+                    QuantidadeVendida = grupoProduto.Sum(item => item.Quantidade)
                 })
                 .ToList();
 
             // 3. Calcular lucros
-            var resultado = agregados
-                .Select(a => new
+            var listaLucros = produtosAgrupados
+                .Select(produto => new
                 {
-                    a.ProdutoId,
-                    a.Nome,
-                    a.PrecoCompra,
-                    a.PrecoVenda,
-                    LucroUnidade = a.PrecoVenda - a.PrecoCompra,
-                    a.QuantidadeVendida,
-                    LucroTotal = (a.PrecoVenda - a.PrecoCompra) * a.QuantidadeVendida
+                    produto.ProdutoId,
+                    produto.Nome,
+                    produto.PrecoCompra,
+                    produto.PrecoVenda,
+                    LucroUnidade = produto.PrecoVenda - produto.PrecoCompra,
+                    produto.QuantidadeVendida,
+                    LucroTotal = (produto.PrecoVenda - produto.PrecoCompra) * produto.QuantidadeVendida
                 })
-                .OrderByDescending(x => x.LucroTotal)
+                .OrderByDescending(resultado => resultado.LucroTotal)
                 .ToList();
-
-            // ===================== PDF COM A MESMA ESTILIZAÇÃO =====================
 
             // Fontes
             var fontNormal = PdfFontFactory.CreateFont(StandardFonts.HELVETICA);
@@ -322,7 +331,7 @@ namespace cafeservellocontroler.Controllers
                     .SetFont(fontBold)
                     .SetFontSize(20)
                     .SetFontColor(ColorConstants.WHITE)
-                    .SetBackgroundColor(new DeviceRgb(47, 58, 74))
+                    .SetBackgroundColor(new DeviceRgb(47, 58, 74)) // cor do sistema
                     .SetPadding(10)
                     .SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER)
                     .SetMarginBottom(10);
@@ -343,28 +352,15 @@ namespace cafeservellocontroler.Controllers
 
                 // ======= TABELA =======
                 var table = new Table(5).UseAllAvailableWidth();
+                var headerBackground = new DeviceRgb(47, 58, 74); // cor padrão do sistema
 
-                var headerBackground = new DeviceRgb(47, 58, 74);
-
+                // Cabeçalhos da tabela
                 table.AddHeaderCell(
                     new Cell()
                         .Add(new Paragraph("Produto").SetFont(fontBold).SetFontColor(ColorConstants.WHITE))
                         .SetBackgroundColor(headerBackground)
                         .SetPadding(8)
-                );
-
-                table.AddHeaderCell(
-                    new Cell()
-                        .Add(new Paragraph("Preço Compra").SetFont(fontBold).SetFontColor(ColorConstants.WHITE))
-                        .SetBackgroundColor(headerBackground)
-                        .SetPadding(8)
-                );
-
-                table.AddHeaderCell(
-                    new Cell()
-                        .Add(new Paragraph("Preço Venda").SetFont(fontBold).SetFontColor(ColorConstants.WHITE))
-                        .SetBackgroundColor(headerBackground)
-                        .SetPadding(8)
+                        .SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER)
                 );
 
                 table.AddHeaderCell(
@@ -376,27 +372,41 @@ namespace cafeservellocontroler.Controllers
 
                 table.AddHeaderCell(
                     new Cell()
-                        .Add(new Paragraph("Lucro Total").SetFont(fontBold).SetFontColor(ColorConstants.WHITE))
+                        .Add(new Paragraph("Preço Compra (R$)").SetFont(fontBold).SetFontColor(ColorConstants.WHITE))
                         .SetBackgroundColor(headerBackground)
                         .SetPadding(8)
                 );
 
-                // LINHAS
-                foreach (var p in resultado)
+                table.AddHeaderCell(
+                    new Cell()
+                        .Add(new Paragraph("Preço Venda (R$)").SetFont(fontBold).SetFontColor(ColorConstants.WHITE))
+                        .SetBackgroundColor(headerBackground)
+                        .SetPadding(8)
+                );
+
+                table.AddHeaderCell(
+                    new Cell()
+                        .Add(new Paragraph("Lucro Total (R$)").SetFont(fontBold).SetFontColor(ColorConstants.WHITE))
+                        .SetBackgroundColor(headerBackground)
+                        .SetPadding(8)
+                );
+
+                // Linhas
+                foreach (var item in listaLucros)
                 {
-                    table.AddCell(new Cell().Add(new Paragraph(p.Nome).SetFont(fontNormal)).SetPadding(6));
-                    table.AddCell(new Cell().Add(new Paragraph(p.PrecoCompra.ToString("N2")).SetFont(fontNormal)).SetPadding(6));
-                    table.AddCell(new Cell().Add(new Paragraph(p.PrecoVenda.ToString("N2")).SetFont(fontNormal)).SetPadding(6));
-                    table.AddCell(new Cell().Add(new Paragraph(p.QuantidadeVendida.ToString()).SetFont(fontNormal)).SetPadding(6));
-                    table.AddCell(new Cell().Add(new Paragraph(p.LucroTotal.ToString("N2")).SetFont(fontNormal)).SetPadding(6));
+                    table.AddCell(new Cell().Add(new Paragraph(item.Nome).SetFont(fontNormal)).SetPadding(6));
+                    table.AddCell(new Cell().Add(new Paragraph(item.QuantidadeVendida.ToString()).SetFont(fontNormal).SetTextAlignment(iText.Layout.Properties.TextAlignment.RIGHT)).SetPadding(6));
+                    table.AddCell(new Cell().Add(new Paragraph(item.PrecoCompra.ToString("N2")).SetFont(fontNormal).SetTextAlignment(iText.Layout.Properties.TextAlignment.RIGHT)).SetPadding(6));
+                    table.AddCell(new Cell().Add(new Paragraph(item.PrecoVenda.ToString("N2")).SetFont(fontNormal).SetTextAlignment(iText.Layout.Properties.TextAlignment.RIGHT)).SetPadding(6));
+                    table.AddCell(new Cell().Add(new Paragraph(item.LucroTotal.ToString("N2")).SetFont(fontNormal).SetTextAlignment(iText.Layout.Properties.TextAlignment.RIGHT)).SetPadding(6));
                 }
 
                 document.Add(table);
 
-                // ======= RODAPÉ =======
+                // Rodapé
                 var rodape = new Paragraph($"Gerado em: {DateTime.Now:dd/MM/yyyy HH:mm}")
                     .SetFont(fontNormal)
-                    .SetFontSize(9)
+                    .SetFontSize(11)
                     .SetTextAlignment(iText.Layout.Properties.TextAlignment.RIGHT)
                     .SetMarginTop(25);
 
@@ -405,6 +415,7 @@ namespace cafeservellocontroler.Controllers
 
             return File(ms.ToArray(), "application/pdf", "LucroPorProduto.pdf");
         }
+
 
     }
 }

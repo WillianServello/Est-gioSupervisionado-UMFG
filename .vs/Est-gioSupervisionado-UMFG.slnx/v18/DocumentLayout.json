@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Controllers\\RelatorioController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:cafeservellocontroler\\Controllers\\RelatorioController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Relatorio\\LucroPorProdutoIndex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:cafeservellocontroler\\Views\\Relatorio\\LucroPorProdutoIndex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Controllers\\HomeController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:cafeservellocontroler\\Controllers\\HomeController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -42,10 +50,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Mapeamento\\ProdutoMap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:cafeservellocontroler\\Mapeamento\\ProdutoMap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Controllers\\RelatorioController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:cafeservellocontroler\\Controllers\\RelatorioController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Produto\\_Detalhes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -151,23 +155,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "RelatorioRepositorio.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Repositorio\\RelatorioRepositorio\\RelatorioRepositorio.cs",
-              "RelativeDocumentMoniker": "cafeservellocontroler\\Repositorio\\RelatorioRepositorio\\RelatorioRepositorio.cs",
-              "ToolTip": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Repositorio\\RelatorioRepositorio\\RelatorioRepositorio.cs",
-              "RelativeToolTip": "cafeservellocontroler\\Repositorio\\RelatorioRepositorio\\RelatorioRepositorio.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T21:03:27.925Z"
+              "DocumentIndex": 1,
+              "Title": "LucroPorProdutoIndex.cshtml",
+              "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Relatorio\\LucroPorProdutoIndex.cshtml",
+              "RelativeDocumentMoniker": "cafeservellocontroler\\Views\\Relatorio\\LucroPorProdutoIndex.cshtml",
+              "ToolTip": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Relatorio\\LucroPorProdutoIndex.cshtml",
+              "RelativeToolTip": "cafeservellocontroler\\Views\\Relatorio\\LucroPorProdutoIndex.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-01T09:02:58.177Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\appsettings.json",
               "RelativeDocumentMoniker": "cafeservellocontroler\\appsettings.json",
@@ -179,7 +184,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "LucroPorProduto.cshtml",
               "DocumentMoniker": "C:\\Users\\biaa\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Relatorio\\LucroPorProduto.cshtml",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\biaa\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Relatorio\\LucroPorProduto.cshtml",
@@ -191,7 +196,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "ProdutoMaisVendido.cshtml",
               "DocumentMoniker": "C:\\Users\\biaa\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Relatorio\\ProdutoMaisVendido.cshtml",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\biaa\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Relatorio\\ProdutoMaisVendido.cshtml",
@@ -203,7 +208,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "RevendedorMaisAtivo.cshtml",
               "DocumentMoniker": "C:\\Users\\biaa\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Relatorio\\RevendedorMaisAtivo.cshtml",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\biaa\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Relatorio\\RevendedorMaisAtivo.cshtml",
@@ -215,7 +220,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "cafeservellocontroler\\Controllers\\HomeController.cs",
@@ -228,7 +233,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
+              "Title": "RelatorioController.cs",
+              "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Controllers\\RelatorioController.cs",
+              "RelativeDocumentMoniker": "cafeservellocontroler\\Controllers\\RelatorioController.cs",
+              "ToolTip": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Controllers\\RelatorioController.cs",
+              "RelativeToolTip": "cafeservellocontroler\\Controllers\\RelatorioController.cs",
+              "ViewState": "AgIAAOEAAAAAAAAAAAAkwEcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T20:53:14.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RelatorioRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Repositorio\\RelatorioRepositorio\\RelatorioRepositorio.cs",
+              "RelativeDocumentMoniker": "cafeservellocontroler\\Repositorio\\RelatorioRepositorio\\RelatorioRepositorio.cs",
+              "ToolTip": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Repositorio\\RelatorioRepositorio\\RelatorioRepositorio.cs",
+              "RelativeToolTip": "cafeservellocontroler\\Repositorio\\RelatorioRepositorio\\RelatorioRepositorio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T21:03:27.925Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "IRelatorioRepositorio.cs",
               "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Repositorio\\RelatorioRepositorio\\IRelatorioRepositorio.cs",
               "RelativeDocumentMoniker": "cafeservellocontroler\\Repositorio\\RelatorioRepositorio\\IRelatorioRepositorio.cs",
@@ -240,7 +270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Program.cs",
               "RelativeDocumentMoniker": "cafeservellocontroler\\Program.cs",
@@ -252,7 +282,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "ModelProduto.cs",
               "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\ModelProduto.cs",
               "RelativeDocumentMoniker": "cafeservellocontroler\\Models\\ModelProduto.cs",
@@ -264,7 +294,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "ProdutoViewModel.cs",
               "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\ViewModels\\ProdutoViewModel.cs",
               "RelativeDocumentMoniker": "cafeservellocontroler\\Models\\ViewModels\\ProdutoViewModel.cs",
@@ -276,7 +306,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "ProdutoMap.cs",
               "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Mapeamento\\ProdutoMap.cs",
               "RelativeDocumentMoniker": "cafeservellocontroler\\Mapeamento\\ProdutoMap.cs",
@@ -288,19 +318,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "RelatorioController.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Controllers\\RelatorioController.cs",
-              "RelativeDocumentMoniker": "cafeservellocontroler\\Controllers\\RelatorioController.cs",
-              "ToolTip": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Controllers\\RelatorioController.cs",
-              "RelativeToolTip": "cafeservellocontroler\\Controllers\\RelatorioController.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAkwEcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T20:53:14.615Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "_Detalhes.cshtml",
               "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Produto\\_Detalhes.cshtml",
               "RelativeDocumentMoniker": "cafeservellocontroler\\Views\\Produto\\_Detalhes.cshtml",
@@ -312,7 +330,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "ProdutoController.cs",
               "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Controllers\\ProdutoController.cs",
               "RelativeDocumentMoniker": "cafeservellocontroler\\Controllers\\ProdutoController.cs",
@@ -324,7 +342,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "_Detalhes.cshtml",
               "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Revendedor\\_Detalhes.cshtml",
               "RelativeDocumentMoniker": "cafeservellocontroler\\Views\\Revendedor\\_Detalhes.cshtml",
@@ -336,7 +354,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "_Criar.cshtml",
               "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Produto\\_Criar.cshtml",
               "RelativeDocumentMoniker": "cafeservellocontroler\\Views\\Produto\\_Criar.cshtml",
@@ -348,7 +366,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "_Editar.cshtml",
               "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Revendedor\\_Editar.cshtml",
               "RelativeDocumentMoniker": "cafeservellocontroler\\Views\\Revendedor\\_Editar.cshtml",
@@ -360,7 +378,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "_Criar.cshtml",
               "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Revendedor\\_Criar.cshtml",
               "RelativeDocumentMoniker": "cafeservellocontroler\\Views\\Revendedor\\_Criar.cshtml",
@@ -372,7 +390,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Revendedor\\Index.cshtml",
               "RelativeDocumentMoniker": "cafeservellocontroler\\Views\\Revendedor\\Index.cshtml",
@@ -384,7 +402,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "_Editar.cshtml",
               "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Produto\\_Editar.cshtml",
               "RelativeDocumentMoniker": "cafeservellocontroler\\Views\\Produto\\_Editar.cshtml",
@@ -396,7 +414,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Produto\\Index.cshtml",
               "RelativeDocumentMoniker": "cafeservellocontroler\\Views\\Produto\\Index.cshtml",
@@ -408,7 +426,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "ItemVendaViewModel.cs",
               "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\ViewModels\\ItemVendaViewModel.cs",
               "RelativeDocumentMoniker": "cafeservellocontroler\\Models\\ViewModels\\ItemVendaViewModel.cs",
@@ -420,7 +438,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "VendaViewModel.cs",
               "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\ViewModels\\VendaViewModel.cs",
               "RelativeDocumentMoniker": "cafeservellocontroler\\Models\\ViewModels\\VendaViewModel.cs",
@@ -432,7 +450,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "ModelRecuperarSenha.cs",
               "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\Login\\ModelRecuperarSenha.cs",
               "RelativeDocumentMoniker": "cafeservellocontroler\\Models\\Login\\ModelRecuperarSenha.cs",
@@ -444,7 +462,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "ModelLogin.cs",
               "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\Login\\ModelLogin.cs",
               "RelativeDocumentMoniker": "cafeservellocontroler\\Models\\Login\\ModelLogin.cs",
@@ -456,7 +474,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "RevendedorViewModel.cs",
               "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\ViewModels\\RevendedorViewModel.cs",
               "RelativeDocumentMoniker": "cafeservellocontroler\\Models\\ViewModels\\RevendedorViewModel.cs",
@@ -468,7 +486,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "ModelFornecedor.cs",
               "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\Pessoa\\ModelFornecedor.cs",
               "RelativeDocumentMoniker": "cafeservellocontroler\\Models\\Pessoa\\ModelFornecedor.cs",
@@ -480,7 +498,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "BancoContext.cs",
               "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Data\\BancoContext.cs",
               "RelativeDocumentMoniker": "cafeservellocontroler\\Data\\BancoContext.cs",
@@ -492,7 +510,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "ModelUsuario.cs",
               "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\Pessoa\\ModelUsuario.cs",
               "RelativeDocumentMoniker": "cafeservellocontroler\\Models\\Pessoa\\ModelUsuario.cs",
@@ -504,7 +522,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "ModelRevendedor.cs",
               "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\Pessoa\\ModelRevendedor.cs",
               "RelativeDocumentMoniker": "cafeservellocontroler\\Models\\Pessoa\\ModelRevendedor.cs",
@@ -516,7 +534,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "ModelItensVenda.cs",
               "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\Venda\\ModelItensVenda.cs",
               "RelativeDocumentMoniker": "cafeservellocontroler\\Models\\Venda\\ModelItensVenda.cs",
@@ -528,7 +546,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "ModelVenda.cs",
               "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\Venda\\ModelVenda.cs",
               "RelativeDocumentMoniker": "cafeservellocontroler\\Models\\Venda\\ModelVenda.cs",
@@ -540,7 +558,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "ModelPessoa.cs",
               "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\Pessoa\\ModelPessoa.cs",
               "RelativeDocumentMoniker": "cafeservellocontroler\\Models\\Pessoa\\ModelPessoa.cs",
@@ -552,7 +570,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "FornecedorController.cs",
               "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Controllers\\FornecedorController.cs",
               "RelativeDocumentMoniker": "cafeservellocontroler\\Controllers\\FornecedorController.cs",
@@ -564,7 +582,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "AlterarSenhaController.cs",
               "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Controllers\\AlterarSenhaController.cs",
               "RelativeDocumentMoniker": "cafeservellocontroler\\Controllers\\AlterarSenhaController.cs",
@@ -576,7 +594,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "LoginController.cs",
               "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "cafeservellocontroler\\Controllers\\LoginController.cs",

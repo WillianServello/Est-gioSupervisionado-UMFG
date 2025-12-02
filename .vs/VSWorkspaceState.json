@@ -1,10 +1,7 @@
 {
   "ExpandedNodes": [
     "",
-    "\\cafeservellocontroler",
-    "\\cafeservellocontroler\\Controllers",
-    "\\cafeservellocontroler\\Views",
-    "\\cafeservellocontroler\\Views\\Relatorio"
+    "\\cafeservellocontroler"
   ],
   "SelectedNode": "\\cafeservellocontroler.sln",
   "PreviewInSolutionExplorer": false

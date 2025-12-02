@@ -19,7 +19,7 @@ html {
 
 body {
     margin-bottom: 60px;
-    overflow: hidden;
+    
 }
 .close-alert{
     position: absolute;
@@ -40,4 +40,6 @@ body {
 .bodi {
     margin: auto
 }
+
+
 

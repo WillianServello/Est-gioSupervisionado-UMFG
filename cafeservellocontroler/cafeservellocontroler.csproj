@@ -7,9 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\css\NovaPasta\**" />
     <Compile Remove="wwwroot\Img\**" />
+    <Content Remove="wwwroot\css\NovaPasta\**" />
     <Content Remove="wwwroot\Img\**" />
+    <EmbeddedResource Remove="wwwroot\css\NovaPasta\**" />
     <EmbeddedResource Remove="wwwroot\Img\**" />
+    <None Remove="wwwroot\css\NovaPasta\**" />
     <None Remove="wwwroot\Img\**" />
   </ItemGroup>
 
@@ -30,10 +34,6 @@
     </PackageReference>
     <PackageReference Include="MySql.EntityFrameworkCore" Version="8.0.20" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\css\NovaPasta\" />
   </ItemGroup>
 
 </Project>

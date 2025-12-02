@@ -1,24 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\",
+  "WorkspaceRootPath": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:cafeservellocontroler\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\Pessoa\\ModelPessoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\Pessoa\\ModelPessoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:cafeservellocontroler\\Models\\Pessoa\\ModelPessoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\Pessoa\\ModelFuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\Pessoa\\ModelFuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:cafeservellocontroler\\Models\\Pessoa\\ModelFuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\Pessoa\\ModelRevendedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\Pessoa\\ModelRevendedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:cafeservellocontroler\\Models\\Pessoa\\ModelRevendedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Controllers\\HomeController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Controllers\\HomeController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:cafeservellocontroler\\Controllers\\HomeController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -35,9 +36,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Program.cs",
               "RelativeDocumentMoniker": "cafeservellocontroler\\Program.cs",
-              "ToolTip": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Program.cs",
+              "ToolTip": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Program.cs",
               "RelativeToolTip": "cafeservellocontroler\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -48,23 +49,22 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "ModelPessoa.cs",
-              "DocumentMoniker": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\Pessoa\\ModelPessoa.cs",
+              "DocumentMoniker": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\Pessoa\\ModelPessoa.cs",
               "RelativeDocumentMoniker": "cafeservellocontroler\\Models\\Pessoa\\ModelPessoa.cs",
-              "ToolTip": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\Pessoa\\ModelPessoa.cs",
+              "ToolTip": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\Pessoa\\ModelPessoa.cs",
               "RelativeToolTip": "cafeservellocontroler\\Models\\Pessoa\\ModelPessoa.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T23:06:46.522Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-24T23:06:46.522Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "ModelFuncionario.cs",
               "DocumentMoniker": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\Pessoa\\ModelFuncionario.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\Pessoa\\ModelFuncionario.cs",
+              "RelativeDocumentMoniker": "cafeservellocontroler\\Models\\Pessoa\\ModelFuncionario.cs",
               "ToolTip": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\Pessoa\\ModelFuncionario.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\Pessoa\\ModelFuncionario.cs",
+              "RelativeToolTip": "cafeservellocontroler\\Models\\Pessoa\\ModelFuncionario.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-24T23:06:28.675Z"
@@ -73,9 +73,9 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "ModelRevendedor.cs",
-              "DocumentMoniker": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\Pessoa\\ModelRevendedor.cs",
+              "DocumentMoniker": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\Pessoa\\ModelRevendedor.cs",
               "RelativeDocumentMoniker": "cafeservellocontroler\\Models\\Pessoa\\ModelRevendedor.cs",
-              "ToolTip": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\Pessoa\\ModelRevendedor.cs",
+              "ToolTip": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Models\\Pessoa\\ModelRevendedor.cs",
               "RelativeToolTip": "cafeservellocontroler\\Models\\Pessoa\\ModelRevendedor.cs",
               "ViewState": "AgIAAB4AAAAAAAAAAAAgwDEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -85,17 +85,13 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Controllers\\HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "cafeservellocontroler\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\facec.lab04\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Controllers\\HomeController.cs",
               "RelativeToolTip": "cafeservellocontroler\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-24T23:05:35.872Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }

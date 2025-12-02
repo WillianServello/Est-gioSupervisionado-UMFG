@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace cafeservellocontroler.Controllers
 {
     [PaginaUsuarioLogado]
+    [PaginaRestritaSomenteAdmin]
     public class ProdutoController : Controller
     {
         private readonly IProdutoRepositorio _produtoRepositorio;

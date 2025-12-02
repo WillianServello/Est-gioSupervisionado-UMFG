@@ -1,0 +1,72 @@
+﻿@model ModelAlterarSenhaAtual
+
+<form id="formEditarSenha" asp-controller="AlterarSenha" asp-action="Alterar" method="post">
+
+
+    <div class="form-group">
+        <div class="div-Criar reponsivo">
+        <label for="senhaAtual">Senha Atual</label>
+
+        <div class="input-group p-0" style="border: 1px solid #ced4da;">
+            <input type="password" asp-for="SenhaAtual" class="form-control input-senha" placeholder="Informe a senha atual" style="border: none">
+
+            <button class="btn  toggleSenha" type="button">
+                <i class="fa-solid fa-eye"></i>
+            </button>
+        </div>
+
+        <span asp-validation-for="SenhaAtual" class="text-danger"></span>
+   
+       
+
+    
+        <div class="form-group">
+            <label for="novaSenha">Nova Senha</label>
+        <div class="input-group p-0" style="border: 1px solid #ced4da;">
+            <input type="password" asp-for="NovaSenha" class="form-control input-senha" placeholder="Informe a nova senha" style="border: none">
+
+                    <button class="btn toggleSenha" type="button">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+            </div>
+            <span asp-validation-for="NovaSenha" class="text-danger"></span>
+        </div>
+
+        <div class="form-group ">
+            <label for="confirmeSenha">Confirme Senha</label>
+                <div class="input-group p-0" style="border: 1px solid #ced4da;">
+                    <input type="password" asp-for="ConfirmarNovaSenha" class="form-control input-senha" placeholder="Confirme a nova senha" style="border: none">
+                    <button class="btn toggleSenha" type="button">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                </div>
+        <span asp-validation-for="ConfirmarNovaSenha" class="text-danger"></span>
+        </div>
+    </div>
+
+
+
+        <div class=" d-flex justify-content-end ">
+            <button type="submit" class="btn btn-primary mt-3 button-submit-close" role="button" style="margin-right: 15px">
+                <i class="fa-regular fa-floppy-disk fa-lg"></i>
+                Editar
+            </button>
+            <a class="btn btn-outline-danger mt-3 button-submit-close" asp-controller="AlterarSenha" asp-action="Index" role="button">
+                <i class="fa-solid fa-eject fa-lg"></i>
+                Cancelar
+            </a>
+        </div>
+
+    </div>
+</form>
+
+
+<script>
+    Inputmask({
+        alias: "password",
+        placeholder: "",
+        showMaskOnHover: false,
+        showMaskOnFocus: false,
+        unmaskAsNumber: false
+    }).mask("#senha");
+</script>

@@ -4,7 +4,6 @@ wwwroot\css\modal.css
 wwwroot\css\navbar.css
 wwwroot\css\Search_PesquisaCss\search.css
 wwwroot\css\sidebar.css
-wwwroot\css\site.css
 wwwroot\css\tabelas.css
 wwwroot\favicon.ico
 wwwroot\js\Search_PesquisaJs\search.js
@@ -72,3 +71,4 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
+wwwroot\css\site.css

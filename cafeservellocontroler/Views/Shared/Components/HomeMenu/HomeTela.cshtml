@@ -18,41 +18,33 @@
 
     </div>
 
-    <div id="welcomeAlert"
-         class="position-fixed"
-         style="z-index:1055; top:20px; right:20px; width:320px; display:none;">
-
-        <div class="alert alert-primary alert-dismissible fade show shadow-lg p-3"
-             role="alert"
-             style="font-size: 1rem;">
-
-            <h5 class="fw-bold mb-1">👋 Bem-vindo de volta!</h5>
-            <p class="mb-2">
-                Ótimo te ver novamente, <strong>@Model.Login</strong>.
-            </p>
-
-            <button type="button" class="btn-close"
-                    data-bs-dismiss="alert"
-                    id="closeAlert"></button>
-        </div>
-    </div>
     
-    <a href="/Produto/Index" class="col-10 col-sm-6 col-md-3 me-4 nav-link templates-pagina-inicial">
-        <div class="dentro">
-            <i class="fa-solid fa-mug-hot fa-2x link-light"></i>
-        </div>
-    </a>
+    @if (Model.Perfil == cafeservellocontroler.Enums.PerfilEnum.Admin)
+    {
 
-    <a href="/Venda/Index" class="col-10 col-sm-6 col-md-3 me-4 nav-link templates-pagina-inicial">
+        <a href="/Produto/Index" class="col-10 col-sm-6 col-md-3 me-4 nav-link templates-pagina-inicial item-menu">
+            <div class="dentro">
+                <i class="fa-solid fa-mug-hot fa-2x link-light"></i>
+            </div>
+
+            <div class="titulo-menu" >PRODUTO</div>
+        </a>
+          
+    }
+    <a href="/Venda/Index" class="col-10 col-sm-6 col-md-3 me-4 nav-link templates-pagina-inicial item-menu">
         <div class="dentro">
             <i class="fa-solid fa-store fa-2x link-light"></i>
         </div>
+
+        <div class="titulo-menu " >VENDA</div>
     </a>
 
-    <a href="/Revendedor/Index" class="col-10 col-sm-6 col-md-3 me-4 nav-link templates-pagina-inicial">
+    <a href="/Revendedor/Index" class="col-10 col-sm-6 col-md-3 me-4 nav-link templates-pagina-inicial item-menu">
         <div class="dentro">
             <i class="fa-solid fa-user fa-2x link-light"></i>
         </div>
+
+        <div class="titulo-menu " >REVENDEDOR</div>
     </a>
 
 
@@ -62,21 +54,29 @@
 <div class="row d-flex mt-4 justify-content-center">
 
 
-    <a href="/Relatorio/Index" class="col-md-3 me-4 nav-link templates-pagina-inicial">
+    <a href="/Relatorio/Index" class="col-md-3 me-4 nav-link templates-pagina-inicial item-menu">
         <div class=" dentro">
             <i class="fa-solid fa-print fa-2x link-light"></i>
         </div>
+
+        <div class="titulo-menu ">RELATÓRIO</div>
     </a>
 
-    <a href="/Usuario/Index" class="col-md-3 me-4 nav-link templates-pagina-inicial">
-        <div class=" dentro">
-            <i class="fa-solid fa-hands fa-2x link-light"></i>
-        </div>
-    </a>
+     @if (Model.Perfil == cafeservellocontroler.Enums.PerfilEnum.Admin)
+    {
+        <a href="/Usuario/Index" class="col-md-3 me-4 nav-link templates-pagina-inicial item-menu">
+            <div class=" dentro">
+                <i class="fa-solid fa-hands fa-2x link-light"></i>
+            </div>
+            <div class="titulo-menu ">USUÁRIO</div>
+        </a>
+    }
 
-    <a href="/AlterarSenha/Index" class="col-md-3 me-4 nav-link templates-pagina-inicial">
+    <a href="/AlterarSenha/Index" class="col-md-3 me-4 nav-link templates-pagina-inicial item-menu">
         <div class=" dentro">
-            <i class="fa-solid fa-lock fa-2x link-light"></i>
+            
+            <i class="fa-solid fa-fingerprint fa-2x link-light"></i>
         </div>
+        <div class="titulo-menu ">PERFIL</div>
     </a>
 </div>

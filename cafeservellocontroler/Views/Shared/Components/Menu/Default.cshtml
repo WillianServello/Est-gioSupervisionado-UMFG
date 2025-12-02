@@ -31,6 +31,8 @@
             </a>
         </li>
 
+@if (Model.Perfil == cafeservellocontroler.Enums.PerfilEnum.Admin)
+    {
     <li class="side-item" data-url="/Produto/Index">
         <a>
             @* <i class="fa-brands fa-product-hunt"></i> *@
@@ -40,7 +42,7 @@
             </span>
         </a>
     </li>
-
+        }
     <li class="side-item" data-url="/Revendedor/Index">
         <a>
             <i class="fa-solid fa-user"></i>
@@ -86,9 +88,9 @@
 
     <li class="side-item" data-url="/AlterarSenha/Index">
         <a href="#">
-            <i class="fa-solid fa-lock"></i>
+                <i class="fa-solid fa-fingerprint"></i>
             <span class="item-description">
-                Alterar Senha
+                Perfil
             </span>
         </a>
     </li>

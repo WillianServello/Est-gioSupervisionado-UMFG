@@ -1,5 +1,6 @@
 ﻿using cafeservellocontroler.Models;
 using cafeservellocontroler.Models.Pessoa;
+using cafeservellocontroler.Models.ViewModels;
 
 namespace cafeservellocontroler.Repositorio.UsuarioRepositorio
 {
@@ -15,7 +16,7 @@ namespace cafeservellocontroler.Repositorio.UsuarioRepositorio
         List<ModelUsuario> BuscarTodos();
 
         ModelUsuario AlterarSenha(ModelAlterarSenhaAtual modelAlterarSenhaAtual);
-
+        ModelUsuario AlterarDados(EditarDadosViewModel model);
         bool Apagar(int id);
 
     }

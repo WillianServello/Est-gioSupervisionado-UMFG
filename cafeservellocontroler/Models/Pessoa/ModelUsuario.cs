@@ -2,7 +2,6 @@
 using cafeservellocontroler.Helper;
 using cafeservellocontroler.Models.ViewModels;
 using Newtonsoft.Json;
-using System.ComponentModel.DataAnnotations;
 
 namespace cafeservellocontroler.Models.Pessoa
 {
@@ -32,7 +31,7 @@ namespace cafeservellocontroler.Models.Pessoa
             Email = email;
         }
 
-        
+
         public void AtualizarDataCriacao()
         {
             DataAtualizacaoCadastro = DateTime.Now;
@@ -57,6 +56,13 @@ namespace cafeservellocontroler.Models.Pessoa
 
         }
 
+        public void AtualizarDadosDoPerfil(EditarDadosViewModel model)
+        {
+            Id = model.Id;
+            Login = model.Login;
+            Email = model.Email;
+        }
+
         public bool SenhaCorreta(string senha)
         {
             return Senha == senha.GerarHash();
@@ -70,11 +76,11 @@ namespace cafeservellocontroler.Models.Pessoa
         public void SetNovaSenha(string novaSenha)
         {
             Senha = novaSenha.GerarHash();
-            
+
         }
 
         public string GerarNovaSenha()
-        { 
+        {
             string novaSenha = Guid.NewGuid().ToString().Substring(0, 8);
             Senha = novaSenha.GerarHash();
             return novaSenha;
@@ -91,6 +97,7 @@ namespace cafeservellocontroler.Models.Pessoa
             DataCadastro = dataCadastro;
             DataAtualizacaoCadastro = dataAtualizacaoCadastro;
         }
+
 
 
     }

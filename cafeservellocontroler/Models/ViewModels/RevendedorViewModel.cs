@@ -18,6 +18,9 @@ namespace cafeservellocontroler.Models.ViewModels
         [Required(ErrorMessage = "O campo Telefone é obrigatório")]
         public string Telefone { get; set; } = string.Empty;
 
+        [RegularExpression(@"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$",
+        ErrorMessage = "Formato de e-mail inválido")]
+        [EmailAddress(ErrorMessage = "Informe um e-mail válido")]
         [Required(ErrorMessage = "O campo Email é obrigatório")]
         public string Email { get; set; } = string.Empty;
 

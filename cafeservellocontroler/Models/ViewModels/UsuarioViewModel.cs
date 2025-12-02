@@ -11,8 +11,9 @@ namespace cafeservellocontroler.Models.ViewModels
         [MaxLength(100, ErrorMessage = "Atingiu o limite de caracteres ")]
         public string Login { get; set; } = string.Empty;
 
-        [Required(ErrorMessage = "O campo senha é obrigatório")]
-        [MinLength(6, ErrorMessage = "A senha deve ter no mínimo 6 caracteres")]
+        [Required(ErrorMessage = "A senha é obrigatória")]
+        [RegularExpression(@"^(?=.*[A-Za-z])(?=.*\d).{6,}$",
+        ErrorMessage = "A senha deve ter pelo menos uma letra, um número e 6 caracteres")]
         public string Senha { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "O campo Email é obrigatório")]

@@ -31,7 +31,7 @@
 }
 
 <div class="tela-login">
-
+    
    
     <img class="icone-login bemvindo-login" src="/css/LOGO CAFE.png" alt="Alternate Text" />
         <p class="bemvindo-login letra-login">Bem vindo de volta!</p>
@@ -59,12 +59,16 @@
             <label class="logo-label-distancia" for="senha">
                 Senha
             </label>
+                <div class="input-group p-0" style="border: 1px solid #ced4da; border-radius: 10px;">
             <input 
                 type="password" 
-                asp-for="Senha" 
-                class="form-control input-login"
-                placeholder="🔒 Informe a senha">
-
+                asp-for="Senha"
+                       class="form-control input-login input-senha"
+                       placeholder="🔒 Informe a senha" style="border: none">
+                <button class="btn  toggleSenha" type="button" >
+                <i class="fa-solid fa-eye"></i>
+                </button>
+                </div>
         <span asp-validation-for="Senha" class="text-danger"></span>
     </div>
 

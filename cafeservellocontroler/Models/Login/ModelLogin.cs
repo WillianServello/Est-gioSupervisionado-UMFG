@@ -4,10 +4,10 @@ namespace cafeservellocontroler.Models.Login
 {
     public class ModelLogin
     {
-        [Required(ErrorMessage = "O login é obrigatório")]
+        [Required(ErrorMessage = "Por favor, informe o login!")]
         public string Login { get; set; }
 
-        [Required(ErrorMessage = "A senha é obrigatório")]
+        [Required(ErrorMessage = "Por favor, informe a senha!")]
         public string Senha { get; set; }
     }
 }

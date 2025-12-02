@@ -1,6 +1,7 @@
 ﻿using cafeservellocontroler.Data;
 using cafeservellocontroler.Models;
 using cafeservellocontroler.Models.Pessoa;
+using cafeservellocontroler.Models.ViewModels;
 
 namespace cafeservellocontroler.Repositorio.UsuarioRepositorio
 {
@@ -86,6 +87,21 @@ namespace cafeservellocontroler.Repositorio.UsuarioRepositorio
             _bancoContext.Usuarios.Update(modelUsuario);
             _bancoContext.SaveChanges();
             //fazer o datetime atualizacao aqui
+            return modelUsuario;
+        }
+
+        public ModelUsuario AlterarDados(EditarDadosViewModel editarDadosViewModel)
+        {
+            ModelUsuario modelUsuario = ListarPorId(editarDadosViewModel.Id);
+
+            if (modelUsuario == null)
+                throw new Exception("Usuário não encontrado.");
+
+            
+            modelUsuario.AtualizarDadosDoPerfil(editarDadosViewModel);
+            _bancoContext.Usuarios.Update(modelUsuario);
+            _bancoContext.SaveChanges();
+
             return modelUsuario;
         }
     }

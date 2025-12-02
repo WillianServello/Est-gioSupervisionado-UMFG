@@ -1,0 +1,80 @@
+﻿hr {
+    border: 1px solid black;
+    opacity: 10%;
+}
+
+.meusdados {
+    font-size: 11px
+}
+
+.botao-senha {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.icone-wrapper {
+    position: relative;
+    width: 28px;
+    height: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid black;
+}
+
+.botao-senha:hover .icone-wrapper {
+    border-right: 1px solid white;
+}
+
+.icone-wrapper i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.2s ease;
+}
+
+
+.icon-aberto {
+    opacity: 0;
+}
+
+
+.botao-senha:hover .icon-fechado {
+    opacity: 0;
+}
+
+.botao-senha:hover .icon-aberto {
+    opacity: 1;
+}
+
+.background-div {
+    background: white;
+    border-radius: 4px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.inputs-lavel {
+    min-height: 4vh; /* Mantém altura mínima */
+    height: auto; /* Permite crescer com o texto */
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    background: lightgray;
+    align-items: start; /* opcional, para alinhar texto no topo */
+}
+
+.p-label {
+    color: black;
+    font-weight: 500;
+    font-size: .83125rem;
+}
+
+.p-input {
+    font-size: 12px;
+    font-family: Arial
+}
+
+
+
+

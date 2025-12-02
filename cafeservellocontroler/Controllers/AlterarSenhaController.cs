@@ -1,6 +1,7 @@
 ﻿ using cafeservellocontroler.Helper;
 using cafeservellocontroler.Models;
 using cafeservellocontroler.Models.Pessoa;
+using cafeservellocontroler.Models.ViewModels;
 using cafeservellocontroler.Repositorio.UsuarioRepositorio;
 using Microsoft.AspNetCore.Mvc;
 
@@ -19,6 +20,65 @@ namespace cafeservellocontroler.Controllers
         {
             return View();
         }
+
+        public IActionResult Editar()
+        {
+            var usuario = _sessao.BuscarSessaoUsuario();
+
+            return PartialView();
+            
+        }
+
+        
+
+
+        public IActionResult EditarDadosGet()
+        {
+            var usuario = _sessao.BuscarSessaoUsuario();
+
+            var model = new EditarDadosViewModel
+            {
+                Id = usuario.Id,
+                Login = usuario.Login,
+                Email = usuario.Email
+            };
+
+            return PartialView("EditarDadosGet", model);
+        }
+
+
+
+
+        [HttpPost]
+        public IActionResult EditarDados(EditarDadosViewModel model)
+        {
+            ModelUsuario usuarioLogado = _sessao.BuscarSessaoUsuario();
+            model.Id = usuarioLogado.Id;
+
+            if (ModelState.IsValid)
+            {
+                // Atualiza no banco
+                ModelUsuario usuarioAtualizado = _usuarioRepositorio.AlterarDados(model);
+
+                // 🔥 Atualiza a sessão para refletir os novos dados
+                _sessao.CriarSessaoUsuario(usuarioAtualizado);
+
+                TempData["MensagemSucesso"] = "Dados atualizados com sucesso!";
+                return RedirectToAction("Index");
+            }
+
+            TempData["MensagemErro"] = "Não foi possível atualizar os dados.";
+            return RedirectToAction("Index");
+        }
+
+
+
+
+
+
+
+
+
         [HttpPost]
         public IActionResult Alterar(ModelAlterarSenhaAtual modelAlterarSenhaAtual)
         {
@@ -42,5 +102,9 @@ namespace cafeservellocontroler.Controllers
                 return RedirectToAction("Index", modelAlterarSenhaAtual);
             }
         }
+
+        
     }
+
+
 }

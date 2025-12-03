@@ -1,4 +1,5 @@
 ﻿using cafeservellocontroler.Models.Pessoa;
+using System.ComponentModel.DataAnnotations;
 
 namespace cafeservellocontroler.Models.Venda
 {
@@ -13,7 +14,7 @@ namespace cafeservellocontroler.Models.Venda
 
         //protagonistas da venda 
         public ModelUsuario Usuario { get; private set; }
-
+        
         public ModelRevendedor Revendedor { get; private set; }
 
         public ICollection<ModelItensVenda> ItensVendas { get; private set; } = [];

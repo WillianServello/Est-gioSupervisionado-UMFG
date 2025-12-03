@@ -1,37 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|c:\\users\\willianrafael\\source\\repos\\willianservello\\est-giosupervisionado-umfg\\cafeservellocontroler\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{16744C17-4510-4A01-80F1-495CA11DA4A7}|cafeservellocontroler\\cafeservellocontroler.csproj|solutionrelative:cafeservellocontroler\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "cafeservellocontroler\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\Est-gioSupervisionado-UMFG\\cafeservellocontroler\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "cafeservellocontroler\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-03T05:05:02.025Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

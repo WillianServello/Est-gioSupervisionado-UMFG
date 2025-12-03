@@ -1,0 +1,76 @@
+﻿.relatorio-container {
+    background: #fff;
+    border-radius: 8px;
+    max-width: 100%;
+    margin: 25px auto;
+}
+
+
+
+
+.relatorio-card {
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    transition: all .2s ease-in-out;
+}
+
+    .relatorio-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+    }
+
+    .relatorio-card .card-title {
+        font-size: 20px;
+        font-weight: 600;
+        color: #2F3A4A;
+    }
+
+
+.btn-relatorio {
+    background-color: #2F3A4A;
+    color: white;
+    font-weight: 500;
+    padding: 10px 0;
+    transition: background .2s;
+    border-radius: 3px;
+}
+
+.relatorio-container {
+    box-shadow: none !important;
+    margin: 0;
+    width: 100%;
+}
+
+
+
+.btn-relatorio:hover {
+    background-color: #181D25;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #2F3A4A;
+}
+
+    .btn-secondary:hover {
+        background-color: #181D25;
+    }
+
+.tamanho {
+    width: 300px;
+    font-size: 17px;
+}
+
+.tamanho-botao-relatorio {
+    width: 200px;
+    font-size: 16px;
+}
+
+/*.background-div-relatorio {
+    background: white;
+    border-radius: 3px;
+    min-height: 100vh;*/ /* Garante que a altura ocupe toda a tela */
+    /*width: 100%;*/ /* Garante que a largura ocupe 100% da tela */
+    /*overflow-x: hidden;*/ /* Se o conteúdo for muito largo, aparece o rolamento lateral */
+    /*overflow-y: hidden;
+}*/

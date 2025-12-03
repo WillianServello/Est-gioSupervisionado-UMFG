@@ -213,7 +213,7 @@ namespace cafeservellocontroler.Controllers
             }
             catch (Exception ex)
             {
-                TempData["MensagemErro"] = $"Erro ao apagar o revendedor: {ex.Message}";
+                TempData["MensagemErro"] = $"Erro ao apagar o revendedor. Ele está em uma Venda!";
                 return RedirectToAction("Index");
             }
         }

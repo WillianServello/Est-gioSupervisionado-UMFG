@@ -56,12 +56,12 @@
 }
 
 .inputs-lavel {
-    min-height: 4vh; /* Mantém altura mínima */
-    height: auto; /* Permite crescer com o texto */
+    min-height: 4vh; 
+    height: auto; 
     border: 1px solid lightgray;
     border-radius: 3px;
     background: lightgray;
-    align-items: start; /* opcional, para alinhar texto no topo */
+    align-items: start;
 }
 
 .p-label {

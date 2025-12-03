@@ -12,119 +12,69 @@
     </p>
 </div>
 
-<div class="table-responsive table-wrapper p-3">
-    <table class="table table-bordered table-striped" id="table">
-        <thead class="table-thead">
-            <tr class="div-thead">
-                <th class="text-center fs-4 py-3">
-                    Qual relatório você deseja gerar?
-                </th>
-            </tr>
-        </thead>
-
-        <tbody>
-            <tr>
-                <td>
-                    <div class="d-flex justify-content-center gap-3 py-4">
-
-                        <a data-bs-toggle="modal"
-                           data-bs-target="#modalLucroPorProdutoIndex"
-                           onclick="limparFormulario()"
-                           class="btn btn-secondary tamanho">
-                            Lucro por produto
-                        </a>
-
-                        <a data-bs-toggle="modal"
-                           data-bs-target="#modalProdutoMaisVendidoIndex"
-                           onclick="limparFormulario()"
-                           class="btn btn-secondary tamanho">
-                            Produto mais vendido
-                        </a>
-
-                        <a data-bs-toggle="modal"
-                           data-bs-target="#modalRevendedorMaisAtivoIndex"
-                           onclick="limparFormulario()"
-                           class="btn btn-secondary tamanho">
-                            Revendedor mais ativo
-                        </a>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
 
 
-<div class="modal fade" id="modalLucroPorProdutoIndex" tabindex="-1" aria-labelledby="modalLucroPorProdutoIndexLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modalLucroPorProdutoIndexLabel">Lucro Por Produto - Filtro</h5>
-                <button type="button" class="btn-close btn-close-modal" data-bs-dismiss="modal" aria-label="Fechar"></button>
-            </div>
-            <div class="modal-body">
-                @await Html.PartialAsync("LucroPorProdutoIndex")
+<div class="relatorio-container  shadow-sm p-4">
+
+
+    <p class="text-muted fs-5 mb-4">
+        Escolha abaixo qual relatório deseja gerar. Cada relatório sera gerado em PDF.
+    </p>
+<div class="row g-4">
+
+    <!-- CARD 1 -->
+    <div class="col-12 col-md-4">
+        <div class="card relatorio-card">
+            <div class="card-body">
+                <h5 class="card-title">Lucro por Produto</h5>
+                <p class="card-text text-muted">
+                    Veja o lucro detalhado por produto dentro de um período específico.
+                </p>
+                <button data-bs-toggle="modal"
+                        data-bs-target="#modalLucroPorProdutoIndex"
+                        class="btn btn-relatorio w-100"
+                        onclick="limparFormulario()">
+                    Gerar Relatório
+                </button>
             </div>
         </div>
     </div>
-</div>
 
-<div class="modal fade" id="modalProdutoMaisVendidoIndex" tabindex="-1" aria-labelledby="modalProdutoMaisVendidoIndexLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modalProdutoMaisVendidoIndexLabel">Produto Mais Vendido - Filtro</h5>
-                <button type="button" class="btn-close btn-close-modal" data-bs-dismiss="modal" aria-label="Fechar"></button>
-            </div>
-            <div class="modal-body">
-                @await Html.PartialAsync("ProdutoMaisVendidoIndex")
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="modalRevendedorMaisAtivoIndex" tabindex="-1" aria-labelledby="modalRevendedorMaisAtivoIndexLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modalRevendedorMaisAtivoIndexLabel">Revendedor mais ativo - Filtro</h5>
-                <button type="button" class="btn-close btn-close-modal" data-bs-dismiss="modal" aria-label="Fechar"></button>
-            </div>
-            <div class="modal-body">
-                @await Html.PartialAsync("RevendedorMaisAtivoIndex")
+    <!-- CARD 2 -->
+    <div class="col-12 col-md-4">
+        <div class="card relatorio-card">
+            <div class="card-body">
+                <h5 class="card-title">Produto Mais Vendido</h5>
+                <p class="card-text text-muted">
+                    Consulte qual produto teve maior saída no período desejado.
+                </p>
+                <button data-bs-toggle="modal"
+                        data-bs-target="#modalProdutoMaisVendidoIndex"
+                        class="btn btn-relatorio w-100"
+                        onclick="limparFormulario()">
+                    Gerar Relatório
+                </button>
             </div>
         </div>
     </div>
-</div>
 
-<style>
-    .btn-secondary{
-        background-color: #2F3A4A;
-        
-    }
+    <!-- CARD 3 -->
+    <div class="col-12 col-md-4">
+        <div class="card relatorio-card">
+            <div class="card-body">
+                <h5 class="card-title">Revendedor Mais Ativo</h5>
+                <p class="card-text text-muted">
+                    Veja qual revendedor teve maior atividade de vendas.
+                </p>
+                <button data-bs-toggle="modal"
+                        data-bs-target="#modalRevendedorMaisAtivoIndex"
+                        class="btn btn-relatorio w-100"
+                        onclick="limparFormulario()">
+                    Gerar Relatório
+                </button>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
 
-    .btn-secondary:hover {
-            background-color: #181D25;
-    }
-
-    .tamanho{
-        width: 300px;
-        font-size: 17px;
-    }
-
-    .tamanho-botao-relatorio{
-        width: 200px;
-        font-size: 16px;
-    }
-
-    .background-div{
-        background: white;
-        border-radius: 3px;
-        min-height: 100vh; /* Garante que a altura ocupe toda a tela */
-        width: 100%; /* Garante que a largura ocupe 100% da tela */
-        overflow-x: hidden; /* Se o conteúdo for muito largo, aparece o rolamento lateral */
-        overflow-y: hidden;
-        
-    }
-</style>

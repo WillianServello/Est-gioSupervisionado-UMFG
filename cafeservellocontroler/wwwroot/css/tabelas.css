@@ -53,19 +53,24 @@ tbody, td, tfoot, th, thead, tr {
     width: 20%;
 
 }
+.espacoPadraoTabelaRevendedor {
+    width: 24%;
+}
+.espacoPadraoTabelaVenda {
+    width: 35%;
+}
 .espacoPadraoTabelaTotalVenda {
     width: 5%;
-
 }
 .espacoPadraoTabelaItem {
-    width: 7%;
+    width: 2%;
 
 }
 .espacoPadraoTabelaProduto {
     width: 32%
 }
 .espacoPadraoTabelaTelefone {
-    width: 10%
+    width: 7%
 }
 .espacoPadraoTabelaEstoque {
     width: 2%;

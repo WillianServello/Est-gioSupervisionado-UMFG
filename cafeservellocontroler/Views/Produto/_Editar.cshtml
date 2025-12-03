@@ -10,26 +10,26 @@
     <div class="div-Criar responsivo">
         <input type="hidden" asp-for="Id"/>
          <div class="form-group">
-            <label for="nome">Nome</label>
+            <label for="nome">Nome*</label>
         <input type="text" asp-for="Nome" class="form-control" placeholder="Informe o nome do produto">
             <span asp-validation-for="Nome" class="text-danger"></span>
          </div>
 
          <div class="form-group">
-            <label for="tipo">Tipo</label>
+            <label for="tipo">Tipo do café*</label>
         <input type="text" asp-for="Descricao" class="form-control" placeholder="Informe o tipo">
             <span asp-validation-for="Descricao" class="text-danger"></span>
          </div>
 
         <div class="row">
              <div class="form-group col-md-6">
-                <label for="precoCompra">Preço Compra</label>
+                <label for="precoCompra">Preço Compra*</label>
                 <input asp-for="PrecoCompra" id="precoCompraEditar" name="PrecoCompra" type="text" class="form-control mask-money" autocomplete="off" inputmode="decimal" placeholder="Informe o valor" />
                 <span asp-validation-for="PrecoCompra" class="text-danger"></span>
              </div>
 
             <div class="form-group col-md-6">
-                <label for="preco">Preço</label>
+                <label for="preco">Preço*</label>
                 <input asp-for="Preco" id="precoEditar" name="Preco" type="text" class="form-control mask-money" autocomplete="off" inputmode="decimal" placeholder="Informe o valor" />
                 <span asp-validation-for="Preco" class="text-danger"></span>
              </div>
@@ -37,7 +37,7 @@
 
         <div class="row " >
             <div class="form-group col-md-6">
-                <label for="estoque">Estoque</label>
+                <label for="estoque">Estoque*</label>
                 <input type="text" asp-for="Estoque" class="form-control" placeholder="Informe a quantidade em estoque">
                 <span asp-validation-for="Estoque" class="text-danger"></span>
              </div>

@@ -80,7 +80,7 @@ namespace cafeservellocontroler.Controllers
             catch(System.Exception erro)
             {
 
-                TempData["MensagemErro"] = $"Não foi possivel apagar seu Produto: {erro.Message}!";
+                TempData["MensagemErro"] = $"Não foi possivel apagar seu Produto. Ele está em uma Venda!";
                 return RedirectToAction("Index");
             }
         }

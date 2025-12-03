@@ -7,7 +7,7 @@
 <form id="formProduto" asp-controller="Usuario" asp-action="Criar" method="post">
     <div class="div-Criar reponsivo">
     <div class="form-group">
-        <label for="login">Login</label>
+        <label for="login">Login*</label>
         <input type="text" asp-for="Login" class="form-control" placeholder="Informe o nome de login">
         <span asp-validation-for="Login" class="text-danger"></span>
     </div>
@@ -16,7 +16,7 @@
 
 
     <div class="form-group">
-        <label for="email">Email</label>
+        <label for="email">Email*</label>
         <input type="email" asp-for="Email" class="form-control" placeholder="Informe o email">
         <span asp-validation-for="Email" class="text-danger"></span>
     </div>
@@ -24,7 +24,7 @@
 
     <div class="row">
         <div class="form-group col-md-6">
-            <label for="senha">Senha</label>
+            <label for="senha">Senha*</label>
                 <div class="input-group p-0" style="border: 1px solid #ced4da;">
                     <input type="password" asp-for="Senha" class="form-control input-senha" placeholder="Informe a senha" style="border: none">
                     <button class="btn  toggleSenha" type="button">
@@ -35,7 +35,7 @@
         </div>
 
         <div class="form-group col-md-6">
-            <label for="nivelAcesso">Nível de Acesso</label>
+            <label for="nivelAcesso">Nível de Acesso*</label>
             <select asp-for="Perfil" class="form-control">
                 <option value="">Selecione</option>
                 <option value="1">Administrador</option>

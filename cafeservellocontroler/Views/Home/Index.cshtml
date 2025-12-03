@@ -4,64 +4,26 @@
     ViewData["Title"] = "Página Inicial";
 }
 
+<div class="row d-flex justify-content-center ">
+
+
+    <div class="mt-4 mb-4 p-3  shadow-sm d-flex justify-content-center flex-wrap">
+
+        <div class="d-flex me-lg-4" >
+            <i class="fa-solid fa-house fa-xl d-flex align-items-center"></i>
+
+            <p class="tamanho-font-titulo borda-titulo ">
+                Página Inicial
+            </p>
+        </div>
 
 
 
-
+    </div>
+    </div>
 @await Component.InvokeAsync("HomeMenu")
 
 
 
-<style>
-    .templates-pagina-inicial {
-        aspect-ratio: 4 / 4; /* deixa o card perfeitamente quadrado */
-        background: white;
-        border-radius: 5px;
-        box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-        transition: 0.3s;
-        margin-bottom: 20px;
-        max-width: 150px
-    }
-        .templates-pagina-inicial:hover {
-           
-            background-color: #3B4656;
-            box-shadow: 2px 2px 6px rgba(0,0,0,0.35);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
 
 
-            .templates-pagina-inicial:hover .titulo-menu {
-            color: white;
-        }
-        
-    .dentro {
-        background: #3B4656; 
-        padding: 20px;
-        border-radius: 8px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .item-menu {
-        display: flex;
-        flex-direction: column; 
-        align-items: center; 
-    }
-
-    
-
-    .titulo-menu {
-        margin-top: 10px;
-        font-size: 1.1rem;
-        color: #3B4656; 
-    }
-   
-    
-</style>

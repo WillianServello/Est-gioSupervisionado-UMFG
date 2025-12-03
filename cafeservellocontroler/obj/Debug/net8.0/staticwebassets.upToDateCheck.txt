@@ -3,6 +3,8 @@ wwwroot\css\login.css
 wwwroot\css\LOGO CAFE.png
 wwwroot\css\modal.css
 wwwroot\css\navbar.css
+wwwroot\css\paginaInicial.css
+wwwroot\css\relatorio.css
 wwwroot\css\Search_PesquisaCss\search.css
 wwwroot\css\sidebar.css
 wwwroot\css\site.css

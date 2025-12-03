@@ -9,4 +9,9 @@ document.querySelectorAll('.side-item').forEach(item => {
         window.location.href = url;
     });
 });
-
+document.querySelectorAll('.side-item-itens').forEach(item => {
+    item.addEventListener('click', () => {
+        const url = item.getAttribute('data-url');
+        window.location.href = url;
+    });
+});

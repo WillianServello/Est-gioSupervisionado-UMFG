@@ -7,6 +7,7 @@ namespace cafeservellocontroler.Models.ViewModels
     {
         public int Id { get; set; }
 
+        
         [Required(ErrorMessage = "O campo Login é obrigatório")]
         [MaxLength(100, ErrorMessage = "Atingiu o limite de caracteres ")]
         public string Login { get; set; } = string.Empty;
@@ -16,7 +17,10 @@ namespace cafeservellocontroler.Models.ViewModels
         ErrorMessage = "A senha deve ter pelo menos uma letra, um número e 6 caracteres")]
         public string Senha { get; set; } = string.Empty;
 
+        [RegularExpression(@"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$",
+        ErrorMessage = "Formato de e-mail inválido")]
         [Required(ErrorMessage = "O campo Email é obrigatório")]
+        [EmailAddress(ErrorMessage = "Informe um e-mail válido")]
         public string Email { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "O campo Perfil é obrigatório")]

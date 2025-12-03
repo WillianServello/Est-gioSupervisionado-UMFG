@@ -51,18 +51,19 @@ main.custom {
     width:50px;
     height:50px;
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: 30px;
 }
 
-#user_infos{
+#user_infos {
     display: flex;
     color: white;
     flex-direction: column;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
 }
-
 #user_infos span:last-child {
     color: white;
     font-size: 12px ;
+
 }
 
 ul {
@@ -79,12 +80,16 @@ ul {
 .side-item {
     border-radius: 8px;
     padding: 14px !important;
+    
     cursor: pointer;
 }
 
-.side-item.active{
+
+
+.side-item.active {
     background-color: #e3e9f7
 }
+
 
 .side-item:hover:not(.active),
 #logout_btn:hover{
@@ -170,7 +175,7 @@ ul {
 }
 
 #sidebar.open-sidebar .item-description {
-   width: 150px !important;
+   width: 170px !important;
    
 }
 
@@ -191,4 +196,168 @@ ul {
 a {
     text-decoration: none;
 }
+
+
+.submenu {
+    list-style: none !important;
+    display: none;
+    flex-direction: column;
+    
+    gap: 6px;
+}
+
+    .submenu .side-item {
+        background: none !important;
+    }
+
+.submenu-toggle .arrow {
+    margin-left: auto;
+    transition: transform .3s ease;
+}
+
+.submenu-toggle.open .arrow {
+    transform: rotate(180deg);
+}
+
+.side-item-menu {
+    border-radius: 8px;
+    padding: 14px !important;
+    cursor: pointer;
+}
+
+    .side-item-menu.active {
+        background-color: #e3e9f7
+    }
+
+    .side-item-menu:hover:not(.active),
+    #logout_btn:hover {
+        background-color: #4f46e5
+    }
+
+    .side-item-menu a {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #e3e9f7 !important;
+    }
+
+    .side-item-menu.active a {
+        color: #e3e9f7 !important;
+        margin-left: 20px;
+    }
+
+
+.side-item.active a {
+    color: #e3e9f7 !important;
+}
+
+.side-item-menu a i {
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+}
+#sidebar.open-sidebar .side-item-menu a {
+    justify-content: flex-start !important;
+    
+    gap: 14px !important;
+}
+
+
+.side-item-itens {
+    border-radius: 8px;
+    padding: 14px !important;
+    cursor: pointer;
+}
+
+.side-item-itens.active {
+    background-color: #e3e9f7
+}
+
+    .side-item-itens:hover:not(.active),
+    #logout_btn:hover {
+        background-color: #4f46e5
+    }
+
+    .side-item-itens a {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #e3e9f7 !important;
+    }
+
+    .side-item-itens.active a {
+        color: #e3e9f7 !important;
+        margin-left: 20px;
+    }
+
+
+    .side-item-itens.active a {
+        color: #e3e9f7 !important;
+    }
+
+    .side-item-itens a i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+    }
+#sidebar.open-sidebar .side-item-itens a {
+    justify-content: flex-start !important;
+    margin-left: 20px;
+    gap: 14px !important;
+}
+
+.side-item-menu-relatorio {
+    border-radius: 8px;
+    padding: 14px !important;
+    cursor: pointer;
+}
+
+    .side-item-menu-relatorio.active {
+        background-color: #e3e9f7
+    }
+
+    .side-item-menu-relatorio:hover:not(.active),
+    #logout_btn:hover {
+        background-color: #4f46e5
+    }
+
+    .side-item-menu-relatorio a {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #e3e9f7 !important;
+    }
+
+    .side-item-menu-relatorio.active a {
+        color: #e3e9f7 !important;
+        margin-left: 20px;
+    }
+
+
+    .side-item-menu-relatorio.active a {
+        color: #e3e9f7 !important;
+    }
+
+    .side-item-menu-relatorio a i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+    }
+#sidebar.open-sidebar .side-item-menu-relatorio a {
+    justify-content: flex-start !important;
+    margin-left: 20px;
+    gap: 14px !important;
+}
+
+
 

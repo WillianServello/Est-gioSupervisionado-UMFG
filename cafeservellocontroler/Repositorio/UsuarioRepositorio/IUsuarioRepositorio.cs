@@ -15,6 +15,8 @@ namespace cafeservellocontroler.Repositorio.UsuarioRepositorio
         ModelUsuario Atualizar(ModelUsuario usuario);
         List<ModelUsuario> BuscarTodos();
 
+        bool LoginExistente(string login, int idIgnorar);
+        bool EmailExistente(string email, int idIgnorar);
         ModelUsuario AlterarSenha(ModelAlterarSenhaAtual modelAlterarSenhaAtual);
         ModelUsuario AlterarDados(EditarDadosViewModel model);
         bool Apagar(int id);

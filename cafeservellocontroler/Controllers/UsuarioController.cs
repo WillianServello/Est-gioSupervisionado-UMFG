@@ -73,7 +73,16 @@ namespace cafeservellocontroler.Controllers
             usuario.SetPerfil(model.Perfil);
             usuario.CriacaoDataCadastro();
 
-
+                if (_usuarioRepositorio.LoginExistente(model.Login, model.Id))
+                {
+                    TempData["MensagemErro"] = "Já existe um usuário com esse login.";
+                    return RedirectToAction("Index");
+                }
+                if (_usuarioRepositorio.EmailExistente(model.Email, model.Id))
+                {
+                    TempData["MensagemErro"] = "Já existe um usuário com esse Email.";
+                    return RedirectToAction("Index");
+                }
 
                 if (ModelState.IsValid)
             {
@@ -109,9 +118,22 @@ namespace cafeservellocontroler.Controllers
                 return RedirectToAction("Index");
             }
 
+
                 usuario.AtualizarDataCriacao();
             usuario.AtualizarDados(model);
-                _usuarioRepositorio.Atualizar(usuario);
+
+            if (_usuarioRepositorio.LoginExistente(model.Login, model.Id))
+            {
+                TempData["MensagemErro"] = "Já existe um usuário com esse Login.";
+                return RedirectToAction("Index");
+            }
+            if (_usuarioRepositorio.EmailExistente(model.Email, model.Id))
+            {
+                TempData["MensagemErro"] = "Já existe um usuário com esse Email.";
+                return RedirectToAction("Index");
+            }
+
+            _usuarioRepositorio.Atualizar(usuario);
                 TempData["MensagemSucesso"] = "Alteração realizado com sucesso! ";
           
 

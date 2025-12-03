@@ -1,4 +1,5 @@
-﻿using cafeservellocontroler.Filters;
+﻿using cafeservellocontroler.Enums;
+using cafeservellocontroler.Filters;
 using cafeservellocontroler.Helper;
 using cafeservellocontroler.Models.Venda;
 using cafeservellocontroler.Models.ViewModels;
@@ -35,7 +36,20 @@ namespace cafeservellocontroler.Controllers
         // LISTAGEM
         public async Task<IActionResult> Index()
         {
-            var vendas = await _vendaRepositorio.BuscarTodasVendas();
+            var usuarioLogado = _sessao.BuscarSessaoUsuario();
+
+            List<ModelVenda> vendas;
+
+            // Se for administrador → lista tudo
+            if (usuarioLogado.Perfil == PerfilEnum.Admin)
+            {
+                vendas = await _vendaRepositorio.BuscarTodasVendas();
+            }
+            else // Funcionário → somente vendas dele
+            {
+                vendas = await _vendaRepositorio.BuscarVendasPorUsuario(usuarioLogado.Id);
+            }
+
             return View(vendas);
         }
 

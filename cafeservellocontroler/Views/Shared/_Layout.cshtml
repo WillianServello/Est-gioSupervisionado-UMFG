@@ -37,11 +37,14 @@
         <nav class="navbarr">
             <div class="navbarr ">
                 
-                <div class="mt-4 mb-4 p-4 shadow-sm w-100">
+                <div class="mt-4 mb-4 p-4  w-100">
 
-                    <p class="borda-titulo">
-                        <a href="/Home/Index" class="text-reset" s>CAFÉ SERVELLO</a>
+                   
+                        <p class="borda-titulo">
+                            <a href="/Home/Index" class="text-reset" s>CAFÉ SERVELLO</a>
                         </p>
+                   
+                   
                 </div>
                 
 
@@ -56,25 +59,167 @@
         @* SIDEBAR *@
         <div class="layout">
         <nav id="sidebar">
-            
+                <div id="sidebar_content">
+                
                 @await Component.InvokeAsync("Menu")
-            
+
+                    <ul id="side_items">
+
+                        <li class="side-item" data-url="/Home/Index">
+                            <a>
+
+                                <i class="fa-solid fa-house"></i>
+                                <span class="item-description">
+                                    Página Inicial
+                                </span>
+                            </a>
+                        </li>
+
+                        <li class="side-item-menu  submenu-toggle">
+                            <a>
+                                <i class="fa-solid fa-bars-progress"></i>
+                                <span class="item-description">
+                                    Atividades
+                                </span>
+                                <i class="fa-solid fa-chevron-down arrow"></i>
+                            </a>
+                        </li>
+
+                        <ul class="submenu">
+                            <li class="side-item-itens" data-url="/Venda/Index">
+                                <a>
+                                    <i class="fa-solid fa-store"></i>
+                                    <span class="item-description">Venda</span>
+                                </a>
+                            </li>
+
+                            <li class="side-item-itens" data-url="/Revendedor/Index">
+                                <a>
+                                    <i class="fa-solid fa-user"></i>
+                                    <span class="item-description">Revendedor</span>
+                                </a>
+                            </li>
+
+                        </ul>
+
+
+
+                        <li class="side-item-menu  submenu-toggle">
+                            <a>
+                                <i class="fa-solid fa-print"></i>
+                                <span class="item-description">
+                                    Gerar Relatório
+                                </span>
+                                <i class="fa-solid fa-chevron-down arrow"></i>
+                            </a>
+                        </li>
+
+                        <ul class="submenu">
+
+
+                            <li class="side-item-menu-relatorio">
+                                <a  href="javascript:void(0)"
+                                       data-bs-toggle="modal"
+                                       data-bs-target="#modalLucroPorProdutoIndex"
+                                       onclick="limparFormulario()">
+
+                                    <i class="fa-solid fa-file-pdf"></i>
+                                    <span class="item-description">Lucro por Produto</span>
+                                    </a>
+                                   
+                                   
+                            </li>
+
+                            <li class="side-item-menu-relatorio">
+                                <a href="javascript:void(0)"
+                                   data-bs-toggle="modal"
+                                   data-bs-target="#modalProdutoMaisVendidoIndex"
+                                   onclick="limparFormulario()">
+
+                                    <i class="fa-solid fa-file-pdf"></i>
+                                    <span class="item-description">Produto mais Vendido</span>
+                                </a>
+
+
+                            </li>
+
+                            <li class="side-item-menu-relatorio">
+                                <a href="javascript:void(0)"
+                                   data-bs-toggle="modal"
+                                   data-bs-target="#modalRevendedorMaisAtivoIndex"
+                                   onclick="limparFormulario()">
+
+                                    <i class="fa-solid fa-file-pdf"></i>
+                                    <span class="item-description">Revendedor mais Ativo</span>
+                                </a>
+
+
+                            </li>
+
+
+                        </ul>
+
+
+
+
+
+                        @await Component.InvokeAsync("MenuAdmin")
+
+                        <li class="side-item" data-url="/AlterarSenha/Index">
+                            <a href="#">
+                                <i class="fa-solid fa-fingerprint"></i>
+                                <span class="item-description">
+                                    Perfil
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    </div>
+
+                <button id="open_btn">
+                    <i id="open_btn_icon" class="fa-solid fa-chevron-right"></i>
+                </button>
+
+                <a id="logout" asp-controller="Login" asp-action="Sair">
+                    <button id="logout_btn">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span class="item-description">
+                            Sair
+                        </span>
+                    </button>
+                </a>
+
         </nav>
         </div>
     </div>
 
            
-
+    
     
 
     <div>
         <main role="main" class=" custom">
             @RenderBody()
+
+            
         </main>
     </div>
 
+    @await Html.PartialAsync("~/Views/Shared/_Modal.cshtml")
+    <script>
+        document.querySelectorAll(".submenu-toggle").forEach(toggle => {
+            toggle.addEventListener("click", () => {
+                toggle.classList.toggle("open");
 
-   
+                let submenu = toggle.nextElementSibling;
+                if (submenu.style.display === "flex") {
+                    submenu.style.display = "none";
+                } else {
+                    submenu.style.display = "flex";
+                }
+            });
+        });
+    </script>
    
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

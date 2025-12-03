@@ -12,7 +12,8 @@
 
    
     
-    <i class="fa-solid fa-tags fa-xl d-flex align-items-center"></i>
+    
+    <i class="fa-solid fa-store fa-xl d-flex align-items-center"></i>
     <p class="tamanho-font-titulo borda-titulo ">
         Vendas
     </p>
@@ -71,12 +72,12 @@
     <table class="table table-bordered table-striped" id="table">
         <thead class="table-thead">
             <tr class="div-thead">
-                <th class="idTR">ID</th>
+                @* <th class="idTR">ID</th> *@
                 
                 <th>Revendedor</th>
-                <th>Usuário (Vendedor)</th>
-                <th>Itens</th>
-                <th>Total</th>
+                <th>Usuário</th>
+                <th class="text-center">Itens</th>
+                <th class="text-center">Total</th>
                 <th class="alinharModificar-ApagarTh" >Modificar</th>
                 <th class="alinharModificar-ApagarTh" >Apagar</th>
             </tr>
@@ -87,16 +88,16 @@
                 @foreach (var venda in Model)
                 {
                     <tr>
-                        <td class="idTH">@venda.Id</td>
+                        @* <td class="idTH">@venda.Id</td> *@
 
 
                         <td class="espacoPadraoTabela">@venda.Revendedor.Nome</td>
 
                         <td class="espacoPadraoTabela">@venda.Usuario.Login</td>
 
-                        <td class="espacoPadraoTabela">@venda.ItensVendas.Count</td>
+                        <td class="espacoPadraoTabelaItem text-center">@venda.ItensVendas.Count</td>
 
-                        <td class="espacoPadraoTabela">R$ @venda.TotalVenda.ToString("N2")</td>
+                        <td class="espacoPadraoTabelaTotalVenda text-end">R$ @venda.TotalVenda.ToString("N2")</td>
 
                         <td class="espacoModificarOpcoes">
                             <div role="group" class="d-grid gap-1 formatacaoBotaoTabela">

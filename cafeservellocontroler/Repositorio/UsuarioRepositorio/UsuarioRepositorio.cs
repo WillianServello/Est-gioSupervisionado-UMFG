@@ -104,5 +104,15 @@ namespace cafeservellocontroler.Repositorio.UsuarioRepositorio
 
             return modelUsuario;
         }
+
+        public bool LoginExistente(string login, int idIgnorar)
+        {
+            return _bancoContext.Usuarios.Any(x => x.Login.ToUpper() == login.ToUpper() && x.Id != idIgnorar);
+        }
+
+        public bool EmailExistente(string email, int idIgnorar)
+        {
+            return _bancoContext.Usuarios.Any(x => x.Email.ToUpper() == email.ToUpper() && x.Id != idIgnorar);
+        }
     }
 }

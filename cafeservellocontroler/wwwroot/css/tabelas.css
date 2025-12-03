@@ -51,14 +51,32 @@ tbody, td, tfoot, th, thead, tr {
 
 .espacoPadraoTabela {
     width: 20%;
-}
 
+}
+.espacoPadraoTabelaTotalVenda {
+    width: 5%;
+
+}
+.espacoPadraoTabelaItem {
+    width: 7%;
+
+}
+.espacoPadraoTabelaProduto {
+    width: 32%
+}
+.espacoPadraoTabelaTelefone {
+    width: 10%
+}
+.espacoPadraoTabelaEstoque {
+    width: 2%;
+}
 td.espacoModificarOpcoes {
     width: 5%;
     white-space: nowrap;
 }
 
 td.espacoApagarOpcoes {
+    
     text-align: center;
     width: 5%;
     white-space: nowrap;

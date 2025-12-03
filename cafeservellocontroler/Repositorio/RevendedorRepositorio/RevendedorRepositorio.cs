@@ -59,5 +59,34 @@ namespace cafeservellocontroler.Repositorio.RevendedorRepositorio
 
             return true;
         }
+
+
+
+
+
+
+
+
+
+
+        public bool NomeExiste(string nome, int IdIgnorar)
+        {
+            return _bancoContext.Revendedor.Any(x => x.Nome.ToLower() == nome.ToLower() && x.Id != IdIgnorar);   
+        }
+
+        public bool NomeFantasiaExiste(string nomeFantasia, int IdIgnorar)
+        {
+            return _bancoContext.Revendedor.Any(x => x.NomeFantasia.ToLower() == nomeFantasia.ToLower() && x.Id != IdIgnorar);
+        }
+
+        public bool CpfCnpjExiste(string cpfCnpj , int IdIgnorar)
+        {
+            return _bancoContext.Revendedor.Any(x => x.Cnpj.ToLower() == cpfCnpj.ToLower() && x.Id != IdIgnorar);
+        }
+
+        public bool EmailExiste(string email , int IdIgnorar)
+        {
+            return _bancoContext.Revendedor.Any(x => x.Email.ToLower() == email.ToLower() && x.Id != IdIgnorar);
+        }
     }
 }

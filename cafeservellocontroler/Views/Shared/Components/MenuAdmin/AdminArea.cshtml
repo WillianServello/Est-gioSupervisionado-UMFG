@@ -1,0 +1,30 @@
+﻿@using cafeservellocontroler.Models.Pessoa
+@model ModelUsuario
+@if (Model.Perfil == cafeservellocontroler.Enums.PerfilEnum.Admin)
+{
+    <li class="side-item-menu  submenu-toggle">
+        <a>
+            <i class="fa-solid fa-gears"></i>
+            <span class="item-description">
+                Controle
+            </span>
+            <i class="fa-solid fa-chevron-down arrow"></i>
+        </a>
+    </li>
+
+    <ul class="submenu">
+        <li class="side-item-itens" data-url="/Produto/Index">
+            <a>
+                <i class="fa-solid fa-mug-hot"></i>
+                <span class="item-description">Produto</span>
+            </a>
+        </li>
+
+        <li class="side-item-itens" data-url="/Usuario/Index">
+            <a>
+                <i class="fa-solid fa-hands"></i>
+                <span class="item-description">Usuário</span>
+            </a>
+        </li>
+    </ul>
+}

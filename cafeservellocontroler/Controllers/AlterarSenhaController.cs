@@ -1,4 +1,5 @@
-﻿ using cafeservellocontroler.Helper;
+﻿using cafeservellocontroler.Filters;
+using cafeservellocontroler.Helper;
 using cafeservellocontroler.Models;
 using cafeservellocontroler.Models.Pessoa;
 using cafeservellocontroler.Models.ViewModels;
@@ -7,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace cafeservellocontroler.Controllers
 {
+    [PaginaUsuarioLogado]
     public class AlterarSenhaController : Controller
     {
         private readonly IUsuarioRepositorio _usuarioRepositorio;
@@ -54,6 +56,18 @@ namespace cafeservellocontroler.Controllers
         {
             ModelUsuario usuarioLogado = _sessao.BuscarSessaoUsuario();
             model.Id = usuarioLogado.Id;
+
+
+            if (_usuarioRepositorio.LoginExistente(model.Login, model.Id))
+            {
+                TempData["MensagemErro"] = "Já existe um usuário com esse login.";
+                return RedirectToAction("Index");
+            }
+            if (_usuarioRepositorio.EmailExistente(model.Email, model.Id))
+            {
+                TempData["MensagemErro"] = "Já existe um usuário com esse Email.";
+                return RedirectToAction("Index");
+            }
 
             if (ModelState.IsValid)
             {

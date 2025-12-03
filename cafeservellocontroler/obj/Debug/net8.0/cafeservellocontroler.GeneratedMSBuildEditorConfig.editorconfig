@@ -128,12 +128,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcSG9tZU1lbnVcSG9tZVRlbGEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/WillianRafael/source/repos/WillianServello/Est-gioSupervisionado-UMFG/cafeservellocontroler/Views/Shared/Components/MenuAdmin/AdminArea.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTWVudUFkbWluXEFkbWluQXJlYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/WillianRafael/source/repos/WillianServello/Est-gioSupervisionado-UMFG/cafeservellocontroler/Views/Shared/Components/Menu/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTWVudVxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/WillianRafael/source/repos/WillianServello/Est-gioSupervisionado-UMFG/cafeservellocontroler/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/WillianRafael/source/repos/WillianServello/Est-gioSupervisionado-UMFG/cafeservellocontroler/Views/Shared/_Modal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Nb2RhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/WillianRafael/source/repos/WillianServello/Est-gioSupervisionado-UMFG/cafeservellocontroler/Views/Shared/_ValidationScriptsPartial.cshtml]

@@ -74,7 +74,7 @@ namespace cafeservellocontroler.Controllers
             }
             catch (Exception ex)
             {
-                TempData["MensagemErro"] = $"Não foi possivel realizar seu Login:!";
+                TempData["MensagemErro"] = $"Não foi possivel realizar seu Login! Por favor ligue o servidor!";
                 return RedirectToAction("Index");
             }
 
@@ -96,7 +96,7 @@ namespace cafeservellocontroler.Controllers
                         string novaSenha = usuario.GerarNovaSenha();
                         string mensagem = $"Sua nova senha é: {novaSenha}";
 
-                        bool emailEnviado = _email.Enviar(usuario.Email, "Sistemas de controle de cafes - NOVA SENHA", mensagem);
+                        bool emailEnviado = _email.Enviar(usuario.Email, "Sistemas de controle de cafes - ALTERAR NOVA SENHA", mensagem);
 
                         if (emailEnviado)
                         {
@@ -106,7 +106,7 @@ namespace cafeservellocontroler.Controllers
                         }
                         else
                         {
-                            TempData["MensagemErro"] = "Não enviar seu email! Tente novamente!";
+                            TempData["MensagemErro"] = "Erro ao enviar seu email! Tente novamente!";
 
                         }
 
@@ -121,7 +121,7 @@ namespace cafeservellocontroler.Controllers
             }
             catch (Exception ex)
             {
-                TempData["MensagemErro"] = $"Não foi possivel redefinir sua senha:!";
+                TempData["MensagemErro"] = $"Não foi possivel redefinir sua senha!";
                 return RedirectToAction("Index");
             }
 

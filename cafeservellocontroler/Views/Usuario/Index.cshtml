@@ -92,7 +92,7 @@
 
         <thead class="table-thead">
             <tr class="div-thead">
-                    <th scope="col" class="idTR">ID</th>
+                    @* <th scope="col" class="idTR">ID</th> *@
                     <th scope="col">Login</th>
                     <th scope="col">Email</th>  
                     <th scope="col">Nivel de Acesso</th>            
@@ -108,7 +108,7 @@
                     foreach (UsuarioViewModel usuario in Model)
                     {
                         <tr>
-                            <th scope="row" class="idTH">@usuario.Id</th>
+                            @* <th scope="row" class="idTH">@usuario.Id</th> *@
                             <td scope="row" class="espacoPadraoTabela">@usuario.Login</td>
                             <td scope="row" class="espacoPadraoTabela">@usuario.Email</td>
                             <td scope="row" class="espacoPadraoTabela">@usuario.Perfil</td>

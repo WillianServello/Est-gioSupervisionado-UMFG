@@ -87,7 +87,39 @@ namespace cafeservellocontroler.Controllers
                 //opcional
                 revendedor.Email = model.Email;
 
-            if (ModelState.IsValid)
+                //if (_usuarioRepositorio.LoginExistente(model.Login))
+                //{
+                //    TempData["MensagemErro"] = "Já existe um usuário com esse login.";
+                //    return RedirectToAction("Index");
+                //}
+
+
+                if(_revendedorRepositorio.NomeExiste(model.Nome, model.Id))
+                {
+                    TempData["MensagemErro"] = "Já existe um revendedor com esse nome.";
+                    return RedirectToAction("Index");
+                }
+
+                if(_revendedorRepositorio.NomeFantasiaExiste(model.NomeFantasia, model.Id))
+                {
+                    TempData["MensagemErro"] = "Já existe um revendedor com esse nome fantasia.";
+                    return RedirectToAction("Index");
+                }
+
+
+                if(_revendedorRepositorio.CpfCnpjExiste(model.Cnpj, model.Id))
+                {
+                    TempData["MensagemErro"] = "Já existe um revendedor com esse CNPJ.";
+                    return RedirectToAction("Index");
+                }
+
+                if (_revendedorRepositorio.EmailExiste(model.Email, model.Id))
+                {
+                    TempData["MensagemErro"] = "Já existe um revendedor com esse email.";
+                    return RedirectToAction("Index");
+                }
+
+                if (ModelState.IsValid)
             {
 
 
@@ -125,7 +157,30 @@ namespace cafeservellocontroler.Controllers
             revendedorExistente.AtualizarDataCadastro();
             revendedorExistente.AtualizarDados(model);
 
+            if (_revendedorRepositorio.NomeExiste(model.Nome, model.Id))
+            {
+                TempData["MensagemErro"] = "Já existe um revendedor com esse nome.";
+                return RedirectToAction("Index");
+            }
 
+            if (_revendedorRepositorio.NomeFantasiaExiste(model.NomeFantasia, model.Id))
+            {
+                TempData["MensagemErro"] = "Já existe um revendedor com esse nome fantasia.";
+                return RedirectToAction("Index");
+            }
+
+
+            if (_revendedorRepositorio.CpfCnpjExiste(model.Cnpj, model.Id))
+            {
+                TempData["MensagemErro"] = "Já existe um revendedor com esse CNPJ.";
+                return RedirectToAction("Index");
+            }
+
+            if (_revendedorRepositorio.EmailExiste(model.Email, model.Id))
+            {
+                TempData["MensagemErro"] = "Já existe um revendedor com esse email.";
+                return RedirectToAction("Index");
+            }
 
             if (ModelState.IsValid)
             {

@@ -1,5 +1,6 @@
 ﻿using cafeservellocontroler.Data;
 using cafeservellocontroler.Models.Venda;
+using iText.Commons.Actions.Contexts;
 using Microsoft.EntityFrameworkCore;
 
 namespace cafeservellocontroler.Repositorio.VendaRepositorio
@@ -49,8 +50,8 @@ namespace cafeservellocontroler.Repositorio.VendaRepositorio
             return venda;
         }
 
-        
-            public bool Apagar(int id)
+
+        public bool Apagar(int id)
         {
             var venda = _bancoDeDadosContext.Vendas.FirstOrDefault(x => x.Id == id);
 
@@ -61,7 +62,7 @@ namespace cafeservellocontroler.Repositorio.VendaRepositorio
             _bancoDeDadosContext.SaveChanges();
             return true;
         }
-        
+
 
         public async Task<List<ModelVenda>> BuscarTodasVendas()
         {
@@ -72,6 +73,15 @@ namespace cafeservellocontroler.Repositorio.VendaRepositorio
                  .ToListAsync();
 
 
+        }
+        public async Task<List<ModelVenda>> BuscarVendasPorUsuario(int usuarioId)
+        {
+            return await _bancoDeDadosContext.Vendas
+                .Include(x => x.Usuario)
+                .Include(x => x.Revendedor)
+                .Include(x => x.ItensVendas)
+                .Where(x => x.Usuario.Id == usuarioId)
+                .ToListAsync();
         }
 
         public ModelVenda? BuscarPorIdComItens(int id)
@@ -91,7 +101,7 @@ namespace cafeservellocontroler.Repositorio.VendaRepositorio
                  .Include(x => x.Revendedor)
                  .Include(x => x.ItensVendas)
                  .ThenInclude(iv => iv.Produto)
-                 .FirstOrDefaultAsync(x => x.Id == id); 
+                 .FirstOrDefaultAsync(x => x.Id == id);
         }
 
         public ModelVenda Atualizar(ModelVenda venda)
@@ -101,13 +111,13 @@ namespace cafeservellocontroler.Repositorio.VendaRepositorio
                 _bancoDeDadosContext.Entry(venda.Usuario).State = EntityState.Unchanged;
             }
 
-            
+
             if (venda.Revendedor != null)
             {
                 _bancoDeDadosContext.Entry(venda.Revendedor).State = EntityState.Unchanged;
             }
 
-            
+
             foreach (var item in venda.ItensVendas)
             {
                 if (item.Produto != null)
@@ -116,10 +126,11 @@ namespace cafeservellocontroler.Repositorio.VendaRepositorio
                 }
             }
 
-            
+
             _bancoDeDadosContext.Vendas.Update(venda);
             _bancoDeDadosContext.SaveChanges();
             return venda;
         }
+
     }
 }

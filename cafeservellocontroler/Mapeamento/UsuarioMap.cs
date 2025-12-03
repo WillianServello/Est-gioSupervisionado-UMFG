@@ -56,7 +56,7 @@ namespace cafeservellocontroler.Mapeamento
             string senhaAdminHash = "123456";
 
             builder.HasData(
-                // ➡️ USE O NOVO CONSTRUTOR EM VEZ DA SINTAXE DE INICIALIZAÇÃO DE OBJETO
+                
                 new ModelUsuario(
                     id: 1,
                     login: "admin",

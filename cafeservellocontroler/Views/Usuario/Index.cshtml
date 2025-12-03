@@ -67,7 +67,7 @@
                 <div class="modal-content ">
                     <div class="modal-header">
                         <h5 class="modal-title" id="modalCriarLabel">Adicionar Usuario </h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        <button type="button" class="btn-close btn-close-modal" data-bs-dismiss="modal" aria-label="Fechar"></button>
                     </div>
                     <div class="modal-body">
                         @Html.Partial("~/Views/Usuario/_Criar.cshtml", new UsuarioViewModel())
@@ -169,7 +169,7 @@
                                             <div class="modal-content">
                                                 <div class="modal-header">
                                                     <h5 class="modal-title">Editar Usuario</h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                                                    <button type="button" class="btn-close btn-close-modal" data-bs-dismiss="modal" aria-label="Fechar"></button>
                                                 </div>
                                                 <div class="modal-body">
                                                     @await Html.PartialAsync("~/Views/Usuario/Editar.cshtml", usuario)
@@ -193,7 +193,7 @@
                                             <div class="modal-content">
                                                 <div class="modal-header">
                                                     <h5 class="modal-title">Apagar Revendedor</h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                                                    <button type="button" class="btn-close btn-close-modal" data-bs-dismiss="modal" aria-label="Fechar"></button>
                                                 </div>
                                                 <div class="modal-body">
                                                     @await Html.PartialAsync("~/Views/Usuario/ApagarConfirmacao.cshtml", usuario)

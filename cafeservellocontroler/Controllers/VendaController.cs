@@ -234,7 +234,7 @@ namespace cafeservellocontroler.Controllers
                     _produtoRepositorio.Atualizar(produto);
                 }
 
-                // 4.1. LIMPAR itens antigos da venda
+                // 5 LIMPAR itens antigos da venda
                 vendaDB.ItensVendas.Clear();
 
                 // 6. Atualizar protagonistas
@@ -280,7 +280,7 @@ namespace cafeservellocontroler.Controllers
                     return RedirectToAction("Index");
                 }
 
-                // 1️⃣ Devolver estoque dos itens
+                // Aqui ele devolve os itens ao estoque
                 foreach (var item in venda.ItensVendas)
                 {
                     var produto = _produtoRepositorio.ListarPorId(item.Produto.Id);
@@ -292,7 +292,7 @@ namespace cafeservellocontroler.Controllers
                     }
                 }
 
-                // 2️⃣ Remover a venda
+                
                 _vendaRepositorio.Apagar(id);
 
                 TempData["MensagemSucesso"] = "Venda removida e estoque atualizado!";

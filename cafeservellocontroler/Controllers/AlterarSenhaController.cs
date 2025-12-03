@@ -71,17 +71,17 @@ namespace cafeservellocontroler.Controllers
 
             if (ModelState.IsValid)
             {
-                // Atualiza no banco
+               
                 ModelUsuario usuarioAtualizado = _usuarioRepositorio.AlterarDados(model);
 
-                // 🔥 Atualiza a sessão para refletir os novos dados
+                
                 _sessao.CriarSessaoUsuario(usuarioAtualizado);
 
                 TempData["MensagemSucesso"] = "Dados atualizados com sucesso!";
                 return RedirectToAction("Index");
             }
 
-            TempData["MensagemErro"] = "Não foi possível atualizar os dados.";
+            TempData["MensagemErro"] = "Não foi possível atualizar os dados!";
             return RedirectToAction("Index");
         }
 
@@ -105,7 +105,7 @@ namespace cafeservellocontroler.Controllers
                     
                     _usuarioRepositorio.AlterarSenha(modelAlterarSenhaAtual);
 
-                    TempData["MensagemSucesso"] = "Senha atualizada com sucesso";
+                    TempData["MensagemSucesso"] = "Senha atualizada com sucesso!";
                     return RedirectToAction("Index", modelAlterarSenhaAtual);
                 }
                 return RedirectToAction("Index", modelAlterarSenhaAtual);

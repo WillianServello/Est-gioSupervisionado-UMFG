@@ -12,6 +12,7 @@ namespace cafeservellocontroler.Models.ViewModels
         [MaxLength(100, ErrorMessage = "Atingiu o limite de caracteres ")]
         public string Nome { get; set; } = string.Empty;
 
+        
         [Required(ErrorMessage = "O campo CNPJ é obrigatório")]
         public string Cnpj { get; set; } = string.Empty;
 
